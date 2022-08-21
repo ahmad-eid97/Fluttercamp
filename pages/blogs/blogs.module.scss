@@ -1,0 +1,70 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/extends.scss";
+
+.blogs {
+  h2 {
+    margin: 50px 0;
+    text-align: center;
+    @include xs {
+      font-size: 1.4rem;
+    }
+  }
+  .blog {
+    border: 1px solid var(--main-color);
+    border-radius: 0 20px;
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+    }
+    @include sm {
+      margin: 0 5px;
+    }
+    .blog__head {
+      background-image: var(--main-background);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 0 20px 0 0;
+      i {
+        padding-right: 5px;
+      }
+      h3 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .headWrapper {
+        display: flex;
+        justify-content: space-between;
+        span {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .blog__body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      button {
+        @extend %mainBtn;
+        background-image: var(--main-background);
+        color: #fff;
+        font-size: 0.9rem;
+        padding: 7px 12px;
+        margin-bottom: 10px;
+        width: 70px;
+        margin: 0 auto 10px;
+        &:hover {
+          background-image: unset;
+          background-image: transparent;
+          color: var(--main-color);
+        }
+      }
+      padding: 20px;
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

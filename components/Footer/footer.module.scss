@@ -1,0 +1,100 @@
+@import '../../styles/mixins.scss';
+
+.footer {
+  background-color: #fff;
+  border-top: 3px dashed var(--main-color);
+  padding: 30px 0 0 0;
+  margin-top: 70px;
+
+  .footerWrapper {
+    .logo {
+      img {
+        background-color: var(--main-color);
+        width: 200px;
+        margin-bottom: 20px;
+        @include sm {
+          width: 150px;
+        }
+      }
+    }
+
+    h5 {
+      color: var(--main-color);
+    }
+    li {
+      padding: 5px 0;
+      opacity: 0.8;
+      cursor: pointer;
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+    a {
+      color: var(--main-color);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .categories {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border: 2px dashed var(--main-color);
+      border-top: none;
+      border-bottom: none;
+      padding: 20px 30px;
+      @include sm {
+        border: unset;
+        border-top: 2px dashed var(--main-color);
+        border-bottom: 2px dashed var(--main-color);
+      }
+      @include xs {
+        display: block;
+        div {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .footerBottom {
+    background-image: var(--main-background);
+    padding: 30px 0;
+    margin-top: 20px;
+    div:first-of-type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+      div {
+        margin-top: 10px;
+      }
+    }
+    span {
+      font-size: 1.1rem;
+      i {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        color: var(--main-color);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        margin: 0 5px 10px;
+        box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+    }
+    .terms {
+      span {
+        margin: 0 20px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

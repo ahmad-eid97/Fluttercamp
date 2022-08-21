@@ -1,0 +1,27 @@
+@import '../../../styles/mixins.scss';
+
+.faq {
+  background-image: url('../../../public/assets/imgs/home/faq.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-position: center;
+  min-height: 600px;
+  padding: 50px 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .faq__head {
+    color: #fff;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .faq__area {
+    background-color: #fff;
+    padding: 50px;
+    max-height: 800px;
+    overflow-y: scroll;
+    @include xs {
+      padding: 10px;
+    }
+  }
+}

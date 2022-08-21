@@ -1,0 +1,137 @@
+@import '../../../styles/mixins.scss';
+
+.wrapper {
+
+  .dropLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+  }
+  
+  .mobSidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    opacity: 0;
+    padding: 0 2px;
+    background-image: var(--main-background);
+    &.ar {
+      left: unset;
+      right: -300px;
+    }
+
+    .links {
+      ul {
+        padding: 20px;
+        li {
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            background-color: #fff;
+            color: var(--main-color);
+          }
+          &.active {
+            background-color: #fff;
+            color: var(--main-color);
+          }
+        }
+      }
+    }
+    
+  }
+
+  &.show {
+
+    .dropLayer {
+      background-color: rgba(0, 0, 0, 0.2);
+      display: block;
+    }
+
+    .mobSidebar {
+      animation: slide-in 0.3s forwards;
+      transition: all 0.1s ease-in-out;
+      opacity: 1;
+      z-index: 9999;
+      &.ar {
+        animation: slide-in-ar 0.3s forwards;
+      }
+
+    }
+    
+  }
+
+  &.hide {
+
+    .dropLayer {
+      background-color: transparent;
+      display: none;
+    }
+
+    .mobSidebar {
+      animation: slide-out 0.3s forwards;
+      transition: all 1s ease-in-out;
+      z-index: -1;
+      &.ar {
+        animation: slide-out-ar 0.3s forwards;
+        z-index: -1;
+      }
+    }
+
+  }
+
+}
+
+@keyframes slide-in {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -300px;
+  }
+}
+
+@keyframes slide-in-ar {
+  0% {
+    right: -300px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-out-ar {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -300px;
+  }
+}
+
+@keyframes showOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,110 @@
+@import '../../styles/mixins.scss';
+
+.navbar {
+  background-color: transparent;
+  padding: 5px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+  background-image: var(--main-background);
+  @include xs {
+    padding: 10px;
+  }
+  // &.scrolled {
+  //   background-color: var(--main-background);
+  // } 
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: var(--main-background);
+    padding: 10px 50px;
+    color: #fff;
+    border-radius: 20px 20px 0 20px;
+    @include md {
+      padding: 10px 20px;
+    }
+    .domain {
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 1.5rem;
+        border-right: 1px solid #fff;
+        padding-right: 10px;
+        @include xs {
+          font-size: 1.2rem;
+        }
+      }
+      .input {
+        display: flex;
+        align-items: center;
+        @include md {
+          display: none;
+        } 
+        i {
+          font-size: 1.2rem;
+          border-right: unset;
+          padding-right: 10px;
+          @include xs {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      input {
+        padding: 5px 20px;
+        border-radius: 0 10px;
+        border: none;
+        outline: none;
+        font-size: 0.9rem;
+        margin: 0 5px
+      }
+      span {
+        padding: 0 10px;
+        font-weight: 600;
+        @include md {
+          display: none;
+        }
+      }
+      .mobIcon {
+        cursor: pointer;
+        display: none;
+      }
+      .mobIcon {
+        @include md {
+          display: inline-block;
+        }
+      }
+    }
+
+    .links {
+      ul {
+        display: flex;
+        gap: 20px;
+        li {
+          border-radius: 10px;
+          padding: 8px;
+          &.active {
+            border-top: 2px dashed #fff;
+            border-bottom: 2px dashed #fff;
+          }
+          a {
+            color: #fff;
+          }
+        }
+      }
+      @include md {
+        display: none;
+      }
+    }
+    .logo {
+      img {
+        width: 100px;
+        cursor: pointer;
+        @include xs {
+          width: 80px;
+        }
+      }
+    }
+  }
+}

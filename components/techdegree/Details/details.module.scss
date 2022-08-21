@@ -1,0 +1,42 @@
+@import '../../../styles/mixins.scss';
+
+.details {
+  .details__head {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+    span {
+      background-image: var(--main-background);
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 0 20px;
+      margin: 0 5px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .details__about {
+    h3 {
+      font-weight: 600;
+      @include xs {
+        font-size: 1.1rem;
+      }
+    }
+
+    h4 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      @include xs {
+        font-size: 1.1rem;
+      }
+    }
+
+    p {
+      opacity: 0.8;
+    }
+
+    .accordions {
+      margin-top: 30px;
+    }
+  }
+}

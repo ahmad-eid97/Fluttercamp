@@ -1,0 +1,102 @@
+@import '../../../styles/mixins.scss';
+
+.testimonials {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  @include sm {
+    margin-top: 100px;
+  }
+  .testimonials__head {
+    text-align: center;
+    h2 {
+      color: var(--main-color);
+      margin-bottom: 80px;
+    }
+  }
+  .carousel {
+    .mainWrapper {
+      @include md {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .testSide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+      i {
+        background-image: var(--main-background);
+        color: #fff;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        font-size: 2rem;
+        display: grid;
+        place-items: center;
+        margin-bottom: 20px;
+        animation: animate 1.5s linear infinite;
+      }
+      @keyframes animate {
+        0% {
+          box-shadow: 0 0 0 0 var(--main-color);
+        }
+        40% {
+          box-shadow: 0 0 0 20px rgba(255, 26, 67, 0);
+        }
+        80% {
+          box-shadow: 0 0 0 20px rgba(255, 206, 67, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 rgba(255, 206, 67, 0);
+        }
+      }
+      h2 {
+        color: var(--main-color);
+        margin-bottom: 5px;
+      }
+      p {
+        text-align: center;
+      }
+    }
+
+    .imageSide {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .blobSection {
+        background-image: var(--main-background);
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        @include lg {
+          width: 400px;
+          height: 400px;
+        }
+        @include md {
+          width: 500px;
+          height: 500px;
+        }
+        @include sm {
+          width: 400px;
+          height: 400px;
+        }
+        @include xs {
+          width: 300px;
+          height: 300px;
+        }
+      }
+      img {
+        height: 600px;
+        object-fit: contain;
+        position: relative;
+        z-index: 2;
+        @include xs {
+          height: 350px;
+        }
+      }
+    }
+  }
+}

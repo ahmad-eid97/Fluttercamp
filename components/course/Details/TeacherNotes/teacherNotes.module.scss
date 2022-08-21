@@ -1,0 +1,23 @@
+@import '../../../../styles/extends.scss';
+
+.teacherNotes {
+  h6 {
+    color: var(--main-color);
+    margin-top: 10px;
+  }
+  a {
+    display: block;
+    cursor: pointer;
+    margin-top: 10px;
+    &:hover {
+      color: var(--main-color);
+      text-decoration: underline;
+    }
+  }
+  button {
+    @extend %mainBtn;
+    padding: 6px 15px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
+}

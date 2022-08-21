@@ -1,0 +1,49 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/extends.scss';
+
+.skills {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  @include sm {
+    margin-top: 100px;
+  }
+  .skills__head {
+    width: 500px;
+    text-align: center;
+    margin: 0 auto 30px;
+    h2 {
+      color: var(--main-color);
+    }
+    @include sm {
+      width: 400px;
+    }
+    @include xs {
+      width: 300px;
+    }
+  }
+
+  .carousel {
+    margin-top: 70px !important;
+    margin-bottom: 50px !important;
+    .skills__slide {
+      background-image: url('../../../public/assets/imgs/home/slider-text.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 250px;
+      display: grid;
+      place-content: center;
+      h3 {
+        color: #fff;
+      }
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    button {
+      @extend %mainBtn;
+    }
+  }
+}

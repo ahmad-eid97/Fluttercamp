@@ -1,0 +1,136 @@
+@import '../../../styles/extends.scss';
+
+.subscribtion {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+  .subscribtion__head {
+    width: 500px;
+    margin: auto;
+    text-align: center !important;
+    margin-bottom: 100px;
+    h2 {
+      color: var(--main-color);
+    }
+    @include sm {
+      width: 400px;
+      margin-bottom: 50px;
+    }
+    @include xs {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .plan {
+    border: 2px solid #ccc;
+    padding: 40px 20px;
+    border-radius: 0 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      border: 2px solid var(--main-color);
+      transform: translateY(-20px);
+      box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.2);
+    }
+    &.special {
+      border: 2px solid var(--main-color);
+      transform: translateY(-50px);
+      box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.2);
+      position: relative;
+      .mark {
+        position: absolute;
+        top: -20px;
+        left: 10%;
+        color: #f6b93b;
+        font-size: 4rem;
+      }
+      @include sm {
+        transform: translateY(0px);
+      }
+    }
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      i {
+        background-image: var(--main-background);
+        padding: 20px 30px;
+        border-radius: 20px 20px 0 20px;
+        color: #fff;
+        font-size: 2rem;
+        text-align: center !important;
+        margin-bottom: 20px;
+        @include xs {
+          font-size: 1.5rem;
+        }
+      }
+      h4 {
+        text-align: center !important;
+      }
+    }
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: var(--main-color);
+      text-align: center;
+      font-size: 2.5rem;
+      @include xs {
+        font-size: 2.2rem;
+      }
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      span {
+        color: var(--main-color);
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        @include xs {
+          font-size: 1.1rem;
+        }
+      }
+  
+      button {
+        display: block;
+        margin-bottom: 20px;
+        @extend %mainBtn;
+        background-image: var(--main-background);
+        color: #fff;
+        &:hover {
+          background-color: transparent;
+          background-image: unset;
+          color: var(--main-color);
+        }
+        @include xs {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    ul {
+      li {
+        font-size: 1.1rem;
+        color: var(--main-color);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        @include xs {
+          font-size: 1rem;
+        }
+        i {
+          color: var(--main-color);
+          font-size: 1.5rem;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

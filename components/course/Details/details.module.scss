@@ -1,0 +1,48 @@
+@import '../../../styles/mixins.scss';
+
+.details {
+  .details__head {
+    display: flex;
+    justify-content: space-between;
+    p {
+      opacity: 0.8;
+    }
+    span {
+      color: var(--main-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+
+  .tabs {
+    margin-top: 30px;
+    border-bottom: 1px solid var(--main-color);
+    display: flex;
+    flex-wrap: wrap;
+    p {
+      padding: 7px 15px;
+      border-radius: 20px 20px 0 0;
+      font-size: 0.9rem;
+      font-weight: 650;
+      cursor: pointer;
+      margin: 0;
+      &.active {
+        border: 1px solid var(--main-color);
+        border-bottom: 3px solid #fff;
+        transform: translateY(2px);
+      }
+      @include xs {
+        margin-bottom: 5px;
+        &.active {
+          border: 1px solid var(--main-color);
+          border-bottom: 1px solid var(--main-color);
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .tab {
+    margin-top: 30px;
+  }
+}

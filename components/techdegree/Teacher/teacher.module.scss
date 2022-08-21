@@ -1,0 +1,42 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/extends.scss';
+
+.teacher {
+  h3 {
+    font-weight: 500;
+    @include xs {
+      font-size: 1.2rem;
+    }
+  }
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    @include xs {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .teacher__desc {
+    h4 {
+      font-weight: 500;
+      margin-top: 20px;
+      @include xs {
+        font-size: 1.1rem;
+      }
+    }
+    p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    button {
+      width: 100%;
+      @extend %mainBtn;
+      margin-top: 10px;
+      padding: 8px 20px;
+      @include xs {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

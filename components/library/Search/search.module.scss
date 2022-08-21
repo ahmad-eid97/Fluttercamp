@@ -1,0 +1,39 @@
+@import '../../../styles/mixins.scss';
+
+.search {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 20px 20px 0 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  
+  @include sm {
+    flex-direction: column;
+  }
+  div.field {
+    input {
+      border: none;
+      width: 600px;
+      outline: none;
+      padding: 10px 15px;
+      @include lg {
+        width: 400px;
+      }
+      @include md {
+        width: 300px;
+      }
+      @include sm {
+        width: 200px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .options {
+    display: flex;
+    gap: 20px;
+  }
+}

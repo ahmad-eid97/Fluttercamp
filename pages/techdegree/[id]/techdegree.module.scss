@@ -1,0 +1,17 @@
+@import '../../../styles/mixins.scss';
+
+.techdegree {
+  .techdegree__details {
+    background-color: #fff;
+    border-radius: 0 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 10px;
+
+    .techdegree__wrapper {
+      @include xs {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

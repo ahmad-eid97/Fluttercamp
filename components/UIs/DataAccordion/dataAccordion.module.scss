@@ -1,0 +1,162 @@
+@import '../../../styles/mixins';
+
+.accordion_link {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  margin-bottom: 15px;
+
+  .link {
+    padding: 3px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    position: relative;
+    border-left: 5px dashed var(--main-color);
+    background-color: rgb(233, 233, 233);
+    padding: 10px 0;
+    box-shadow: 0 1px 10px rgb(56 65 74 / 10%);
+    &.ar {
+      border-left: unset;
+      border-right: 5px dashed var(--main-color);
+    }
+
+    .icon {
+      pointer-events: none;
+      display: flex;
+
+      span {
+        padding: 3px 10px;
+        border-radius: 5px;
+        color: var(--main-color);
+        font-size: 0.8rem;
+        font-weight: 500;
+        background-color: var(--main-color-light);
+        @include xs {
+          font-size: 0.7rem;
+        }
+      }
+      
+      i {
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+        justify-content: center;
+        transition: all 0.2s ease-in-out;
+        width: 40px;
+        height: 40px;
+        background-image: var(--main-background);
+        border-radius: 50%;
+        color: #fff;
+        @include xs {
+          font-size: 0.8rem;
+        }
+      }
+
+    }
+
+    .label {
+      pointer-events: none;
+      transition: opacity 0.1s ease-in-out;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 15px;
+      display: flex;
+      align-items: center;
+      @include xs {
+        font-size: 0.9rem;
+      }
+      i {
+        font-size: 1.2rem;
+        margin-right: 10px;
+        @include xs {
+          font-size: 1rem;
+        }
+      }
+      &.ar {
+        i {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    & > i {
+      position: absolute;
+      top: 25%;
+      right: 15px;
+      transition: all 0.2s ease-in-out;
+      pointer-events: none;
+      font-size: 1rem;
+      &.ar {
+        right: unset;
+        left: 25px;
+      }
+    }
+  }
+
+  .subMenu {
+    cursor: pointer;
+    height: auto;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 9;
+    box-shadow: 0 1px 2px rgb(56 65 74 / 10%);
+
+    .dropLayer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: transparent;
+      z-index: -1;
+    }
+
+    .accordionBody {
+      padding: 20px 20px;
+      background-color: var(--special-background);
+      p {
+        span {
+          color: var(--main-color);
+          font-weight: 600;
+        }
+      }
+      .time {
+        margin-top: 10px;
+        color: var(--main-color);
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  &.showSub {
+    .link {
+      .icon i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &.smallAccordion {
+    .link {
+      .label {
+        font-size: 0.9rem;
+      }
+    }
+    .subMenu {
+      li {
+        font-size: 0.85rem;
+        padding-top: 5px;
+      }
+    }
+  }
+
+}

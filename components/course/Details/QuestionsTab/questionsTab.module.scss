@@ -1,0 +1,79 @@
+@import '../../../../styles/extends.scss';
+
+.questions {
+  .questions__question {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    .questionSide {
+      display: flex;
+      gap: 10px;
+      img {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        padding: 3px;
+        border: 1px solid var(--main-color);
+      }
+
+      p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        margin-bottom: 20px;
+      }
+
+      .specs {
+        display: flex;
+        flex-wrap: wrap;
+        span {
+          background-image: var(--main-background);
+          color: #fff;
+          border-radius: 20px 20px 0 20px;
+          padding: 5px 15px;
+          margin: 0 5px 5px;
+          font-size: 0.9rem;
+          display: block;
+        }
+      }
+    }
+
+    h5 {
+      color: #86db9f;
+      font-weight: 600;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    button {
+      @extend %mainBtn;
+      padding: 6px 15px;
+      font-size: 0.8rem;
+      margin-top: 10px;
+      min-width: 50%;
+    }
+  }
+
+  .help {
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    p {
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    button {
+      @extend %mainBtn;
+      padding: 6px 15px;
+      font-size: 0.8rem;
+      margin-top: 10px;
+    }
+  }
+}

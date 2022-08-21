@@ -1,0 +1,73 @@
+@import '../../../styles/extends.scss';
+
+.practice {
+  margin-top: 50px;
+  .practice__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    h5 {
+      color: var(--main-color);
+    }
+    p {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    button {
+      @extend %mainBtn;
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .practice__topics {
+    
+    .topic {
+      border: 1px solid var(--main-color);
+      border-radius: 0 20px;
+      transition: all 0.3s ease-in-out;
+      // margin: 0 25px;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-20px);
+      }
+      @include sm {
+        margin: 0 auto;
+        max-width: 500px;
+      }
+      .topic__head {
+        background-image: var(--main-background);
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        border-radius: 0px 20px 0 0;
+        i {
+          padding-right: 5px;
+        }
+      }
+      .topic__body {
+        padding: 20px;
+      }
+      .topic__actions {
+        padding: 0 20px 20px 20px;
+        display: flex;
+        gap: 15px;
+        cursor: pointer;
+        @include sm {
+          gap: 5px;
+        }
+        .action {
+          background-image: var(--main-background);
+          padding: 7px 12px;
+          border-radius: 20px 20px 0 20px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/extends.scss';
+
+.tracks {
+  margin-top: 50px;
+
+  .header {
+    margin: 30px 0;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 0 20px;
+    border: 1px dashed var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    h6 {
+      color: var(--main-color);
+      @include sm {
+        font-size: 0.9rem;
+      }
+    }
+    p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      @include sm {
+        font-size: 0.8rem;
+      }
+    }
+    button {
+      @extend %mainBtn;
+      padding: 7px 15px;
+      font-size: 0.8rem;
+      @include sm {
+        font-size: 0.7rem;
+        padding: 7px 10px;
+      }
+    }
+  }
+
+  .tracks__course {
+    border: 1px solid var(--main-color);
+    border-radius: 0 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 2px 15px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+    }
+    .tracks__course_head {
+      background-image: var(--main-background);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      border-radius: 0px 20px 0 0;
+      i {
+        padding-right: 5px;
+      }
+    }
+
+    .tracks__course_body {
+      padding: 20px;
+    }
+    .tracks__course_actions {
+      padding: 0 20px 20px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      cursor: pointer;
+      @include sm {
+        gap: 5px;
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .action {
+        background-image: var(--main-background);
+        padding: 7px 12px;
+        border-radius: 20px 20px 0 20px;
+        color: #fff;
+      }
+
+      button {
+        @extend %mainBtn;
+        font-size: 0.8rem;
+        padding: 7px 15px;
+      }
+    }
+  }
+}

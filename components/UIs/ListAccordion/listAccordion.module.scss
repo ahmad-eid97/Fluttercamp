@@ -1,0 +1,186 @@
+@import '../../../styles/mixins';
+
+.accordion_link {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  margin-bottom: 15px;
+
+  .link {
+    padding: 3px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    position: relative;
+    padding: 10px 0;
+
+    .icon {
+      pointer-events: none;
+      display: flex;
+
+      span {
+        padding: 3px 10px;
+        border-radius: 5px;
+        color: var(--main-color);
+        font-size: 0.8rem;
+        font-weight: 500;
+        background-color: var(--main-color-light);
+        @include xs {
+          font-size: 0.7rem;
+        }
+      }
+      
+      i {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        transition: all 0.2s ease-in-out;
+        background-image: var(--main-background);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        color: #fff;
+        @include xs {
+          font-size: 0.8rem;
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+    }
+
+    .label {
+      pointer-events: none;
+      transition: opacity 0.1s ease-in-out;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 15px;
+      @include xs {
+        font-size: 0.9rem;
+      }
+      i {
+        font-size: 1.2rem;
+        margin-right: 10px;
+        @include xs {
+          font-size: 1rem;
+        }
+      }
+      &.ar {
+        i {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+
+      h6 {
+        color: var(--main-color);
+      }
+
+      span {
+        color: var(--main-color);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+    }
+
+    & > i {
+      position: absolute;
+      top: 25%;
+      right: 15px;
+      transition: all 0.2s ease-in-out;
+      pointer-events: none;
+      font-size: 1rem;
+      &.ar {
+        right: unset;
+        left: 25px;
+      }
+    }
+  }
+
+  .subMenu {
+    cursor: pointer;
+    height: auto;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 9;
+
+    .dropLayer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: transparent;
+      z-index: -1;
+    }
+
+    .accordionBody {
+      padding: 20px 20px;
+
+      .step {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+
+        i {
+          border: 2px solid var(--main-color);
+          color: var(--main-color);
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: grid;
+          place-content: center;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            width: 35px;
+            height: 35px;
+          }
+          @include xs {
+            font-size: 0.8rem;
+          }
+        }
+
+        h6 {
+          @include xs {
+            font-size: 0.9rem;
+          }
+        }
+
+        span {
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+
+  &.showSub {
+    .link {
+      .icon i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &.smallAccordion {
+    .link {
+      .label {
+        font-size: 0.9rem;
+      }
+    }
+    .subMenu {
+      li {
+        font-size: 0.85rem;
+        padding-top: 5px;
+      }
+    }
+  }
+
+}
