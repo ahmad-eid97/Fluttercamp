@@ -96,7 +96,8 @@
         height: 70px;
         cursor: pointer;
         @include xs {
-          width: 100px;
+          width: 80px;
+          height: auto;
         }
       }
     }
