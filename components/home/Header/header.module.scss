@@ -1,7 +1,7 @@
 @import '../../../styles/mixins.scss';
 
 .header {
-  height: 60vh;
+  height: 600px;
   background-image: url('../../../public/assets/imgs/home/banner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -82,7 +82,7 @@
 }
 .bottom {
   background: linear-gradient(-45deg, #39cefd, #03569b);
-  padding: 20px;
+  padding: 10px 20px;
   .part {
     display: flex;
     align-items: center;
