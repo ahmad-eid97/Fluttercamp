@@ -6,43 +6,55 @@ import cls from "./header.module.scss";
 
 const Header = () => {
   return (
-    <div className={cls.header}>
-      <Grid container spacing={3} justifyContent="center">
-        <Grid item sm={6} md={6}>
-          <div className={cls.textSide}>
-            <h1>Transform</h1>
-            <h1>Your Life Through</h1>
-            <h1>Education</h1>
-            <img src="/assets/imgs/home/slider-text.png" alt="textImage" />
-          </div>
-        </Grid>
-
-        <Grid item sm={6} md={6}>
-          <div className={cls.sideImg}>
-            <img src="/assets/imgs/home/slide-img.png" alt="headerImg" />
-            <img
-              src="/assets/imgs/home/slider-img-after.png"
-              alt="headerImg"
-              className={cls.secondImage}
-            />
-          </div>
-        </Grid>
-
-        <Grid item sm={10} md={8} lg={6}>
-          <div className={cls.smallTextSide}>
-            <div>
-              <h1>Full Stack</h1>
+    <>
+      <div className={cls.header}>
+        <Grid container spacing={3} alignItems="center">
+          <Grid item sm={6} md={6}>
+          </Grid>
+          <Grid item sm={6} md={6}>
+            <div className={cls.textSide}>
+              <h1>تعلم في الجدول الزمني الخاص بك</h1>
+              <p>دراسة أي موضوع، في أي وقت. اكتشف آلاف الدورات التدريبية بأقل سعر على الإطلاق!</p>
+              <div className={cls.input}>
+                <button><i className="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" placeholder="ماذا تريد أن تدرس!؟" />
+              </div>
             </div>
-            <div>
-              <h1>Back End</h1>
-            </div>
-            <div>
-              <h1>Front End</h1>
-            </div>
-          </div>
+          </Grid>
         </Grid>
-      </Grid>
-    </div>
+      </div>
+      <div className={cls.bottom}>
+        <Grid container justifyContent="center">
+          <Grid item xs={12} sm={6} md={4}>
+            <div className={cls.part}>
+              <i className="fas fa-bullseye float-left"></i>
+              <div>
+                <h4>دورات عبر الإنترنت</h4>
+                <p>استكشاف مجموعة متنوعة من المواضيع الجديدة</p>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <div className={cls.part}>
+              <i className="fa fa-check float-left"></i>
+              <div>
+                <h4>تعليمات الخبراء</h4>
+                <p>العثور على الدورة المناسبة لك</p>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <div className={cls.part}>
+              <i className="fa fa-clock float-left"></i>
+              <div>
+                <h4>الوصول مدى الحياة</h4>
+                <p>تعلم في الجدول الزمني الخاص بك</p>
+              </div>
+            </div>
+          </Grid>
+        </Grid>
+      </div>
+    </>
   );
 };
 

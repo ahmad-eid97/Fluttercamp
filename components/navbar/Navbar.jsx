@@ -39,26 +39,32 @@ const Navbar = () => {
           <ul>
             <li className={router.pathname === "/" ? cls.active : ""}>
               <Link href="/">الصفحة الرئيسية</Link>
+              <p></p>
             </li>
             <li className={router.pathname === "/tracks" ? cls.active : ""}>
               <Link href="/tracks"> المسارات</Link>
+              <p></p>
             </li>
             <li className={router.pathname === "/library" ? cls.active : ""}>
               <Link href="/library"> المكتبة</Link>
+              <p></p>
             </li>
             <li className={router.pathname === "/society" ? cls.active : ""}>
               <Link href="/society"> مجتمعنا</Link>
+              <p></p>
             </li>
             <li className={router.pathname === "/about" ? cls.active : ""}>
               <Link href="/about"> من نحن؟</Link>
+              <p></p>
             </li>
             <li className={router.pathname === "/support" ? cls.active : ""}>
               <Link href="/support"> الدعم الفني</Link>
+              <p></p>
             </li>
           </ul>
         </div>
         <div className={cls.domain}>
-          <div className={cls.input}><i className="fa-regular fa-magnifying-glass"></i> <input type="text" placeholder="بحث عن كورسات" /></div> <i className="fa-solid fa-bell"></i>
+          <i className="fa-solid fa-bell"></i>
           <span className={cls.mobIcon} onClick={() => setMobSidebar(true)}>
             <i className="fa-thin fa-grid-2"></i>
           </span>
