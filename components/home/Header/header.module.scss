@@ -1,12 +1,11 @@
 @import '../../../styles/mixins.scss';
 
 .header {
-  height: max(600px, 70vh);
+  height: 60vh;
   background-image: url('../../../public/assets/imgs/home/banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  margin-top: 0vh;
-  padding-top: 10vh;
-  padding-bottom: 30px;
   @include md {
     padding-top: 13vh;
   }
