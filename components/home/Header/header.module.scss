@@ -98,5 +98,17 @@
     p {
       font-size: 16px;
     }
+    @include xs {
+      justify-content: flex-start;
+      i {
+        font-size: 32px;
+      }
+      h4 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
   }
 }

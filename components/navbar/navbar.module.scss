@@ -23,7 +23,10 @@
     color: #000;
     border-radius: 20px 20px 0 20px;
     @include md {
-      padding: 10px 20px;
+      padding: 3px 20px;
+    }
+    @include xs {
+      padding: 0px 10px;
     }
     .domain {
       display: flex;
@@ -96,7 +99,7 @@
         height: 70px;
         cursor: pointer;
         @include xs {
-          width: 80px;
+          width: 130px;
           height: auto;
         }
       }
