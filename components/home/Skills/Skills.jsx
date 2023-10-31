@@ -60,7 +60,6 @@ const Skills = () => {
       <Swiper
         className={`${cls.carousel}`}
         dir="rtl"
-        onSwiper={(swiper) => console.log(swiper)}
         breakpoints={breakpoints}
       >
         {skills.map((skill, idx) => (

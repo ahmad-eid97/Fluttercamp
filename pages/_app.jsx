@@ -21,7 +21,6 @@ import "../styles/globals.scss";
 class MyApp extends App {
   static getInitialProps = wrapper.getInitialAppProps(
     (store) => async (context) => {
-      // console.log(store.getState().user.user);
       return {};
     }
   );
@@ -33,7 +32,6 @@ class MyApp extends App {
   componentDidMount() {
     // PAGES LOADER
     Router.events.on("routeChangeStart", () => {
-      console.log("here we are");
       this.setState({
         showLoader: true,
       });
@@ -58,14 +56,12 @@ class MyApp extends App {
           ></link>
         </Head>
 
-        {console.log(this.state.showLoader)}
-
         {this.state.showLoader && <Loading />}
         {/* <Loading /> */}
 
         <ThemeProviderContext>
           {router.pathname.startsWith("/login") ||
-          router.pathname.startsWith("/signup") ? (
+            router.pathname.startsWith("/signup") ? (
             <Component {...pageProps} />
           ) : (
             <MainLayout>
