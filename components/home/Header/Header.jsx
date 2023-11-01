@@ -8,20 +8,22 @@ const Header = () => {
   return (
     <>
       <div className={cls.header}>
-        <Grid container spacing={3} alignItems="center">
-          <Grid item sm={6} md={6}>
-          </Grid>
-          <Grid item sm={6} md={6}>
-            <div className={cls.textSide}>
-              <h1>تعلم في الجدول الزمني الخاص بك</h1>
-              <p>دراسة أي موضوع، في أي وقت. اكتشف آلاف الدورات التدريبية بأقل سعر على الإطلاق!</p>
-              <div className={cls.input}>
-                <button><i className="fa-solid fa-magnifying-glass"></i></button>
-                <input type="text" placeholder="ماذا تريد أن تدرس!؟" />
+        <Container maxWidth="xxl">
+          <Grid container spacing={3} alignItems="center">
+            <Grid item sm={6} md={6}>
+              <div className={cls.textSide}>
+                <h1>تعلم في الجدول الزمني الخاص بك</h1>
+                <p>دراسة أي موضوع، في أي وقت. اكتشف آلاف الدورات التدريبية بأقل سعر على الإطلاق!</p>
+                <div className={cls.input}>
+                  <button><i className="fa-solid fa-magnifying-glass"></i></button>
+                  <input type="text" placeholder="ماذا تريد أن تدرس!؟" />
+                </div>
               </div>
-            </div>
+            </Grid>
+            <Grid item sm={6} md={6}>
+            </Grid>
           </Grid>
-        </Grid>
+        </Container>
       </div>
       <div className={cls.bottom}>
         <Grid container justifyContent="center">

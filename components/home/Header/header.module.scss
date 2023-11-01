@@ -2,7 +2,7 @@
 
 .header {
   height: 570px;
-  background-image: url('../../../public/assets/imgs/home/banner.jpg');
+  background-image: url('../../../public/assets/imgs/home/banner2.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -25,8 +25,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 70%;
-    margin: 10% auto 0;
+    width: 100%;
+    margin: 27% auto 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,11 +59,11 @@
     .input {
       background-color: #fff;
       display: flex;
-      border-radius: 5px;
-      margin-top: 20px;
+      border-radius: 20px 5px 20px 5px;
+      margin-top: 30px;
       overflow: hidden;
       input {
-        width: clamp(200px, 30vw, 400px);
+        width: clamp(200px, 30vw, 300px);
         border: none;
         padding: 15px 0px;
         outline: none;
