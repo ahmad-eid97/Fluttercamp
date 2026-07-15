@@ -1,0 +1,39 @@
+@use "@/styles/extends" as *;
+
+.quizTab {
+  background-color: #fff;
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+
+  .loadingData {
+    @extend %tabsTitle;
+    justify-content: start;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  h4 {
+    @extend %tabsTitle;
+  }
+
+  & > button {
+    @extend %panelFocusBtn;
+    padding: 7px 20px;
+    margin-top: 10px;
+  }
+
+  .emptyData {
+    @extend %emptyData;
+    margin-top: 20px;
+  }
+
+  .actions {
+    margin-top: 20px;
+    @extend %formActions;
+  }
+}

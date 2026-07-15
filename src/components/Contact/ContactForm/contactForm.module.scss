@@ -1,0 +1,105 @@
+@use "@/styles/mixins" as *;
+
+.form {
+  height: 100%;
+  padding: 36px 32px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+
+  @include xs {
+    padding: 26px 20px;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    @include sm {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  .field {
+    margin-bottom: 16px;
+
+    label {
+      display: block;
+      margin: 0 0 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-color);
+
+      @include xs {
+        font-size: 0.85rem;
+      }
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px 16px;
+      font-size: 0.97rem;
+      color: var(--text-color);
+      background: #fff;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      outline: none;
+      transition: border-color var(--dur-base) var(--ease-out),
+        box-shadow var(--dur-base) var(--ease-out);
+
+      &::placeholder { color: var(--muted-text-color); }
+
+      &:focus {
+        border-color: var(--main-color);
+        box-shadow: var(--ring);
+      }
+
+      @include xs {
+        padding: 11px 14px;
+      }
+    }
+
+    textarea {
+      height: 150px;
+      resize: none;
+    }
+  }
+
+  .btn {
+    margin-top: 6px;
+
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 32px;
+      font-weight: 700;
+      font-size: 0.97rem;
+      color: #fff;
+      background: var(--main-color);
+      border: 0;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: background var(--dur-base) var(--ease-out),
+        box-shadow var(--dur-base) var(--ease-out),
+        transform var(--dur-base) var(--ease-out);
+
+      &:hover {
+        background: var(--main-color-dark);
+        box-shadow: var(--shadow-brand);
+        transform: translateY(-2px);
+      }
+
+      @include xs {
+        width: 100%;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

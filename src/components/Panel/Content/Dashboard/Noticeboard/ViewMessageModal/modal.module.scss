@@ -1,0 +1,78 @@
+@use "@/styles/extends" as *;
+@use "@/styles/mixins" as *;
+
+.modal {
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      @extend %tabsTitle;
+      width: 100%;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background-color: var(--bg-alt-color);
+      padding: 5px;
+      border-radius: var(--radius-md);
+    }
+  }
+
+  .content {
+    margin-top: 20px;
+    padding: 5px;
+
+    .topInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+
+      p {
+        font-weight: bold;
+        margin: 0;
+        font-size: 20px;
+        margin-top: 5px;
+        color: var(--text-color);
+        text-align: center !important;
+        width: 100%;
+
+        span {
+          text-align: center !important;
+          display: block;
+          font-weight: normal;
+          margin-top: 5px;
+          font-size: 14px;
+
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .bottomInfo {
+      p {
+        margin: 0;
+        text-align: center !important;
+
+        svg {
+          top: 2px;
+          margin-inline-end: 4px;
+        }
+      }
+    }
+  }
+  .actions {
+    margin-top: 15px;
+    @extend %smallFormActions;
+  }
+}

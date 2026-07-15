@@ -1,0 +1,100 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.paymentGateway {
+  margin-top: 20px;
+
+  h4 {
+    @extend %sectionTitle;
+    margin-bottom: 20px;
+  }
+
+  .gateways {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+
+    .gateway {
+      grid-column: span 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      background-color: var(--bg-alt-color);
+      padding: 50px 20px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+
+      svg {
+        width: 50px;
+        height: 50px;
+        color: var(--main-color);
+      }
+
+      p {
+        font-size: 18px;
+        color: var(--text-color);
+        span {
+          font-weight: 700;
+          font-size: 20px;
+        }
+      }
+
+      &:hover {
+        background-color: rgba(var(--main-color-rgb), 0.08);
+      }
+
+      &.active {
+        background-color: rgba(var(--main-color-rgb), 0.1);
+        border: 1px solid var(--main-color);
+      }
+
+      @include lg {
+        grid-column: span 4;
+      }
+
+      @include md {
+        grid-column: span 6;
+      }
+
+      @include xs {
+        grid-column: span 12;
+      }
+    }
+  }
+
+  .form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-lg);
+    .fields {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 15px;
+
+      .field {
+        grid-column: span 6;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        label {
+          color: var(--text-color);
+          font-weight: 500;
+        }
+        @include sm {
+          grid-column: span 12;
+        }
+      }
+    }
+    & > button {
+      @extend %panelFocusBtn;
+      grid-column: span 2;
+      margin-top: 20px;
+    }
+  }
+}

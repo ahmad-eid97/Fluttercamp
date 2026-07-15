@@ -1,0 +1,105 @@
+@use "@/styles/mixins" as *;
+
+.cart_coupon {
+  padding: 28px;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  flex: 1;
+  min-width: 280px;
+
+  .head {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 22px;
+
+    .iconTile {
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-md);
+      background: rgba(var(--main-color-rgb), 0.1);
+      color: var(--main-color);
+
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    h4 {
+      margin: 0 0 4px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--main-color-dark);
+    }
+
+    p {
+      margin: 0;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--light-text-color);
+    }
+  }
+
+  .field {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-color);
+
+      svg {
+        top: 3px;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 46px;
+      padding-inline: 28px;
+      border: none;
+      border-radius: var(--radius-md);
+      background: var(--gradient-brand);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+
+      svg {
+        width: 19px;
+        height: 19px;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-brand);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}

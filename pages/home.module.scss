@@ -1,9 +1,0 @@
-@import '../styles/mixins.scss';
-
-.home {
-  h1 {
-    @include xs {
-      color: red;
-    }
-  }
-}

@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FlutterCamp 🎯
 
-## Getting Started
+**FlutterCamp** is a modern, full-featured learning platform for the **Flutter framework** — project-based courses that take learners from their first widget to a published, cross-platform app.
 
-First, run the development server:
+> Redesigned, modernized, and engineered by **Hassan Ali**.
+
+---
+
+## ✨ Highlights
+
+- **Modern, professional UI** — a complete redesign with a cohesive design system, on-brand palette (FlutterCamp blue `#1671b2` + orange `#ff7300`), fluid typography, layered shadows, and tasteful motion.
+- **Fully self-contained** — ships with an advanced **in-app mock backend**. No real API is contacted; all data is generated as a realistic, internally-consistent, Flutter-themed dataset (courses, instructors, tracks, blogs, reviews, dashboards).
+- **Bilingual & RTL** — full Arabic (RTL) and English (LTR) support.
+- **Preset demo accounts** — sign in instantly:
+  - **Student** — `student@fluttercamp.dev` / `password`
+  - **Instructor** — `instructor@fluttercamp.dev` / `password`
+
+## 🛠️ Tech Stack
+
+- **Next.js 16** (App Router, Turbopack) · **React 19** · **TypeScript 5**
+- **MUI 9** · **Tailwind CSS 3** · **Sass** (CSS Modules)
+- **Redux Toolkit** · **Swiper** · **ApexCharts / Chart.js** · **Iconify**
+- **@faker-js/faker** + a custom axios mock adapter for the demo backend
+
+## 🚀 Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm install --legacy-peer-deps
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm run build    # production build
+npm run start    # serve production build on :4025
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+The app runs entirely on mock data (`NEXT_PUBLIC_USE_MOCKS=true`). The mock layer lives in [`src/mocks/`](src/mocks/) — an axios adapter (`adapter.ts`) routes every request (`router.ts`) to domain handlers (`handlers/`) backed by a seeded, internally-consistent dataset (`seed/`).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 📂 Project Structure
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- `src/app/[locale]/` — App Router pages (public site + dashboard panel), Arabic/English locales
+- `src/components/` — UI components (`ui/` design-system primitives, `Common/` chrome, feature areas, `Panel/` dashboard)
+- `src/mocks/` — the in-app mock backend
+- `src/styles/` — design tokens (`variables.scss`, `globals.css`) + Tailwind config
+- `src/api/` — typed API client modules (intercepted by the mock adapter)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 👤 Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Hassan Ali** — design & engineering.

@@ -1,0 +1,32 @@
+@use "@/styles/extends" as *;
+
+.descriptiveQuestion {
+  background-color: var(--bg-alt-color);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+
+  h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      label {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .actions {
+    @extend %smallFormActions;
+  }
+
+}

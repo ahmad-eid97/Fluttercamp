@@ -1,0 +1,74 @@
+@use "@/styles/mixins" as *;
+
+.checkout_status {
+  padding: 0;
+  margin-bottom: 80px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    max-width: 520px;
+    margin-inline: auto;
+    padding: 70px 24px 90px;
+
+    .iconTile {
+      width: 96px;
+      height: 96px;
+      border-radius: var(--radius-pill);
+      display: grid;
+      place-items: center;
+      margin-bottom: 8px;
+      background-color: rgba(var(--success-rgb, 69, 202, 128), 0.12);
+      color: var(--success);
+
+      svg {
+        width: 56px;
+        height: 56px;
+      }
+    }
+
+    h3 {
+      font-size: var(--text-h1, 1.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--main-color-dark);
+      margin: 0;
+    }
+
+    .message {
+      font-size: 16px;
+      color: var(--light-text-color);
+      margin: 0 0 8px;
+    }
+
+    .totalRow {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-color);
+      margin: 0;
+
+      span {
+        color: var(--success);
+        font-weight: 800;
+        margin-inline-start: 6px;
+      }
+    }
+  }
+
+  &.failed {
+    .content {
+      .iconTile {
+        background-color: rgba(var(--danger-rgb, 230, 57, 70), 0.12);
+        color: var(--danger);
+      }
+
+      h3 {
+        color: var(--danger);
+      }
+    }
+  }
+}

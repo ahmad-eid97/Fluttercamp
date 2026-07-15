@@ -1,0 +1,49 @@
+@use "@/styles/extends" as *;
+
+.skillsTab {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+
+  h4 {
+    @extend %sectionTitle;
+  }
+
+  .skills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    .skill {
+      background-color: rgba(var(--main-color-rgb), 0.05);
+      padding: 5px 20px;
+      border-radius: var(--radius-md);
+      color: var(--main-color);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &.choosed {
+        background-color: var(--main-color);
+        color: #fff;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 20px;
+    p {
+      color: var(--light-text-color);
+      font-size: 14px;
+    }
+  }
+
+  .actions {
+    button {
+      @extend %panelFocusBtn;
+      margin-top: 20px;
+    }
+  }
+}

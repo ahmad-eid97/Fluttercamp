@@ -1,0 +1,137 @@
+@use "@/styles/mixins" as *;
+
+.stepper {
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0px 12px 23px 0px rgba(62, 73, 84, 0.04);
+  border-radius: 5px;
+
+  .steps {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      border-top: 3px dashed var(--border-color);
+      z-index: 1;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      background-color: #fff;
+      position: relative;
+      z-index: 2;
+      padding: 0 10px;
+
+      .circle {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(var(--main-color-rgb), 0.05);
+        color: var(--panel-text-color);
+        border-radius: 8px;
+        display: grid;
+        place-content: center;
+        flex-shrink: 0;
+
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+
+        @include lg {
+          width: 40px;
+          height: 40px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        @include md {
+          width: 36px;
+          height: 36px;
+
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+
+      p {
+        font-weight: 700;
+        color: var(--panel-text-color);
+        font-size: 18px;
+        position: relative;
+        display: none;
+        width: 0;
+
+        span {
+          opacity: 0;
+          z-index: -1;
+          animation: show 0.5s ease-in-out;
+        }
+      }
+
+      &.active {
+        .circle {
+          background-color: var(--panel-text-color);
+          color: #fff;
+        }
+
+        p {
+          display: inline-block;
+          width: 100%;
+          span {
+            opacity: 1;
+            z-index: 2;
+          }
+        }
+      }
+    }
+
+    @include lg {
+      flex-wrap: wrap;
+      gap: 10px;
+      .step {
+        p {
+          display: inline-block;
+          width: 100%;
+
+          span {
+            opacity: 1;
+            z-index: 1;
+          }
+        }
+      }
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    width: 0;
+    z-index: -1;
+  }
+  100% {
+    opacity: 1;
+    width: auto;
+    z-index: 1;
+  }
+}

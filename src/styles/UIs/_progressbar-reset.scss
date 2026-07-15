@@ -1,0 +1,12 @@
+#nprogress .bar,
+#nprogress .spinner {
+  z-index: 99999999999999999 !important;
+}
+
+[role="tooltip"].MuiTooltip-popper {
+  z-index: 99999999999999999 !important;
+  & > div {
+    background-color: rgba(var(--main-color-dark-rgb), 0.8);
+    border: 1px solid var(--main-color-dark);
+  }
+}

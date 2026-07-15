@@ -1,0 +1,10 @@
+//= Re-export the placeholder partials so consumers can `@use "@/styles/extends" as *`
+@forward "@/styles/extends/containers";
+@forward "@/styles/extends/buttons";
+@forward "@/styles/extends/form";
+@forward "@/styles/extends/section-titles";
+@forward "@/styles/extends/empty";
+@forward "@/styles/extends/texts";
+@forward "@/styles/extends/steps";
+@forward "@/styles/extends/table";
+@forward "@/styles/extends/dropdowns";

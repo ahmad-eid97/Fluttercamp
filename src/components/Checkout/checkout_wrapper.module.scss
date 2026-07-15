@@ -1,0 +1,118 @@
+@use "@/styles/mixins" as *;
+
+.checkout_wrapper {
+  padding: 0;
+  margin-bottom: 80px;
+
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 28px;
+    align-items: start;
+
+    @include lg {
+      grid-template-columns: minmax(0, 1fr) 300px;
+    }
+
+    @include md {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .main {
+    min-width: 0;
+  }
+
+  .items {
+    padding: 32px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+
+    @include xs {
+      padding: 20px;
+    }
+  }
+
+  .aside {
+    position: sticky;
+    inset-block-start: 24px;
+
+    @include md {
+      position: static;
+    }
+  }
+
+  .orderCard {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+
+    .orderHead {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border-color);
+
+      .orderIcon {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-md);
+        display: grid;
+        place-items: center;
+        background-color: rgba(var(--main-color-rgb), 0.1);
+        color: var(--main-color);
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--main-color-dark);
+        margin: 0;
+      }
+    }
+
+    .orderRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--light-text-color);
+      padding: 8px 0;
+
+      .count {
+        font-weight: 700;
+        color: var(--text-color);
+      }
+
+      &.orderTotal {
+        margin-top: 8px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border-color);
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--text-color);
+
+        span:last-child {
+          font-size: 22px;
+          font-weight: 800;
+          letter-spacing: -0.02em;
+          color: var(--main-color-dark);
+        }
+      }
+    }
+  }
+}

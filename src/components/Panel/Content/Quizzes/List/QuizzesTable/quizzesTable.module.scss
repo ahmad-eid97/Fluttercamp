@@ -1,0 +1,79 @@
+@use "@/styles/extends" as *;
+
+.quizzesTable {
+  p {
+    color: var(--light-text-color);
+    font-size: 15px;
+    text-align: center;
+
+    &.date {
+      font-size: 14px;
+    }
+  }
+
+  .detailsCell {
+    p {
+      color: var(--text-color);
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0;
+    }
+    span {
+      font-size: 14px;
+      color: var(--light-text-color);
+    }
+  }
+
+  .status {
+    text-align: center !important;
+    padding: 3px 5px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+
+    &.active {
+      background-color: rgba(69, 202, 128, 0.15);
+      color: var(--success);
+      border: 1px solid rgba(69, 202, 128, 0.15);
+    }
+    &.inactive {
+      background-color: rgba(234, 84, 85, 0.15);
+      color: var(--danger);
+      border: 1px solid rgba(234, 84, 85, 0.15);
+    }
+  }
+
+  .actions {
+    padding: 0;
+
+    &.ar {
+      .iconOptions {
+        button {
+          & > div {
+            right: unset;
+            left: calc(100% + 5px);
+          }
+        }
+      }
+    }
+
+    .iconOptions {
+      button {
+        & > div {
+          top: -5px;
+          padding: 10px;
+          border: 1px solid rgba(var(--main-color-rgb), 0.2);
+          left: unset;
+          right: calc(100% + 5px);
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .noData {
+    @extend %emptyData;
+  }
+}

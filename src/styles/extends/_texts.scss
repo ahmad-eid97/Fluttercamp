@@ -1,0 +1,7 @@
+%textGradient {
+  background: var(--main-color);
+  background: linear-gradient(-45deg, var(--secondary-color) 10%, var(--main-color) 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

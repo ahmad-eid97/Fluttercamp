@@ -1,0 +1,93 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.wrapper {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  h4 {
+    @extend %sectionTitle;
+    margin-bottom: 20px;
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+  row-gap: 15px;
+
+  @include xs {
+    gap: 15px;
+    column-gap: 0px;
+  }
+
+  .field {
+    grid-column: span 6;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+    p {
+      color: var(--light-text-color);
+      font-size: 14px;
+      margin: 0;
+    }
+    @include sm {
+      grid-column: span 12;
+    }
+    @include xs {
+      grid-column: span 12;
+    }
+  }
+
+  .switch {
+    grid-column: span 6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    .content {
+      display: flex;
+      flex-direction: column;
+      max-width: 80%;
+
+      span {
+        color: var(--light-text-color);
+        font-size: 14px;
+
+        @include sm {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .empty {
+    grid-column: span 6;
+    @include sm {
+      display: none;
+    }
+  }
+
+  label {
+    font-weight: 600;
+    color: var(--text-color);
+  }
+
+  .fullField {
+    grid-column: span 12;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.actions {
+  margin-top: 20px;
+  button {
+    @extend %panelFocusBtn;
+  }
+}

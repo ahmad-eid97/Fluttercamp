@@ -1,0 +1,51 @@
+@use "@/styles/mixins" as *;
+
+.forumsStatistics {
+  margin-bottom: 20px;
+  background-color: rgba(var(--main-color-rgb), 0.05);
+  border: 1px dashed var(--main-color);
+  border-radius: 4px;
+  color: var(--main-color);
+  padding: 30px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-inline: 10px;
+
+    @include sm {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    svg {
+      width: 64px;
+      height: 64px;
+      padding: 15px;
+      border-radius: 4px;
+      background-color: rgba(var(--bg-main-rgb), 0.5);
+      border: 1px solid rgba(var(--bg-main-rgb), 0.9);
+    }
+
+    h3 {
+      margin: 0;
+      @include sm {
+        font-size: 20px;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      @include sm {
+        font-size: 15px;
+      }
+    }
+  }
+}

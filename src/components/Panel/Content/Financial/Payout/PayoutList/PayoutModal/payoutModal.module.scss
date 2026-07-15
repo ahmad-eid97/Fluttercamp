@@ -1,0 +1,12 @@
+@use "@/styles/extends" as *;
+
+.payoutModal {
+  p {
+    color: var(--light-text-color);
+  }
+
+  .actions {
+    margin-top: 20px;
+    @extend %smallFormActions;
+  }
+}

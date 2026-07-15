@@ -1,0 +1,125 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.box {
+  position: relative;
+  margin-top: 0;
+  padding: 32px 36px;
+  border-radius: var(--radius-xl);
+  background: var(--gradient-brand);
+  box-shadow: var(--shadow-brand);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // decorative glow
+  &::before {
+    content: "";
+    position: absolute;
+    inset-block-start: -60%;
+    inset-inline-end: -5%;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 60%);
+    pointer-events: none;
+  }
+
+  @include md {
+    margin-top: 0;
+    padding: 24px;
+  }
+
+  .left_side {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+
+    @include md {
+      width: 100%;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      color: #fff;
+      font-size: var(--text-h1, 32px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+
+      @include md {
+        font-size: 28px;
+      }
+
+      @include sm {
+        font-size: 23px;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        border-radius: var(--radius-pill);
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--main-color-dark);
+        background-color: #fff;
+        border: 1px solid transparent;
+        transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out),
+          background-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-md);
+        }
+
+        // second button as outline-on-glass
+        &:last-child {
+          background-color: rgba(255, 255, 255, 0.14);
+          color: #fff;
+          border-color: rgba(255, 255, 255, 0.45);
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.24);
+          }
+        }
+      }
+    }
+  }
+
+  .right_side {
+    position: relative;
+    z-index: 2;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      height: 150px;
+      width: auto;
+      filter: drop-shadow(0 12px 24px rgba(7, 36, 59, 0.25));
+    }
+  }
+
+  &.ar {
+    .right_side img {
+      transform: scaleX(-1);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Quantum Assignment",
+    "course": "Quantum Physics from Beginner to Expert (Quantum mechanics)",
+    "minGrade": 50,
+    "average": 82.5,
+    "submissions": 1,
+    "pending": 9,
+    "passed": 1,
+    "failed": 3,
+    "status": "active"
+  },
+  {
+    "title": "Second Assignment",
+    "course": "Quantum Physics from Beginner to Expert (Quantum mechanics)",
+    "minGrade": 50,
+    "average": 74,
+    "submissions": 1,
+    "pending": 2,
+    "passed": 4,
+    "failed": 2,
+    "status": "idle"
+  },
+  {
+    "title": "Final Chapter Assignment",
+    "course": "Quantum Physics from Beginner to Expert (Quantum mechanics)",
+    "minGrade": 55,
+    "average": 95,
+    "submissions": 1,
+    "pending": 3,
+    "passed": 2,
+    "failed": 0,
+    "status": "active"
+  }
+]

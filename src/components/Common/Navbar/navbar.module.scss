@@ -1,0 +1,360 @@
+@use "@/styles/mixins" as *;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999999;
+  background-color: transparent;
+
+  &.inPanel {
+    position: static;
+    height: 100%;
+    z-index: 1;
+  }
+
+  // ---------- Docked top bar (full-width, no gap above content) ----------
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-inline: clamp(18px, 4vw, 60px);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(280px) saturate(100%);
+    -webkit-backdrop-filter: blur(280px) saturate(100%);
+    border-bottom: 1px solid rgba(var(--main-color-rgb), 0.08);
+    transition:
+      box-shadow 0.3s var(--ease-out),
+      background-color 0.3s ease,
+      height 0.3s ease;
+
+    &.scrolled:not(.docked) {
+      height: 68px;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 8px 30px rgba(16, 32, 55, 0.08);
+      border-bottom-color: transparent;
+    }
+
+    // panel variant — fills the dashboard's own 90px topbar
+    &.docked {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: 100%;
+      height: 100%;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      padding-inline: clamp(16px, 3vw, 38px);
+    }
+
+    @include md {
+      height: 64px;
+      padding-inline: 16px;
+    }
+  }
+
+  // ---------- Brand ----------
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    .logoMark {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, var(--main-color), var(--main-color-dark));
+      color: #fff;
+      font-size: 1.35rem;
+      box-shadow: 0 6px 14px -4px rgba(var(--main-color-rgb), 0.5);
+      transition: transform var(--dur-base) var(--ease-out);
+
+      :global(svg) {
+        color: #fff;
+      }
+    }
+
+    &:hover .logoMark {
+      transform: rotate(-8deg) scale(1.06);
+    }
+
+    .logoText {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--main-color-dark);
+
+      b {
+        color: var(--main-color);
+        font-weight: 900;
+      }
+
+      @include xs {
+        font-size: 1.05rem;
+      }
+    }
+  }
+
+  // ---------- Center links: segmented control capsule ----------
+  .links {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      padding: 5px;
+      background: rgba(var(--main-color-rgb), 0.05);
+      border: 1px solid rgba(var(--main-color-rgb), 0.07);
+      border-radius: var(--radius-pill, 999px);
+
+      li {
+        position: relative;
+
+        a {
+          display: block;
+          padding: 8px 15px;
+          border-radius: var(--radius-pill, 999px);
+          color: var(--text-color);
+          font-weight: 600;
+          font-size: 0.9rem;
+          white-space: nowrap;
+          transition:
+            color 0.2s ease,
+            background-color 0.2s ease;
+        }
+
+        p {
+          display: none;
+        }
+
+        &:hover a {
+          color: var(--main-color);
+        }
+
+        &.active a {
+          color: var(--main-color);
+          font-weight: 700;
+          background: #fff;
+          box-shadow: 0 2px 8px rgba(16, 32, 55, 0.1);
+        }
+      }
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  // ---------- Right-side actions ----------
+  .domain {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    a {
+      cursor: pointer;
+      color: inherit;
+      display: inline-flex;
+    }
+
+    // search field (opens overlay)
+    .searchField {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      height: 42px;
+      min-width: 188px;
+      padding: 0 8px 0 14px;
+      padding-inline: 14px 8px;
+      border-radius: var(--radius-pill, 999px);
+      border: 1px solid var(--border-color, #e6ebf1);
+      background: rgba(var(--main-color-rgb), 0.04);
+      color: var(--light-text-color, #8a93a4);
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+      svg {
+        font-size: 1.25rem;
+        color: var(--main-color);
+        flex-shrink: 0;
+      }
+      span {
+        flex: 1;
+        text-align: start;
+      }
+
+      kbd {
+        font-size: 0.66rem;
+        font-weight: 700;
+        padding: 3px 6px;
+        border-radius: 6px;
+        background: #fff;
+        border: 1px solid var(--border-color, #e6ebf1);
+        color: var(--light-text-color, #8a93a4);
+        direction: ltr;
+      }
+
+      &:hover {
+        background: #fff;
+        border-color: rgba(var(--main-color-rgb), 0.4);
+        box-shadow: var(--shadow-sm);
+      }
+
+      @include lg {
+        min-width: 0;
+        width: 42px;
+        padding: 0;
+        justify-content: center;
+        span,
+        kbd {
+          display: none;
+        }
+      }
+    }
+
+    // grouped utility cluster (language + cart)
+    .cluster {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      padding: 4px;
+      border-radius: var(--radius-pill, 999px);
+      background: rgba(var(--main-color-rgb), 0.05);
+      border: 1px solid rgba(var(--main-color-rgb), 0.07);
+    }
+
+    .clusterDivider {
+      width: 1px;
+      height: 20px;
+      margin-inline: 2px;
+      background: rgba(var(--main-color-rgb), 0.15);
+    }
+
+    .iconBtn {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      color: var(--main-color-dark);
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 1.35rem;
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+
+      &:hover {
+        background-color: rgba(var(--main-color-rgb), 0.12);
+        color: var(--main-color);
+      }
+    }
+
+    .cartWrap {
+      position: relative;
+
+      .cartCount {
+        position: absolute;
+        top: -2px;
+        inset-inline-end: -2px;
+        min-width: 18px;
+        height: 18px;
+        padding: 0 5px;
+        border-radius: var(--radius-pill);
+        background: var(--secondary-color);
+        color: #fff;
+        font-size: 10.5px;
+        font-weight: 800;
+        display: grid;
+        place-items: center;
+        border: 2px solid #fff;
+        direction: ltr;
+      }
+    }
+
+    .loginBtn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 11px 18px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, var(--main-color), var(--main-color-dark));
+      color: #fff;
+      box-shadow: 0 8px 18px -5px rgba(var(--main-color-rgb), 0.55);
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+
+      svg {
+        font-size: 1.16rem;
+      }
+
+      .loginArrow {
+        font-size: 1rem;
+        transition: transform 0.2s ease;
+      }
+
+      &:hover {
+        filter: brightness(1.08);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px -6px rgba(var(--main-color-rgb), 0.65);
+
+        .loginArrow {
+          transform: translateX(-3px);
+        }
+      }
+
+      span {
+        @include sm {
+          display: none;
+        }
+      }
+    }
+
+    .mobIcon {
+      cursor: pointer;
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 13px;
+      background-color: rgba(var(--main-color-rgb), 0.08);
+      place-items: center;
+      color: var(--main-color);
+      font-size: 1.4rem;
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+
+      &:hover {
+        background-color: var(--main-color);
+        color: #fff;
+      }
+
+      @include lg {
+        display: grid;
+      }
+    }
+  }
+}

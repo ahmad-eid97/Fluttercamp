@@ -1,0 +1,60 @@
+.pricingPlans {
+  h4 {
+    margin-bottom: 15px;
+  }
+  .plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 15px;
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: var(--main-color);
+      transform: rotate(45deg);
+      top: -15px;
+      left: -15px;
+    }
+    h5 {
+      color: var(--main-color);
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      svg {
+        width: 35px;
+        height: 35px;
+        background-color: var(--bg-alt-color);
+        border-radius: var(--radius-md);
+        padding: 6px;
+        color: var(--icon-color);
+        cursor: pointer;
+        &:hover {
+          background-color: var(--main-color);
+          color: #fff;
+        }
+        &:last-of-type {
+          &:hover {
+            background-color: var(--danger);
+            color: #fff;
+          }
+        }
+      }
+    }
+    &.ar {
+      &:after {
+        left: unset;
+        right: -15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@use "@/styles/mixins" as *;
+
+%container {
+  max-width: calc($xxl-size - 100px);
+  margin: 0 auto;
+
+  @include xxl {
+    max-width: calc($xl-size - 60px);
+  }
+
+  @include xl {
+    max-width: calc($lg-size - 60px);
+  }
+
+  @include lg {
+    max-width: calc($md-size - 60px);
+  }
+
+  @include md {
+    max-width: calc($sm-size - 40px);
+  }
+
+  @include sm {
+    max-width: calc(100% - 40px);
+  }
+
+  @include xs {
+    max-width: calc(100% - 10px);
+  }
+}
+
+%container-xl {
+  max-width: calc($xxl-size - 100px);
+  margin: 0 auto;
+
+  @include xxl {
+    max-width: calc($xl-size - 60px);
+  }
+
+  @include xl {
+    max-width: calc(100% - 40px);
+  }
+
+  @include xs {
+    max-width: calc(100% - 10px);
+  }
+}
+
+%container-lg {
+  max-width: calc($xxl-size - 100px);
+  margin: 0 auto;
+
+  @include xxl {
+    max-width: calc($xl-size - 60px);
+  }
+
+  @include xl {
+    max-width: calc($lg-size - 60px);
+  }
+
+  @include lg {
+    max-width: calc(100% - 40px);
+  }
+
+  @include xs {
+    max-width: calc(100% - 10px);
+  }
+}
+
+%container-md {
+  max-width: calc($xxl-size - 100px);
+  margin: 0 auto;
+
+  @include xxl {
+    max-width: calc($xl-size - 60px);
+  }
+
+  @include xl {
+    max-width: calc($lg-size - 60px);
+  }
+
+  @include lg {
+    max-width: calc($sm-size - 60px);
+  }
+
+  @include md {
+    max-width: calc(100% - 40px);
+  }
+
+  @include xs {
+    max-width: calc(100% - 10px);
+  }
+}

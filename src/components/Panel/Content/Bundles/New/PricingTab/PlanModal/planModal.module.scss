@@ -1,0 +1,61 @@
+@use "@/styles/extends" as *;
+@use "@/styles/mixins" as *;
+
+.planModal {
+  h3 {
+    margin-bottom: 20px;
+  }
+  form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px !important;
+
+    .field,
+    .switch {
+      grid-column: span 12;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+      // @include md {
+      //   grid-column: span 6;
+      // }
+      // @include xs {
+      //   grid-column: span 12;
+      // }
+    }
+    .switch {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      .content {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+        span {
+          color: var(--light-text-color);
+        }
+      }
+    }
+    .empty {
+      grid-column: span 6;
+      @include sm {
+        display: none;
+      }
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--text-color);
+
+      svg {
+        top: 0px;
+      }
+    }
+  }
+  .actions {
+    justify-content: flex-end;
+    @extend %smallFormActions;
+    margin-top: 00px;
+  }
+}

@@ -1,0 +1,191 @@
+@use "@/styles/mixins" as *;
+
+.testimonialsBg {
+  position: relative;
+  width: 100%;
+  padding-block: 84px;
+  overflow: hidden;
+
+  @include sm {
+    padding-block: 56px;
+  }
+
+  .testimonials {
+    position: relative;
+    z-index: 1;
+  }
+
+  .bgGrid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(var(--main-color-rgb), 0.08) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+    mask-image: radial-gradient(70% 70% at 50% 50%, #000 10%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .glowA,
+  .glowB {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .glowA {
+    width: 420px;
+    height: 420px;
+    top: -120px;
+    inset-inline-start: -80px;
+    background: rgba(var(--main-color-rgb), 0.16);
+  }
+  .glowB {
+    width: 380px;
+    height: 380px;
+    bottom: -120px;
+    inset-inline-end: -80px;
+    background: rgba(242, 178, 78, 0.16);
+  }
+
+  .bgQuote {
+    position: absolute;
+    top: 10px;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    font-size: 16rem;
+    color: rgba(var(--main-color-rgb), 0.04);
+    pointer-events: none;
+    z-index: 0;
+
+    @include sm { display: none; }
+  }
+
+  .carousel {
+    position: relative;
+    z-index: 1;
+    padding: 8px 4px 16px !important;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: 56px 64px 44px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include sm {
+      padding: 48px 24px 32px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient-brand);
+    }
+
+    .quoteIcon {
+      display: grid;
+      place-items: center;
+      width: 68px;
+      height: 68px;
+      border-radius: var(--radius-lg);
+      font-size: 2.1rem;
+      color: #fff;
+      background: var(--gradient-brand);
+      box-shadow: var(--shadow-brand);
+      margin-bottom: 22px;
+    }
+
+    .stars {
+      display: inline-flex;
+      gap: 4px;
+      margin-bottom: 20px;
+      font-size: 1.25rem;
+      color: var(--dark-alt-color);
+    }
+
+    .comment {
+      margin: 0 0 30px;
+      font-size: var(--text-lead);
+      line-height: 1.85;
+      color: var(--text-color);
+      font-weight: 500;
+      max-width: 860px;
+
+      :global(p) {
+        margin: 0;
+      }
+    }
+
+    .author {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: auto;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      width: 100%;
+      justify-content: center;
+
+      .avatar {
+        position: relative;
+        flex-shrink: 0;
+        width: 58px;
+        height: 58px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px solid #fff;
+          box-shadow: var(--shadow-sm);
+          background: var(--bg-alt-color);
+        }
+
+        .verified {
+          position: absolute;
+          bottom: -2px;
+          inset-inline-end: -2px;
+          display: grid;
+          place-items: center;
+          font-size: 1.1rem;
+          color: var(--main-color);
+          background: #fff;
+          border-radius: 50%;
+          box-shadow: var(--shadow-xs);
+        }
+      }
+
+      .authorMeta {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-align: start;
+
+        strong {
+          font-size: 1.05rem;
+          font-weight: 800;
+          color: var(--main-color-dark);
+        }
+
+        small {
+          font-size: 0.88rem;
+          color: var(--light-text-color);
+        }
+      }
+    }
+  }
+}

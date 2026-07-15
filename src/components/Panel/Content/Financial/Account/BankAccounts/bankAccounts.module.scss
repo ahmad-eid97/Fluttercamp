@@ -1,0 +1,102 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.bankAccounts {
+  margin-top: 20px;
+  h4 {
+    @extend %sectionTitle;
+    margin-bottom: 20px;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    .item {
+      grid-column: span 3;
+      min-height: 200px;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      position: relative;
+      background-color: var(--bg-alt-color);
+      border: 1px solid var(--border-color);
+      border-top: none;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      &:hover {
+        background-color: rgba(var(--main-color-rgb), 0.08);
+      }
+      .badge {
+        background-color: #fff;
+        position: relative;
+        z-index: 2;
+        top: -22px;
+        color: var(--main-color);
+        width: 120px;
+        height: 100px;
+        display: grid;
+        place-content: center;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        box-shadow: 0 15px 0 #d9d9d9;
+        &:after,
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 50px;
+          height: 50px;
+          background-color: transparent;
+        }
+        &:before {
+          left: -50px;
+          border-top-right-radius: 50px;
+          box-shadow: 15px -15px 0 15px #fff;
+        }
+        &:after {
+          right: -50px;
+          border-top-left-radius: 50px;
+          box-shadow: -15px -15px 0 15px #fff;
+        }
+        svg {
+          width: 60px;
+          height: 60px;
+          opacity: 0.5;
+        }
+      }
+      .content {
+        ul {
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 5px;
+            color: var(--text-color);
+            span {
+              color: var(--light-text-color);
+            }
+            @include xs {
+              font-size: 16px;
+              gap: 15px;
+              span {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      @include lg {
+        grid-column: span 4;
+      }
+      @include md {
+        grid-column: span 6;
+      }
+      @include xs {
+        grid-column: span 12;
+      }
+    }
+  }
+}

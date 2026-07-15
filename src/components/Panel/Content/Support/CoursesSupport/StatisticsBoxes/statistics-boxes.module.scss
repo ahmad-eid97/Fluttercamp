@@ -1,0 +1,23 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .item {
+    width: calc(33.3% - 8px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @include lg {
+      width: calc(50% - 5px);
+    }
+
+    @include sm {
+      width: 100%;
+    }
+  }
+}

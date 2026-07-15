@@ -1,0 +1,106 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.section_title {
+  @extend %tabsTitle;
+  margin-bottom: 20px;
+}
+
+.addNewTopic {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+    row-gap: 15px;
+
+    @include xs {
+      gap: 15px;
+      column-gap: 0px;
+    }
+
+    .field {
+      grid-column: span 6;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        svg {
+          width: 25px;
+          height: 25px;
+          background-color: var(--main-color);
+          color: #fff;
+          border-radius: var(--radius-md);
+          margin: 0;
+          padding: 3px;
+          cursor: pointer;
+        }
+      }
+      .attachment {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .input {
+          flex: 1;
+        }
+        .head {
+          margin: 0;
+          svg {
+            padding: 4px;
+          }
+        }
+        label {
+          font-size: 18px;
+        }
+        button {
+          padding: 4px 15px;
+        }
+      }
+      @include md {
+        grid-column: span 6;
+      }
+      @include sm {
+        grid-column: span 12;
+      }
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--text-color);
+
+      svg {
+        top: 0px;
+      }
+    }
+
+    .fullField {
+      grid-column: span 12;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  .actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    grid-column: span 12;
+
+    button {
+      @extend %panelFocusBtn;
+      margin: 0px 0 0;
+    }
+  }
+}

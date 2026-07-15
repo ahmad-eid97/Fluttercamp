@@ -1,0 +1,614 @@
+@use "@/styles/mixins" as *;
+
+.learning {
+  padding: 0 0 50px;
+
+  h2 {
+    color: #2f2d51;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32.4px;
+    margin-bottom: 32px;
+    margin-top: 0px;
+    text-align: start !important;
+  }
+
+  .container {
+    margin-inline: auto;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #eee;
+
+    @include lg {
+      flex-wrap: wrap;
+    }
+
+    .content {
+      flex: 1;
+
+      @include lg {
+        order: 2;
+      }
+    }
+
+    .accordionSideContainer {
+      position: sticky;
+      top: 5px;
+      height: 100%;
+
+      .accordionSide {
+        padding: 20px;
+        height: 100%;
+        width: 25vw;
+        border-radius: 0 4px 4px 0;
+        background-color: rgba(var(--main-color-rgb), 0.3);
+        position: relative;
+        transition: all 0.3s ease;
+
+        @include xxl {
+          width: 30vw;
+        }
+
+        @include xl {
+          width: 30vw;
+        }
+
+        @include lg {
+          width: 100vw;
+          order: 1;
+          position: static;
+        }
+
+        &.hide {
+          width: 0;
+          max-height: 100vh;
+          overflow: hidden;
+
+          @include lg {
+            position: relative;
+            left: unset;
+          }
+
+          .hzCollapse {
+            position: absolute;
+            left: 0%;
+            top: 20px;
+            transform: translateX(-50%);
+            z-index: 111111111;
+          }
+        }
+
+        span.disabled {
+          font-size: 14px !important;
+          cursor: not-allowed;
+        }
+
+        span.current {
+          font-weight: bold !important;
+          font-size: 15px !important;
+          cursor: auto;
+        }
+
+        @include lg {
+          height: 0;
+          padding-top: 50px;
+          padding-bottom: 0;
+          overflow: hidden;
+
+          &.show {
+            height: 100%;
+            padding-bottom: 30px;
+          }
+        }
+
+        .hzCollapse {
+          top: -10px;
+          right: 3px;
+          margin: 0;
+          cursor: pointer;
+          width: 18px;
+          height: 18px;
+          display: block;
+
+          @include lg {
+            display: none;
+          }
+        }
+
+        .collapse {
+          top: -35px;
+          right: 3px;
+          margin: 0;
+          cursor: pointer;
+          width: 18px;
+          height: 18px;
+          display: none;
+
+          @include lg {
+            display: block;
+          }
+        }
+
+        .collapse_text {
+          position: absolute;
+          left: 30px;
+          font-weight: bold;
+          top: 15px;
+          margin: 0;
+          display: none;
+          color: var(--main-color);
+
+          @include lg {
+            display: block;
+          }
+        }
+
+        .inputGroup {
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          -webkit-box-align: stretch;
+          align-items: stretch;
+          width: 100%;
+          margin-bottom: 15px;
+
+          input {
+            position: relative;
+            -webkit-box-flex: 1;
+            flex: 1 1 auto;
+            width: 1%;
+            min-width: 0;
+            border-radius: 5px 0 0 5px;
+            min-height: 40px;
+            padding: 5px 16px;
+            box-shadow: none;
+            display: block;
+            font-weight: 400;
+            line-height: 1.64;
+            color: #77838f;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #e7e7ec;
+            appearance: none;
+            transition: all 0.3s ease;
+            outline-offset: -2px;
+            z-index: 3;
+
+            &:focus {
+              border-color: var(--main-color);
+              outline: none;
+
+              + .inputGroupBtn {
+                button {
+                  border-color: var(--main-color);
+                  background-color: var(--main-color);
+                  color: #fff;
+                }
+              }
+            }
+          }
+
+          .inputGroupBtn {
+            margin-left: -1px;
+            border-radius: 0 5px 5px 0;
+            display: flex;
+
+            button {
+              transition: all 0.3s ease;
+              cursor: pointer;
+              margin-left: -1px;
+              z-index: 2;
+              position: relative;
+              border-radius: 0 15px 15px 0;
+              padding: 9px 16px;
+              display: inline-block;
+              font-weight: 500;
+              line-height: 1.64;
+              text-align: center !important;
+              transition:
+                color 0.15s ease-in-out,
+                background-color 0.15s ease-in-out,
+                border-color 0.15s ease-in-out,
+                box-shadow 0.15s ease-in-out;
+              background-color: #fff;
+              border: 1px solid transparent;
+              border-color: #e7e7ec;
+            }
+          }
+        }
+
+        .accordion {
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+          border: 1px solid #e7e7ec !important;
+          border-radius: 0 !important;
+          box-shadow: none;
+          overflow: hidden;
+
+          &:first-of-type {
+            border-radius: 4px 4px 0 0 !important;
+          }
+
+          &:last-of-type {
+            border-radius: 0 0 4px 4px !important;
+          }
+
+          &::before {
+            content: none;
+          }
+
+          svg {
+            top: 0 !important;
+            width: 16px;
+            height: 16px;
+
+            @include sm {
+              width: 15px;
+              height: 15px;
+            }
+          }
+
+          :global(.Mui-expanded) {
+            background-color: #f2f2f2 !important;
+          }
+
+          :global(.MuiAccordionSummary-root) {
+            padding: 5px 24px;
+            min-height: 50px;
+            background-color: #f1f1f152;
+
+            :global(.MuiAccordionSummary-content) {
+              margin: 0;
+              color: var(--text-color);
+
+              p {
+                font-size: 14px;
+
+                @include sm {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+
+          :global(.MuiCollapse-root) {
+            padding: 0;
+
+            :global(.MuiAccordionDetails-root) {
+              padding: 0;
+
+              .item {
+                min-height: 55px;
+                display: flex;
+                padding-inline-start: 30px;
+                padding-inline-end: 20px;
+                align-items: center;
+                border-top: 1px solid #e7e7ec;
+                position: relative;
+
+                &.done {
+                  background-color: rgba(var(--main-color-rgb), 0.05);
+                  border: 1px solid rgba(var(--main-color-rgb), 0.1);
+
+                  .text {
+                    .title {
+                      input {
+                        border-color: rgba(var(--main-color-rgb), 0.2);
+                      }
+                    }
+                  }
+                }
+
+                &.active {
+                  background-color: rgba(var(--main-color-rgb), 0.2);
+                  border: 1px solid rgba(var(--main-color-rgb), 0.3);
+
+                  .text {
+                    .icon {
+                      color: rgba(var(--main-color-rgb), 0.7);
+                    }
+
+                    .title {
+                      color: var(--main-color);
+                      input {
+                        border-color: rgba(var(--main-color-rgb), 0.2);
+                      }
+                    }
+                  }
+
+                  .meta {
+                    .icon {
+                      color: rgba(var(--main-color-rgb), 0.7);
+                    }
+                  }
+                }
+
+                .text {
+                  display: flex;
+                  align-items: center;
+                  margin-inline-end: auto;
+                  margin-bottom: 0;
+
+                  .icon {
+                    color: var(--text-color);
+                    margin-inline-end: 10px;
+                    padding-inline-start: 15px;
+
+                    svg {
+                      width: 20px;
+                      height: 20px;
+                    }
+                  }
+
+                  .title {
+                    color: var(--text-color);
+                    font-size: 15px;
+                    line-height: 18px;
+                    margin-inline-end: 16px;
+                    font-weight: 600;
+
+                    span {
+                      display: block;
+                      font-size: 12px;
+                      font-weight: normal;
+                    }
+
+                    input {
+                      position: absolute;
+                      top: 45%;
+                      left: 10px;
+                      transform: translateY(-50%);
+                      height: 25px;
+                      width: 25px;
+                      border-radius: 5px;
+                      border: 1px solid var(--main-color);
+
+                      &:disabled {
+                        cursor: auto;
+                        background-color: rgba(var(--main-color-rgb), 0.05);
+                        border: 1px solid rgba(var(--main-color-rgb), 0.1);
+                      }
+                    }
+                  }
+                }
+
+                .meta {
+                  align-items: center;
+                  display: flex;
+
+                  .badge {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 14px;
+                    margin-right: 24px;
+                    padding-bottom: 8px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    padding-top: 8px;
+                    text-align: center !important;
+                    vertical-align: baseline;
+                    white-space: nowrap;
+                    border-radius: 0.25rem;
+                    display: inline-block;
+
+                    &.question {
+                      background-color: #ffe9d0;
+                      color: #6d6677;
+                    }
+
+                    &.time {
+                      background-color: #e7f0fa;
+                      color: #196ecd;
+                    }
+                  }
+
+                  .lectures {
+                    color: #77838f;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 22.4px;
+                    margin-right: 24px;
+                    text-align: start !important;
+                  }
+
+                  .icon {
+                    color: var(--text-color);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .thumbnail {
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    inset: 0;
+    padding: 10px;
+    background-color: rgba(var(--main-color-rgb), 0.05);
+    margin-bottom: 48px;
+    width: 100%;
+    height: 500px;
+    border: 0;
+
+    .iconContainer {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: #fff;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      display: inline-flex;
+      height: 60px;
+      width: 60px;
+      z-index: 1;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    img {
+      height: auto;
+      position: absolute;
+      top: calc(50% + 1px);
+      left: calc(50% + 1px);
+      transform: scale(1.01) translate(-50%, -50%);
+      display: block;
+      width: 100%;
+      max-height: none;
+      max-width: none;
+      transition:
+        filter 0.3s,
+        -webkit-filter 0.3s;
+      box-shadow: 0 1.5rem 4rem rgba(140, 152, 164, 0.05);
+      border-radius: 15px;
+    }
+  }
+
+  .overview {
+    margin-bottom: 48px;
+
+    h3 {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 30.8px;
+      margin-bottom: 14.4px;
+      margin-top: 0px;
+      color: #2f2d51;
+      text-align: start !important;
+
+      @include sm {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30.4px;
+      margin-bottom: 32px;
+      margin-top: 0px;
+      text-align: start !important;
+    }
+
+    .more {
+      color: var(--main-color);
+      line-height: 1.55;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 0 48px;
+      text-align: start !important;
+      display: block;
+      cursor: bv;
+
+      & > span {
+        display: flex;
+        align-items: center;
+        color: var(--text-color);
+        border: 1px solid #eee;
+        background-color: #eee;
+        padding: 3px 20px;
+        border-radius: 5px;
+        width: fit-content;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #ccc;
+        }
+
+        .icon {
+          display: inline-block;
+          margin-inline-end: 5px;
+
+          svg {
+            color: var(--text-color);
+            top: 3px;
+          }
+        }
+      }
+    }
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 48px;
+
+      .btn {
+        max-width: 280px;
+        width: 100%;
+        color: #fff;
+        background-color: var(--main-color);
+        border: 1px solid var(--main-color);
+        padding: 16px 20px;
+        text-align: center !important;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #fff;
+          color: var(--main-color);
+        }
+
+        span {
+          margin: 0 12px;
+        }
+
+        svg {
+          top: 3px;
+        }
+      }
+    }
+  }
+
+  &.ar {
+    .container {
+      .accordionSide {
+        .inputGroup {
+          input {
+            border-radius: 0 5px 5px 0;
+          }
+          .inputGroupBtn {
+            border-radius: 5px 0 0 5px;
+            button {
+              border-radius: 5px 0 0 5px;
+            }
+          }
+        }
+      }
+    }
+
+    :global(.MuiCollapse-root) {
+      :global(.MuiAccordionDetails-root) {
+        .item {
+          .text {
+            .title {
+              input {
+                left: unset;
+                right: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .overview {
+      .btns {
+        .btn {
+          i {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}

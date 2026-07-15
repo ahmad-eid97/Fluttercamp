@@ -1,0 +1,178 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.learning_header {
+  position: relative;
+  color: var(--main-color);
+  background-color: #fff;
+
+  .vector {
+    right: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+
+    &.ar {
+      right: unset;
+      left: 0;
+      transform: rotateY(180deg);
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+
+    .logo {
+      padding-inline-end: 20px;
+      border-inline-end: 1px solid #eee;
+
+      img {
+        object-fit: contain;
+        width: 150px;
+
+        @include lg {
+          width: 147px;
+        }
+
+        @include sm {
+          width: 110px;
+        }
+      }
+    }
+
+    .meta {
+      flex: 1;
+
+      h1 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        text-transform: uppercase;
+        color: var(--main-color);
+
+        @include xl {
+          font-size: 20px;
+        }
+
+        @include lg {
+          font-size: 18px;
+        }
+
+        @include md {
+          font-size: 15px;
+        }
+
+        @include sm {
+          font-size: 14px;
+        }
+      }
+
+      p {
+        color: var(--main-color);
+        margin: 0;
+      }
+    }
+
+    .progress {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      @include lg {
+        width: 70%;
+      }
+
+      @include sm {
+        flex-wrap: wrap;
+        gap: 5px;
+        width: 95%;
+      }
+
+      div {
+        display: block;
+        flex: 1;
+        height: 12px;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid rgba(var(--main-color-rgb), 0.4);
+        position: relative;
+
+        @include sm {
+          height: 10px;
+        }
+
+        span {
+          display: block;
+          height: 100%;
+          background-color: rgba(var(--main-color-rgb), 0.7);
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      p {
+        @include sm {
+          width: 100%;
+        }
+
+        svg {
+          top: 0;
+          margin-inline-end: 5px;
+          width: 16px;
+          height: 16px;
+        }
+
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .return {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      a {
+        @extend %mainBtn;
+        margin: 0;
+        border-radius: 2px;
+        font-size: 14px;
+        padding-inline: 20px;
+        padding-block: 3px;
+        padding-bottom: 6px;
+
+        @include sm {
+          padding-inline: 10px;
+          padding-block: 0px;
+          padding-bottom: 3px;
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+          margin-inline-end: 5px;
+          top: 0;
+          @include md {
+            margin-inline-end: 0;
+          }
+        }
+
+        span {
+          @include md {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

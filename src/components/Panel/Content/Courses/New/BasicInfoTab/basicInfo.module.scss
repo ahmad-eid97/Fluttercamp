@@ -1,0 +1,66 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.wrapper {
+  background-color: #fff;
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+
+  .loadingData {
+    @extend %tabsTitle;
+    justify-content: start;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.basicInfo {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+  row-gap: 15px;
+
+  @include xs {
+    gap: 15px;
+    column-gap: 0px;
+  }
+
+  .field {
+    grid-column: span 6;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+    @include sm {
+      grid-column: span 12;
+    }
+    @include xs {
+      grid-column: span 12;
+    }
+  }
+  .empty {
+    grid-column: span 6;
+    @include sm {
+      display: none;
+    }
+  }
+  label {
+    font-weight: 600;
+    color: var(--main-color);
+  }
+  .fullField {
+    grid-column: span 12;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.actions {
+  margin-top: 20px;
+  @extend %formActions;
+}

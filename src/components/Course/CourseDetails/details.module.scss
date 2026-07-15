@@ -1,0 +1,85 @@
+@use "@/styles/mixins" as *;
+
+.details {
+  // ---- Intro / overview card ----
+  .details__head {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 28px 30px;
+    box-shadow: var(--shadow-sm);
+
+    @include xs {
+      padding: 22px 20px;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--main-color-dark);
+      margin: 0 0 12px;
+
+      @include sm {
+        font-size: 1.25rem;
+      }
+    }
+
+    p {
+      color: var(--light-text-color);
+      line-height: 1.7;
+    }
+
+    span {
+      color: var(--main-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+
+  // ---- Segmented tabs ----
+  .tabs {
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 6px;
+    background: var(--bg-alt-color);
+    border-radius: var(--radius-lg);
+
+    p {
+      flex: 1;
+      min-width: max-content;
+      padding: 11px 18px;
+      margin: 0;
+      text-align: center;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--light-text-color);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all var(--dur-base) var(--ease-out);
+
+      &:hover {
+        color: var(--main-color-dark);
+        background: rgba(var(--main-color-rgb), 0.08);
+      }
+
+      &.active {
+        color: #fff;
+        background: var(--main-color);
+        box-shadow: var(--shadow-sm);
+      }
+
+      @include xs {
+        flex: 1 1 calc(50% - 8px);
+        font-size: 0.85rem;
+        padding: 10px 12px;
+      }
+    }
+  }
+
+  .tab {
+    margin-top: 28px;
+  }
+}

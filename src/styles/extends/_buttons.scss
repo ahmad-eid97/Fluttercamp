@@ -1,0 +1,167 @@
+@use "@/styles/mixins" as *;
+
+%mainBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  font-weight: 700;
+  background: var(--main-color);
+  color: #fff;
+  padding: 12px 34px;
+  margin-top: 20px;
+  transition: transform var(--dur-base, 0.24s) var(--ease-out, ease),
+    box-shadow var(--dur-base, 0.24s) var(--ease-out, ease), background-color var(--dur-base, 0.24s) ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: var(--radius-md, 10px);
+  box-shadow: var(--shadow-sm);
+
+  &:hover {
+    background: var(--main-color-dark);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-brand);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include sm {
+    margin: 10px auto 0;
+    padding: 10px 26px;
+    font-size: 15px;
+  }
+
+  @include xs {
+    padding: 9px 22px;
+    font-size: 14px;
+  }
+}
+
+%panelBtn {
+  text-align: center !important;
+  padding: 5px 25px;
+  border-radius: 4px;
+  background-color: var(--bg-main-color);
+  border: 1px solid var(--bg-main-color);
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  color: var(--text-color);
+  margin-top: 0;
+  transition: all 0.35s ease;
+
+  &:hover {
+    border-color: var(--bg-alt-color);
+  }
+
+  svg {
+    top: 3px;
+    margin-inline-end: 8px;
+  }
+
+  @include sm {
+    padding: 4px 25px;
+    font-size: 15px;
+  }
+
+  @include xs {
+    font-size: 14px;
+  }
+}
+
+// Backed by a mixin so other partials can compose it via `@include`
+// (cross-partial `@extend` of a placeholder is unsupported under Sass modules).
+@mixin panelFocusBtn {
+  text-align: center !important;
+  padding: 10px 30px;
+  border-radius: 4px;
+  background-color: var(--text-color);
+  border: 1px solid var(--text-color);
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 0;
+  transition: all 0.35s ease;
+
+  &:hover {
+    background-color: var(--text-color-dark);
+  }
+
+  svg {
+    top: 3px;
+    margin-inline-end: 8px;
+  }
+
+  @include sm {
+    padding: 8px 25px;
+    font-size: 15px;
+  }
+
+  @include xs {
+    font-size: 14px;
+  }
+}
+
+%panelFocusBtn {
+  @include panelFocusBtn;
+}
+
+%outlinedBtn {
+  text-align: center !important;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid var(--bg-main-color);
+  transition: all 0.3s ease;
+  outline: none;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--bg-main-color);
+    border-color: var(--bg-main-color);
+    color: var(--text-color);
+  }
+  @include sm {
+    padding: 8px 25px;
+  }
+  @include sm {
+    padding: 6px 20px;
+    font-size: 1rem;
+  }
+}
+
+@mixin outlinedFocusBtn {
+  text-align: center !important;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  transition: all 0.3s ease;
+  outline: none;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--text-color);
+    border-color: var(--text-color);
+    color: #fff;
+  }
+  @include sm {
+    padding: 8px 25px;
+  }
+  @include sm {
+    padding: 6px 20px;
+    font-size: 1rem;
+  }
+}
+
+%outlinedFocusBtn {
+  @include outlinedFocusBtn;
+}

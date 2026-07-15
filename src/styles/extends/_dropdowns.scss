@@ -1,0 +1,104 @@
+@use "@/styles/mixins" as *;
+
+%dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background-color: transparent;
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    top: 150%;
+    left: -150%;
+    margin-top: 5px;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    animation: show 0.1s ease-in-out 1;
+    z-index: 2;
+    width: 130px;
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+
+    li {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      a {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        text-transform: capitalize;
+      }
+
+      p {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+
+      img {
+        border-radius: 0;
+        width: 20px;
+        height: 15px;
+        left: 0 !important;
+        right: 0 !important;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.show {
+      display: block;
+    }
+
+    &.ar {
+      left: unset;
+      right: -40%;
+    }
+
+    @keyframes show {
+      0% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+
+    @include md {
+      left: -40%;
+      li {
+        p {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    @include sm {
+      left: -40%;
+    }
+
+    @include xs {
+      left: -40%;
+    }
+  }
+}

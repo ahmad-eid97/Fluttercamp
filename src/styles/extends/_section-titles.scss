@@ -1,0 +1,107 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends/buttons" as *;
+
+%sectionTitle {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+
+  span {
+    color: var(--pale-text-color);
+    font-size: 15px;
+    font-weight: 500;
+    transform: translateY(3px);
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    flex: 1 1;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #eee;
+  }
+}
+
+%tabsTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: var(--text-color);
+  gap: 15px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  background-color: rgba(var(--bg-main-color-rgb), 0.5);
+  border: 1px solid rgba(var(--bg-main-color-rgb), 0.5);
+
+  @include md {
+    font-size: 18px;
+  }
+
+  @include sm {
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
+
+  b {
+    flex: 1;
+    background-color: rgba(var(--text-color-rgb), 0.1);
+    border-radius: 5px;
+    height: 1px;
+  }
+
+  button {
+    @include panelFocusBtn;
+    padding: 7px 20px;
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 16px;
+
+    @include sm {
+      font-size: 14px;
+      padding: 4px 15px;
+    }
+  }
+}
+
+%sidesSectionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: var(--text-color);
+  gap: 15px;
+  border-radius: 5px;
+
+  @include md {
+    font-size: 18px;
+  }
+
+  @include sm {
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
+
+  b {
+    flex: 1;
+    background-color: rgba(var(--text-color-rgb), 0.1);
+    border-radius: 5px;
+    height: 1px;
+  }
+
+  button {
+    @include panelFocusBtn;
+    padding: 7px 20px;
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 16px;
+
+    @include sm {
+      font-size: 14px;
+      padding: 4px 15px;
+    }
+  }
+}

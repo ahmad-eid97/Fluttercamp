@@ -1,0 +1,75 @@
+@use "@/styles/extends" as *;
+@use "@/styles/mixins" as *;
+
+.assignmentModal {
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background-color: var(--bg-alt-color);
+      border-radius: var(--radius-md);
+      padding: 5px;
+    }
+  }
+  form {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    .field {
+      grid-column: span 12;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        svg {
+          width: 25px;
+          height: 25px;
+          background-color: var(--main-color);
+          color: #fff;
+          border-radius: var(--radius-md);
+        }
+      }
+      .attachment {
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .head {
+          svg {
+            background-color: var(--bg-alt-color);
+            color: var(--main-color);
+          }
+        }
+        label {
+          font-size: 18px;
+        }
+        input {
+          padding: 6px 15px;
+        }
+        button {
+          padding: 4px 15px;
+        }
+      }
+    }
+    .switch {
+      grid-column: span 12;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .actions {
+    margin-top: 25px;
+    @extend %smallFormActions;
+  }
+}

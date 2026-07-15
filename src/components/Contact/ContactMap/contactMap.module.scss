@@ -1,0 +1,20 @@
+@use "@/styles/mixins" as *;
+
+.map {
+  margin-top: 48px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 460px;
+    border: 0;
+
+    @include xs {
+      height: 320px;
+    }
+  }
+}

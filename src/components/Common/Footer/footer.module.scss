@@ -1,0 +1,239 @@
+@use "@/styles/mixins" as *;
+
+.footer {
+  position: relative;
+  color: rgba(255, 255, 255, 0.82);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(var(--main-color-rgb), 0.55), transparent 55%),
+    linear-gradient(160deg, var(--main-color-dark) 0%, #06243b 100%);
+
+  .inner {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr 1.4fr;
+    gap: 40px;
+    padding-top: 72px;
+    padding-bottom: 48px;
+
+    @include lg {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 36px 28px;
+    }
+    @include sm {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 20px;
+    }
+    @include xs {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .brandCol {
+    @include lg {
+      grid-column: 1 / -1;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+
+      .logoMark {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 11px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+        font-size: 1.45rem;
+      }
+
+      .logoText {
+        font-size: 1.4rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: #fff;
+
+        b {
+          color: var(--accent);
+          font-weight: 900;
+        }
+      }
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 380px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px;
+
+      a {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 1.2rem;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+        transition:
+          background 0.2s ease,
+          transform 0.2s ease;
+
+        &:hover {
+          background: var(--secondary-color);
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  h5 {
+    color: #fff;
+    font-size: 1.02rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+  }
+
+  .linksCol {
+    :global(ul) {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    :global(li),
+    :global(a) {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.93rem;
+      transition:
+        color 0.2s ease,
+        padding-inline-start 0.2s ease;
+    }
+    :global(a):hover {
+      color: #fff;
+      padding-inline-start: 4px;
+    }
+  }
+
+  .newsletterCol {
+    p {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .newsletter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-pill);
+      padding: 5px 5px 5px 16px;
+      transition: border-color 0.2s ease;
+
+      &:focus-within {
+        border-color: var(--accent);
+      }
+
+      > svg {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.65);
+        flex-shrink: 0;
+      }
+
+      input {
+        flex: 1;
+        min-width: 0;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 0.92rem;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      button {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background: var(--secondary-color);
+        color: #fff;
+        font-size: 1.2rem;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease;
+
+        &:hover {
+          transform: scale(1.06);
+        }
+      }
+    }
+
+    .sent {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.88rem;
+      color: var(--success);
+      font-weight: 600;
+    }
+  }
+
+  .bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    .bottomInner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 22px;
+      padding-bottom: 22px;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .author {
+      a {
+        color: var(--accent);
+        font-weight: 700;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .terms {
+      display: flex;
+      gap: 22px;
+
+      a {
+        color: rgba(255, 255, 255, 0.6);
+        transition: color 0.2s ease;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

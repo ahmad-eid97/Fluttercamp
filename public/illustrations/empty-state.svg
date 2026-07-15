@@ -1,0 +1,39 @@
+<svg width="240" height="200" viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nothing here yet">
+  <defs>
+    <linearGradient id="es-brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b8bd0"/>
+      <stop offset="1" stop-color="#1671b2"/>
+    </linearGradient>
+    <linearGradient id="es-lid" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f9bdd"/>
+      <stop offset="1" stop-color="#1d79ba"/>
+    </linearGradient>
+  </defs>
+
+  <!-- soft backdrop -->
+  <ellipse cx="120" cy="172" rx="92" ry="16" fill="#1671b2" opacity="0.08"/>
+  <circle cx="120" cy="96" r="78" fill="#1671b2" opacity="0.06"/>
+
+  <!-- floating dots -->
+  <circle cx="44" cy="60" r="5" fill="#f2b24e" opacity="0.7"/>
+  <circle cx="196" cy="52" r="6" fill="#ff7300" opacity="0.5"/>
+  <circle cx="206" cy="120" r="4" fill="#1671b2" opacity="0.5"/>
+  <circle cx="36" cy="118" r="4" fill="#1671b2" opacity="0.4"/>
+
+  <!-- open box -->
+  <g transform="translate(120,108)">
+    <!-- back -->
+    <path d="M-58 -6 L0 -28 L58 -6 L0 16 Z" fill="#bcd9ef"/>
+    <!-- body -->
+    <path d="M-58 -6 L0 16 L0 64 L-58 40 Z" fill="url(#es-brand)"/>
+    <path d="M58 -6 L0 16 L0 64 L58 40 Z" fill="#0f5c93"/>
+    <!-- open lids -->
+    <path d="M-58 -6 L-30 -34 L28 -30 L0 -28 Z" fill="url(#es-lid)" opacity="0.95"/>
+    <path d="M58 -6 L30 -34 L-28 -30 L0 -28 Z" fill="#2b8bd0" opacity="0.95"/>
+    <!-- flutter-ish chevron mark floating out -->
+    <g transform="translate(0,-52)">
+      <rect x="-13" y="-13" width="26" height="26" rx="7" fill="#fff" stroke="#e6eef5"/>
+      <path d="M4 -6 L-4 2 L1 6 L-2 9 L-9 2 L1 -8 Z" fill="#1671b2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+@use "@/styles/extends" as *;
+
+.add_new_discount {
+  h4.sectionTitle {
+    @extend %tabsTitle;
+  }
+
+  & > button {
+    @extend %panelFocusBtn;
+    padding: 7px 20px;
+    margin-top: 10px;
+  }
+
+  .emptyData {
+    @extend %emptyData;
+    margin-top: 20px;
+  }
+}

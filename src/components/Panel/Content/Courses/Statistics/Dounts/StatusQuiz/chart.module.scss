@@ -1,0 +1,46 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.chart {
+  margin-top: 15px;
+  background-color: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: inline-block;
+  width: calc(33.33% - 10px);
+  margin-inline-end: 10px;
+
+  @include lg {
+    width: calc(50% - 10px);
+  }
+
+  @include md {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 18px;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 20px;
+
+    @include md {
+      font-size: 16px;
+    }
+  }
+
+  & > div {
+    max-height: 300px;
+    text-align: center !important;
+    padding-bottom: 20px;
+
+    canvas {
+      margin: auto;
+    }
+  }
+
+  &.ar {
+    display: inline-block;
+  }
+}

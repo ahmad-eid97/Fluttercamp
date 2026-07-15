@@ -1,0 +1,73 @@
+@use "@/styles/extends" as *;
+@use "@/styles/mixins" as *;
+
+.materialsList {
+  margin-top: 20px;
+  border-radius: var(--radius-lg);
+
+  .items {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+
+    .item {
+      grid-column: span 12;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      border-radius: var(--radius-lg);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 0;
+      background-color: var(--bg-alt-color);
+      border: 1px solid var(--border-color);
+
+      @include sm {
+        flex-wrap: wrap;
+      }
+
+      h5 {
+        color: var(--text-color);
+        text-align: center !important;
+        font-weight: 500;
+      }
+
+      p {
+        color: var(--main-color);
+        font-size: 20px;
+        text-align: center !important;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        button {
+          @extend %panelFocusBtn;
+          padding: 3px 10px !important;
+
+          @include sm {
+            margin-top: 5px;
+            padding: 1px 7px !important;
+          }
+
+          &:last-of-type {
+            @extend %outlinedFocusBtn;
+          }
+
+          svg {
+            width: 20px;
+            height: 18px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "@/styles/mixins" as *;
+
+.view_error {
+  padding: 100px 0;
+  margin: 50px 100px;
+  text-align: center !important;
+  background-color: rgba(var(--main-color-rgb), 0.05);
+  border: 1px dashed var(--main-color);
+  border-radius: 5px;
+  font-weight: bold;
+
+  @include lg {
+    margin: 50px 70px;
+  }
+
+  @include md {
+    margin: 50px;
+  }
+
+  @include sm {
+    margin: 40px;
+  }
+
+  @include xs {
+    margin: 30px;
+  }
+}

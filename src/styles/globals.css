@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    /* FlutterCamp brand palette mapped onto the shadcn HSL token system, so
+       Tailwind utilities (bg-primary, text-foreground, ring-ring …) are on-brand. */
+    --background: 0 0% 100%;
+    --foreground: 225 18% 27%; /* #383e50 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 225 18% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 18% 27%;
+
+    --primary: 204 78% 39%; /* #1671b2 brand blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 27 100% 50%; /* #ff7300 orange */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 206 33% 95%; /* #ecf1f5 */
+    --muted-foreground: 0 0% 46%; /* #767676 */
+
+    --accent: 38 86% 63%; /* #f2b24e gold */
+    --accent-foreground: 204 89% 23%; /* #07436e navy */
+
+    --success: 146 56% 53%; /* #45ca80 */
+    --success-foreground: 0 0% 100%;
+
+    --warning: 29 100% 63%; /* #ff9f43 */
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 79% 62%; /* #ea5455 */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 16% 91%;
+    --input: 210 16% 91%;
+    --ring: 204 78% 39%;
+
+    --radius: 0.625rem;
+  }
+
+  .dark {
+    --background: 222 32% 8%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 28% 11%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 28% 11%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 204 70% 55%;
+    --primary-foreground: 222 32% 8%;
+
+    --secondary: 27 95% 55%;
+    --secondary-foreground: 222 32% 8%;
+
+    --muted: 217 24% 17%;
+    --muted-foreground: 215 18% 65%;
+
+    --accent: 38 80% 60%;
+    --accent-foreground: 222 32% 8%;
+
+    --success: 146 50% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 29 90% 60%;
+    --warning-foreground: 222 32% 8%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 24% 20%;
+    --input: 217 24% 20%;
+    --ring: 204 70% 55%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}

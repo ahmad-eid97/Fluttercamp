@@ -1,0 +1,135 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.summary {
+  h4 {
+    @extend %tabsTitle;
+    margin-bottom: 20px;
+  }
+  .list {
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // gap: 15px;
+    // .item {
+    //   grid-column: span 3;
+    //   min-height: 200px;
+    //   padding: 20px;
+    //   border-radius: 4px;
+    //   position: relative;
+    //   background-color: rgba(var(--bg-main-rgb), 0.4);
+    //   border: 1px solid rgba(var(--bg-main-rgb), 0.7);
+    //   border-top: none;
+    //   transition: all 0.2s ease-in-out;
+    //   display: flex;
+    //   align-items: center;
+    //   flex-direction: column;
+    //   overflow: hidden;
+    //   &:hover {
+    //     background-color: rgba(var(--bg-main-rgb), 0.7);
+    //   }
+    //   .badge {
+    //     background-color: #fbfbfd;
+    //     position: relative;
+    //     z-index: 2;
+    //     top: -22px;
+    //     color: var(--panel-text-color);
+    //     width: 120px;
+    //     height: 100px;
+    //     display: grid;
+    //     place-content: center;
+    //     border-bottom-left-radius: 100px;
+    //     border-bottom-right-radius: 100px;
+    //     box-shadow: 0 15px 0 #d9d9d9;
+    //     &:after,
+    //     &:before {
+    //       content: '';
+    //       position: absolute;
+    //       top: 0;
+    //       width: 50px;
+    //       height: 50px;
+    //       background-color: transparent;
+    //     }
+    //     &:before {
+    //       left: -50px;
+    //       border-top-right-radius: 50px;
+    //       box-shadow: 15px -15px 0 15px #fbfbfd;
+    //     }
+    //     &:after {
+    //       right: -50px;
+    //       border-top-left-radius: 50px;
+    //       box-shadow: -15px -15px 0 15px #fbfbfd;
+    //     }
+    //     svg {
+    //       width: 60px;
+    //       height: 60px;
+    //       opacity: 0.5;
+    //     }
+    //   }
+    //   .content {
+    //     display: flex;
+    //     align-items: center;
+    //     flex-direction: column;
+    //     gap: 5px;
+    //     position: relative;
+    //     z-index: 2;
+    //     h3 {
+    //       color: var(--panel-text-color);
+    //       margin: 0;
+    //     }
+    //     p {
+    //       color: var(--pale-text-color);
+    //       font-size: 18px;
+    //     }
+    //     .discount {
+    //       color: var(--main-color);
+    //       font-size: 18px;
+    //       font-weight: 600;
+    //     }
+    //     .date {
+    //       color: var(--pale-text-color);
+    //       display: flex;
+    //       align-items: center;
+    //       gap: 7px;
+    //     }
+    //     button {
+    //       @extend %panelFocusBtn;
+    //       padding: 7px 20px;
+    //       margin: 10px;
+    //     }
+    //   }
+    //   &>svg {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     width: 70%;
+    //     height: 70%;
+    //     color: var(--pale-text-color);
+    //     opacity: 0.05;
+    //   }
+    //   @include lg {
+    //     grid-column: span 4;
+    //   }
+    //   @include md {
+    //     grid-column: span 6;
+    //   }
+    //   @include xs {
+    //     grid-column: span 12;
+    //   }
+    // }
+  }
+
+  .amountCell {
+    color: var(--light-text-color);
+    font-size: 15px;
+  }
+
+  .dateCell {
+    color: var(--light-text-color);
+    font-size: 15px;
+  }
+
+  .emptyData {
+    @extend %emptyData;
+  }
+}

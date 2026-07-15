@@ -1,0 +1,80 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.loadingData {
+  @extend %tabsTitle;
+  justify-content: start;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.basicInfo {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+    row-gap: 15px;
+
+    @include xs {
+      gap: 15px;
+      column-gap: 0px;
+    }
+
+    .field {
+      grid-column: span 6;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+      @include md {
+        grid-column: span 6;
+      }
+      @include sm {
+        grid-column: span 12;
+      }
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--text-color);
+
+      svg {
+        top: 0px;
+      }
+    }
+
+    .fullField {
+      grid-column: span 12;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  .actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      &:first-of-type {
+        @extend %outlinedFocusBtn;
+      }
+
+      &:last-of-type {
+        @extend %panelFocusBtn;
+        margin: 0px 0 0;
+      }
+    }
+  }
+}

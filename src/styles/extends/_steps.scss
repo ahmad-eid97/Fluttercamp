@@ -1,0 +1,25 @@
+@use "@/styles/mixins" as *;
+
+%step-field {
+  background: var(--bg-element);
+  border-radius: 5px;
+  border: 1.5px solid transparent;
+  box-shadow: 0px 3px 3px 0px rgb(0 0 0 / 4%);
+  padding: 15px;
+  outline: none;
+  font-size: 16px;
+  resize: none;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  color: var(--text-color);
+
+  &:focus {
+    border: 1.5px double var(--light-main-color);
+  }
+
+  @include xs {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,286 @@
+@use "@/styles/mixins" as *;
+
+.meeting {
+  margin-bottom: 48px;
+  width: 100%;
+
+  form {
+    width: 60%;
+    margin: 0 auto 24px;
+    padding: 36px 40px 40px;
+    border-radius: var(--radius-lg);
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+
+    @include xl {
+      width: 70%;
+    }
+
+    @include lg {
+      width: 85%;
+    }
+
+    @include md {
+      width: 90%;
+    }
+
+    @include sm {
+      width: 100%;
+      padding: 24px 20px 28px;
+    }
+
+    .formHead {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      justify-content: center;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+
+      .iconTile {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        border-radius: var(--radius-md);
+        background: var(--gradient-brand);
+        color: #fff;
+
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      h3 {
+        text-align: center !important;
+        margin: 0;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: var(--text-color);
+      }
+    }
+
+    .formGroup {
+      margin-bottom: 22px;
+
+      @include xs {
+        margin-bottom: 16px;
+      }
+
+      .meetingsList {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: var(--bg-alt-color);
+        gap: 10px;
+        padding: 12px;
+        border-radius: var(--radius-md);
+        margin-top: 8px;
+
+        p {
+          color: var(--light-text-color);
+          width: 100%;
+          text-align: center !important;
+          font-size: 14px;
+          margin: 0;
+        }
+
+        .meetingsItem {
+          border: 1px solid var(--border-color);
+          background-color: #fff;
+          padding: 8px 16px;
+          border-radius: var(--radius-md);
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all var(--dur-base) var(--ease-out);
+
+          &:hover {
+            border-color: var(--main-color);
+            color: var(--main-color);
+          }
+
+          &.selected {
+            background-color: var(--main-color);
+            border-color: var(--main-color);
+            color: #fff;
+          }
+        }
+      }
+
+      label {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.6;
+        pointer-events: auto;
+        text-align: start !important;
+        color: var(--text-color);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        margin-bottom: 6px;
+
+        @include sm {
+          font-size: 14px;
+        }
+
+        svg {
+          color: var(--main-color);
+          width: 18px;
+          height: 18px;
+        }
+
+        span {
+          font-size: 13px;
+          font-weight: 500;
+          color: var(--light-text-color);
+          margin-inline: 5px;
+        }
+      }
+
+      input,
+      select {
+        display: block;
+        width: 100%;
+        padding: 12px 18px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        transition: border-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+
+        &:disabled {
+          background-color: var(--bg-alt-color);
+        }
+
+        &::placeholder {
+          color: var(--light-text-color);
+        }
+
+        @include xs {
+          padding: 9px 14px;
+          font-size: 14px;
+        }
+
+        &:focus {
+          background-color: #fff;
+          border-color: var(--main-color);
+          outline: 0;
+          box-shadow: 0 0 0 3px rgba(var(--main-color-rgb), 0.15);
+        }
+      }
+
+      input[type="checkbox"] {
+        width: auto;
+        display: inline-block;
+        position: relative;
+        top: 8px;
+        margin-inline-start: 10px;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 20px;
+      border-radius: var(--radius-md);
+      background-color: var(--main-color);
+      border: 1px solid var(--main-color);
+      cursor: pointer;
+      color: #fff;
+      width: 100%;
+      font-weight: 700;
+      text-align: center !important;
+      transition: all var(--dur-base) var(--ease-out);
+      min-height: 52px;
+      position: relative;
+
+      @include sm {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+
+      @include xs {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        background-color: var(--main-color-dark);
+        box-shadow: var(--shadow-brand);
+      }
+
+      &:disabled {
+        background-color: #b1b0b4 !important;
+        border-color: #b1b0b4 !important;
+        pointer-events: none;
+        box-shadow: none;
+      }
+
+      svg {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+
+      &.disabled {
+        span {
+          display: none;
+        }
+
+        svg {
+          display: block;
+        }
+      }
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border-color);
+      margin: 28px 0 4px;
+    }
+
+    .metadata {
+      padding: 12px 4px 0;
+
+      p {
+        color: var(--light-text-color);
+        width: 100%;
+        font-size: 14px;
+        margin: 0 0 6px;
+
+        &::before {
+          content: "#";
+          font-size: 13px;
+          font-weight: 700;
+          position: relative;
+          top: 1px;
+          margin-inline-end: 8px;
+          display: inline-block;
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+
+  .noData {
+    padding: 50px 25px;
+    width: 100%;
+    margin: 0px auto;
+    color: var(--text-color);
+    text-align: center !important;
+    background-color: var(--bg-alt-color);
+    border-radius: var(--radius-md);
+  }
+}

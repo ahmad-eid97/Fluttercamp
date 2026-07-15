@@ -1,0 +1,128 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.reply_modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #000, $alpha: 0.75);
+  z-index: 99999999;
+  transition: all 0.3s ease;
+  animation: showModal 0.2s forwards ease-in-out 1;
+
+  @keyframes showModal {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes show {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .content {
+    border-radius: var(--radius-lg);
+    padding: 20px 30px 25px;
+    width: 700px;
+    background-color: #fff;
+    animation: show 0.4s forwards ease-in-out 1;
+
+    @include lg {
+      max-width: 650px;
+    }
+
+    @include md {
+      max-width: 600px;
+      padding: 30px 20px;
+    }
+
+    @include sm {
+      margin: 130px auto 60px;
+      max-width: 90%;
+    }
+
+    @include xs {
+      padding: 40px 20px;
+      max-width: 100%;
+    }
+
+    h4 {
+      @extend %sectionTitle;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 20px;
+      row-gap: 15px;
+
+      @include xs {
+        gap: 15px;
+        column-gap: 0px;
+      }
+
+      .field {
+        grid-column: span 6;
+        display: inline-flex;
+        flex-direction: column;
+        gap: 5px;
+        @include md {
+          grid-column: span 6;
+        }
+        @include xs {
+          grid-column: span 12;
+        }
+      }
+
+      label {
+        font-weight: 600;
+        color: var(--light-text-color);
+
+        svg {
+          top: 0px;
+        }
+      }
+
+      .fullField {
+        grid-column: span 12;
+        display: inline-flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      grid-column: span 12;
+
+      button {
+        @extend %panelFocusBtn;
+        margin: 0px 0 0;
+      }
+    }
+  }
+}

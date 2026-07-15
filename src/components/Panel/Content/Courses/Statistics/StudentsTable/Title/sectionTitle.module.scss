@@ -1,0 +1,14 @@
+@use "@/styles/extends" as *;
+
+.sectionTitle {
+  margin-top: 40px;
+
+  h4.sectionTitle {
+    @extend %sectionTitle;
+  }
+
+  .emptyData {
+    @extend %emptyData;
+    margin-top: 20px;
+  }
+}

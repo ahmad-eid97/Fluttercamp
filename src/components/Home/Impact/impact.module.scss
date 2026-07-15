@@ -1,0 +1,175 @@
+@use "@/styles/mixins" as *;
+
+.impact {
+  position: relative;
+  padding-block: clamp(56px, 7vw, 96px);
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--bg-default, #fff) 0%, #f3f8fc 100%);
+}
+
+.glow {
+  position: absolute;
+  inset-inline-start: 50%;
+  top: -40%;
+  width: 70vw;
+  height: 70vw;
+  max-width: 900px;
+  max-height: 900px;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(var(--main-color-rgb, 22, 113, 178), 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.grid {
+  margin-top: clamp(32px, 4vw, 52px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 1.8vw, 24px);
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include xs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: clamp(24px, 2.8vw, 34px) 18px;
+  border-radius: var(--radius-xl, 18px);
+  border: 1px solid transparent;
+  transition:
+    transform var(--dur-base, 0.24s) var(--ease-out, ease),
+    box-shadow var(--dur-base, 0.24s) ease,
+    border-color var(--dur-base, 0.24s) ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px -16px rgba(17, 24, 39, 0.22);
+  }
+
+  // ---- tones: tinted gradient bg + matching accents ----
+  &.brand {
+    background: linear-gradient(155deg, rgba(var(--main-color-rgb), 0.1), rgba(var(--main-color-rgb), 0.015));
+    border-color: rgba(var(--main-color-rgb), 0.16);
+    .iconChip {
+      color: var(--main-color);
+      box-shadow: 0 8px 18px -6px rgba(var(--main-color-rgb), 0.45);
+    }
+    .suffix,
+    .watermark {
+      color: var(--main-color);
+    }
+  }
+  &.gold {
+    background: linear-gradient(155deg, rgba(242, 178, 78, 0.2), rgba(242, 178, 78, 0.03));
+    border-color: rgba(242, 178, 78, 0.32);
+    .iconChip {
+      color: #c97a12;
+      box-shadow: 0 8px 18px -6px rgba(242, 178, 78, 0.6);
+    }
+    .suffix,
+    .watermark {
+      color: #c97a12;
+    }
+  }
+  &.secondary {
+    background: linear-gradient(155deg, rgba(255, 115, 0, 0.1), rgba(255, 115, 0, 0.02));
+    border-color: rgba(255, 115, 0, 0.2);
+    .iconChip {
+      color: var(--secondary-color);
+      box-shadow: 0 8px 18px -6px rgba(255, 115, 0, 0.45);
+    }
+    .suffix,
+    .watermark {
+      color: var(--secondary-color);
+    }
+  }
+  &.success {
+    background: linear-gradient(155deg, rgba(69, 202, 128, 0.16), rgba(69, 202, 128, 0.02));
+    border-color: rgba(69, 202, 128, 0.26);
+    .iconChip {
+      color: var(--success);
+      box-shadow: 0 8px 18px -6px rgba(69, 202, 128, 0.45);
+    }
+    .suffix,
+    .watermark {
+      color: var(--success);
+    }
+  }
+}
+
+.watermark {
+  position: absolute;
+  inset-inline-end: -14px;
+  bottom: -18px;
+  font-size: 120px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.iconChip {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  font-size: 32px;
+  background: #fff;
+}
+
+.value {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-size: clamp(2rem, 1.4rem + 2vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text-color, #383e50);
+
+  span {
+    font-size: inherit;
+  }
+
+  .suffix {
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-size: 0.5em;
+    font-weight: 800;
+  }
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted-text-color, #6b7280);
+
+  @include xs {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,35 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100000;
+  height: 90px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-xs);
+
+  @media print {
+    display: none;
+  }
+
+  @include lg {
+    height: 70px;
+  }
+
+  @include sm {
+    height: 57px;
+  }
+
+  &.ar {
+    .vector {
+      inset-inline-start: 0;
+      inset-inline-end: auto;
+
+      img {
+        transform: rotateY(-180deg);
+      }
+    }
+  }
+}

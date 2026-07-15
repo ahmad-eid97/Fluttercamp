@@ -1,0 +1,13 @@
+.splitter {
+  fill: #fff;
+  position: absolute;
+
+  &.top {
+    top: -2px;
+  }
+
+  &.bottom {
+    bottom: -2px;
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,26 @@
+.stripeSelect {
+  .stripe {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--border-color);
+    overflow: hidden;
+    div {
+      flex: 1;
+      padding: 10px;
+      text-align: center !important;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &.active {
+        background-color: var(--main-color);
+        color: #fff;
+      }
+    }
+  }
+}

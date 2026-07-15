@@ -1,0 +1,70 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.modal {
+  padding: 0;
+
+  .title {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+
+    @include lg {
+      flex-wrap: wrap;
+    }
+
+    .field {
+      width: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+
+      textarea {
+        border-radius: var(--radius-md);
+        display: block;
+        width: 100%;
+        min-height: 50px;
+        padding: 9px 16px;
+        box-shadow: none;
+        color: var(--text-color);
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease-in-out;
+        outline: none;
+        resize: none;
+
+        &:focus {
+          border-color: var(--main-color);
+          outline: 0;
+          box-shadow: var(--ring);
+        }
+      }
+    }
+
+    .actions {
+      border-top: 1px solid var(--border-color);
+      justify-content: flex-end;
+      @extend %smallFormActions;
+      margin-top: 0;
+      padding-top: 20px;
+      width: 100%;
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--text-color);
+    }
+  }
+}

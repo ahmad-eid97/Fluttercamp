@@ -1,0 +1,3048 @@
+{
+  "loading": "Loading",
+  "welcome": "Welcome to grids apps biggest online shop!",
+  "arabic": "Arabic",
+  "english": "English",
+  "navbar": {
+    "home": "Home",
+    "courses": "Courses",
+    "blog": "Articles",
+    "about": "About us",
+    "contact": "Contact",
+    "instructors": "Instructors",
+    "events": "Events",
+    "forums": "Forums",
+    "tracks": "Tracks",
+    "library": "Library",
+    "search": "Search in website",
+    "login": "Login",
+    "cart": "Cart",
+    "user_menu": {
+      "profile": "Profile",
+      "dashboard": "Dashboard",
+      "myCourses": "My Courses",
+      "support": "Support",
+      "salesHistory": "Sales History",
+      "settings": "Settings",
+      "logout": "Logout",
+      "logoutQuestion": "Do you want to logout?",
+      "cancel": "Cancel",
+      "loggedOut": "You are logged out"
+    }
+  },
+  "pagesMetadata": {
+    "home": "Home",
+    "universities": "Universities",
+    "schools": "Schools",
+    "general": "Public courses",
+    "articles": "Articles",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "checkoutSuccess": "Payment operation success",
+    "contact": "Contact",
+    "courses": "Courses",
+    "learning": "Learning",
+    "forgetPassword": "Forget Password",
+    "login": "Login",
+    "signup": "Sign Up",
+    "forums": "Forums",
+    "newForum": "Create New Topic",
+    "topic": "Topic",
+    "editTopic": "Edit Topic",
+    "instructors": "Instructors",
+    "session": "Online meeting"
+  },
+  "footer": {
+    "phone": "Phone",
+    "email": "Email Address",
+    "policy": "Privacy Policy",
+    "terms": "Terms and confirmation",
+    "copyright": {
+      "part1": "",
+      "part2": "Copyright © Laravelcamp All Right Reserved."
+    },
+    "links": "Links",
+    "linksList": {
+      "home": "Home",
+      "about": "About FlutterCamp",
+      "contact": "Contact"
+    },
+    "education": "Education",
+    "educationList": {
+      "courses": "Courses",
+      "instructors": "Instructors",
+      "forums": "Forums",
+      "articles": "Articles"
+    },
+    "pathes": "Pathes",
+    "pathesList": {
+      "universities": "Universities",
+      "schools": "Schools",
+      "general": "Public courses"
+    }
+  },
+  "home": {
+    "metadata": {
+      "title": "Home",
+      "universitiesTitle": "Universities",
+      "schoolsTitle": "Schools",
+      "generalTitle": "Public courses"
+    },
+    "blogs": {
+      "latest": "Latest Blogs",
+      "showMore": "Show More",
+      "show": "عرض"
+    },
+    "faqs": {
+      "title": "Most asked questions"
+    },
+    "latestCourses": {
+      "title": "Latest Courses",
+      "sub_title": "Here are the latest courses on the platform, which are the highest rated on the platform Our students have more than twenty years of experience",
+      "minutesLeft": "Minutes left",
+      "hours": "hours",
+      "watchTrailer": "Watch Trailer",
+      "showMore": "Show More",
+      "text_lesson": "Text course",
+      "course": "Video course",
+      "webinar": "Live webinar"
+    },
+    "skills": {
+      "title": "The most professional techniques and skills to learn",
+      "sub_title": "Learn about all the techniques and skills available in courses on our platform and their courses at a high level of professionalism and accuracy"
+    },
+    "subscribtion": {
+      "title": "Join us and start your educational journey",
+      "sub_title": "Subscribe with us at a nominal price to receive the courses and content you wish to study Easily, and if you stop on the way, you can contact technical support",
+      "monthly": "Monthly",
+      "knowMore": "Know More"
+    },
+    "video": {
+      "moneyTransactions": "Money Transactions",
+      "dailyReports": "Daily Reports",
+      "response": "Immediate Response"
+    }
+  },
+  "main_header": {
+    "fluttercamp": "FlutterCamp",
+    "title": "Learn, Improve, Grow",
+    "subTitle": "Are you looking for a way to develop your skills and learn more in different fields? you are in the right place",
+    "buttonTxt": "Get Started",
+    "features": {
+      "webinars": "Online Webinars",
+      "discover": "Discover group of new topics",
+      "experts": "Experts Instructions",
+      "findWebinar": "Find suitable webinar",
+      "access": "Access to all topics",
+      "studyTime": "Study in your schedule",
+      "searchText": "Search in courses and instructors"
+    }
+  },
+  "libraryPage": {
+    "search": "Search in the library",
+    "filters": {
+      "newest": "Newest",
+      "popular": "Popular",
+      "featured": "Featured",
+      "latest": "Latest"
+    },
+    "title": "Subjects",
+    "sub_title": "Browse content by topics that interest you most."
+  },
+  "tracksPage": {
+    "title": "Browse all tracks",
+    "subTitle": "The educational tracks we have available throughout the platform",
+    "track": {
+      "hour": "Hour",
+      "watchAd": "Watch Trailer",
+      "showDetails": "Show Details"
+    }
+  },
+  "trackDetailsPage": {
+    "track": "track",
+    "theTrack": "The Track",
+    "hour": "Hour",
+    "course": "Course",
+    "showCourse": "Show Course",
+    "text_lesson": "Text course",
+    "video_course": "Video course",
+    "webinar": "Live webinar"
+  },
+  "sessionPage": {
+    "sessionStarted": "Online meeting session is started",
+    "join": "Join now",
+    "content": {
+      "loadingContent": "Loading content..."
+    }
+  },
+  "header": {
+    "title": {
+      "part1": "Looking For The Best",
+      "part2": "Courses"
+    },
+    "subTitle": "Are you looking for a way to develop your skills and learn more in different fields? you are in the right place!",
+    "buttonTxt": "Explore Courses"
+  },
+  "categories": {
+    "title": "Categories",
+    "subTitle": "What can you learn at our great platform? Explore is our top courses:",
+    "btnTxt": "Watch more",
+    "over": "Over ",
+    "courses": "Courses",
+    "noSubcategories": "No Subcategories for this category"
+  },
+  "courses": {
+    "title": "Special Courses",
+    "subTitle": "Discover the best program for you from our distinctive courses",
+    "noData": "No Courses Yet",
+    "sections": {
+      "all": "All",
+      "arabic": "Arabic",
+      "physics": "Physics",
+      "math": "Mathimatics",
+      "history": "History"
+    },
+    "badges": {
+      "bestSeller": "Best Seller",
+      "new": "New",
+      "sale": "Sale"
+    },
+    "course": {
+      "category": "Web development",
+      "title": "The Ultimate React Course 2023: React, Redux & More",
+      "lessons": "Lessons",
+      "review": "Reviews"
+    },
+    "bundleCourses": "Bundle Courses"
+  },
+  "steps": {
+    "topTitle": "Our subscription steps",
+    "title": "Subscribe to FlutterCamp in simple steps",
+    "steps": {
+      "one": {
+        "title": "Select Subjects",
+        "details": "Begin by choosing subjects and specializations that you wishes to study, our representatives contact you to complete the process."
+      },
+      "two": {
+        "title": "Determine the academic goal",
+        "details": "Academic goals will be determined with your Personal Education Consultant so we can hire the right teacher for your child."
+      },
+      "three": {
+        "title": "Customize your package and start",
+        "details": "One of our representatives will help you book a personalized lesson package tailored to you and your child's long-term educational needs."
+      }
+    },
+    "btnTxt": "Subscripe now"
+  },
+  "events": {
+    "title": "Upcoming Events",
+    "subTitle": "Discover the best program for you from our distinctive courses",
+    "btnTxt": "Watch Events",
+    "event": {
+      "title": "The effective workshop on learning front-end web development.",
+      "place": "Online"
+    }
+  },
+  "news": {
+    "title": "Latest Articles",
+    "subTitle": "Read our latest articles in all education categories",
+    "btnTxt": "Explore Articles",
+    "article": {
+      "category": "Programming",
+      "title": "How did learning programming become so widespread throughout the Arab world and the world?",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "author": "Hassan Ali"
+    }
+  },
+  "instructors": {
+    "page": "Instructors",
+    "title": "Our Best Instructors",
+    "subTitle": "Enjoy a unique learning experience with our best teachers",
+    "btnTxt": "See our team",
+    "available": "Available for Meetings",
+    "meeting": "Free Meetings",
+    "discount": "Discount",
+    "filters": "Filters",
+    "category": "Category",
+    "level": "Training level",
+    "gender": "Instructor gender",
+    "price": "Price Range",
+    "age": "Instructor Age",
+    "time": "Time",
+    "location": "Location",
+    "country": "Country",
+    "province": "Province",
+    "city": "City",
+    "district": "District",
+    "all": "All",
+    "topRate": "Top Rate",
+    "topSellers": "Top Sellers",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "male": "Male",
+    "female": "Female",
+    "inPerson": "In-person",
+    "online": "Online",
+    "individual": "Individual",
+    "group": "Group",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "type": "Meeting Type",
+    "population": "Population",
+    "map": "Location On Map",
+    "resetFilter": "Reset filter",
+    "noInstructors": "No instructors found",
+    "instructor": {
+      "title": "Physics Instructor"
+    }
+  },
+  "why": {
+    "topSection": {
+      "title": "Learn at your own pace",
+      "details": "You can learn flexibly and at your own pace. On our platform, we offer you the opportunity to learn different subjects and skills thanks to the self-learning methodology. You will find resources, articles, and educational videos that help you advance and develop your skills easily and conveniently."
+    },
+    "bottomSection": {
+      "title": "A community of opportunity",
+      "details": "We strongly believe that cooperation and interaction based on trust lead to multiple opportunities. We seek to create a vibrant and interconnected community, where everyone can benefit and contribute. Whether you are looking for opportunities for learning and personal development, to build social and professional relationships, or to participate in various projects and events."
+    }
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "text": "We are excited for you to become part of our community and stay up to date with the latest news and developments.",
+    "inputPlaceholder": "Type your email address",
+    "btnTxt": "Subscribe",
+    "emailSubcribed": "Your email subscribed successfully"
+  },
+  "notFound": {
+    "text": "It looks like you are lost.",
+    "btn": "Go back to home",
+    "metadata": {
+      "title": "Page not found"
+    }
+  },
+  "pagesHeader": {
+    "home": "Home"
+  },
+  "about": {
+    "header": {
+      "title": "About FlutterCamp"
+    },
+    "intro": {
+      "subTitle": "What is FlutterCamp ?",
+      "title": "FlutterCamp is the largest online learning platform in Middle East.",
+      "details": "Discover the world of knowledge and interesting learning with us! You will find a variety of topics and educational materials covering various fields. We guarantee you a high-quality educational experience. Join us now and benefit from The opportunity to access exclusive and fun educational content"
+    },
+    "team": {
+      "title": "Join laravel camp team",
+      "subTitle": "We work hard to create the best learning experience ever, and are always looking for great people to help us achieve that vision.",
+      "jobs": "Jobs in fluttercamp"
+    },
+    "services": {
+      "quote": "Quote"
+    },
+    "company": {
+      "ourCompany": "What about our company?"
+    },
+    "video": {
+      "title": "Know Us More",
+      "subTitle": "Discover the world of knowledge and interesting learning with us!"
+    },
+    "metadata": {
+      "title": "About FlutterCamp"
+    }
+  },
+  "coursesPage": {
+    "header": {
+      "title": "Courses"
+    },
+    "filters": {
+      "all": "All",
+      "newest": "Newest",
+      "highestPrice": "Highest Price",
+      "lowestPrice": "Lowest Price",
+      "bestSellers": "Best Sellers",
+      "bestRated": "Best Rated"
+    },
+    "sidebar": {
+      "type": "Type",
+      "courseBundle": "Course bundle",
+      "liveClass": "Live class",
+      "videoClass": "Video class",
+      "textClass": "Text class",
+      "filters": "Filters",
+      "subscribed": "Subscribed",
+      "featured": "Featured",
+      "downloadable": "Downloadable",
+      "withDiscount": "With Discount",
+      "freeCourses": "Free Courses",
+      "quzziesIncluded": "Quzzies Included",
+      "certificateIncluded": "Certificate Included"
+    },
+    "content": {
+      "availableCourses": "courses available for you",
+      "inputs": {
+        "search": "Search our courses",
+        "category": "Category",
+        "sortBy": "Sort By",
+        "categoryOptions": {
+          "all": "All Categories",
+          "arabic": "Arabic",
+          "physics": "Physics"
+        },
+        "sortOptions": {
+          "category": "Category",
+          "date": "Date",
+          "name": "Name"
+        }
+      }
+    }
+  },
+  "blogs": {
+    "title": "Latest blogs"
+  },
+  "blogPage": {
+    "header": {
+      "title": "Articles"
+    }
+  },
+  "blogDetailsPage": {
+    "header": {
+      "title": "How did learning programming become so widespread throughout the Arab world and the world?"
+    },
+    "blog": {
+      "noRelatedArticles": "No related articles",
+      "noComments": "No Comments Yet",
+      "readTime": "Minutes read",
+      "reply": "Reply",
+      "report": "Report",
+      "reportComment": "Report comment",
+      "commentContent": "Comment content",
+      "replyToComment": "Reply to the comment",
+      "title": "Title",
+      "message": "Message",
+      "instructor": "Instructor",
+      "student": "Student",
+      "replyAdded": "Your comment will be published after approved by admin.",
+      "replyContent": "Reply content",
+      "sendReply": "Send reply",
+      "save": "Save",
+      "pleaseLogin": "Please login to reply to the article",
+      "reportSuccess": "Report is sent to review",
+      "replySuccess": "Reply sent to review",
+      "texts": [
+        "You only live once, but if you do it right, once is enough.",
+        "Most improve you Digital Marketing selling Campaign this is is important for our ability to learn from mistakes, but it alsogive rise to self-criticism, because it is part of the threat-protection system in theme other wordsImprove you Digital Marketing selling.",
+        "Make your Business more faster",
+        "Improve you Digital Marketing selling inventore veritatis is important for our ability to learn from mistakes, but it alsogive rise to self-criticism, because it is part of the threat-protection system in the other wordsImprove you Digital Marketing selling. Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vem, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "“Excepteur sint occaecat cupidatat non proident, sunt culpa quite deserunt enal mollit anim id estambul ilaborum. Sed ultra practice omnis iste natus none of error unexpected site.”",
+        "Improve you Digital Marketing selling inventore veritatis is important for our ability to learn from mistakes, but it alsogive rise to self-criticism, because it is part of the threat-protection system in the other wordsImprove you Digital Marketing selling. Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vem, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Improve you Digital Marketing selling inventore veritatis is important for our ability to learn from mistakes, but it alsogive rise to self-criticism, because it is part of the threat-protection system in the other wordsImprove you Digital Marketing selling. Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim vem, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      ],
+      "share": "Share",
+      "tags": "Tags",
+      "categories": {
+        "title": "Categories",
+        "items": [
+          "Medecines",
+          "Physics",
+          "Arabic",
+          "Mathimatics",
+          "English"
+        ]
+      },
+      "articles": {
+        "title": "Articles",
+        "items": [
+          "How did learning programming become so widespread throughout the Arab world and the world?",
+          "How did learning programming become so widespread throughout the Arab world and the world?",
+          "How did learning programming become so widespread throughout the Arab world and the world?"
+        ]
+      },
+      "gellery": "Gallery"
+    }
+  },
+  "contactPage": {
+    "header": {
+      "title": "Contact Us"
+    },
+    "content": {
+      "title": "Contact Information",
+      "phone": "Call us",
+      "address": "Address",
+      "addressValue": "Ramallah, Palestine",
+      "email": "Mail us",
+      "area": "Our Location",
+      "noPhone": "No Phone Number",
+      "noEmail": "No Email Address",
+      "form": {
+        "title": "Contact Us",
+        "text": "We are excited to connect with you. If you have any questions, feedback or concerns, you are in the right place. Our dedicated team is here to help.",
+        "name": "Full name",
+        "email": "Email address",
+        "phone": "Phone number",
+        "subject": "Subject",
+        "message": "Type your message",
+        "send": "Send",
+        "sent": "Your message delivered successfully"
+      }
+    }
+  },
+  "coursePage": {
+    "subscribe": "Subscribe",
+    "courseSubscribeSuccess": "You are now subscribed to this course.",
+    "noAccess": "You don't have access to this content",
+    "checkQuizStatus": "Check quiz status",
+    "startQuiz": "Start solving the quiz",
+    "liveSessionFinishAt": "This live session has finished at",
+    "assignmentAsTeacherText": "You can't add solutions to the assignment as a teacher, click to go to review student's solutions",
+    "markAsPassed": "Mark this lesson as passed",
+    "noContents": "There are not contents in this course",
+    "addToCart": "Add to cart",
+    "addToCartSuccess": "Course added to cart successfully",
+    "enrollSuccess": "You enrolled to this course successfully",
+    "text_lesson": "Text course",
+    "course": "Video course",
+    "webinar": "Live webinar",
+    "category": "Web development",
+    "in": "In",
+    "title": "The Ultimate React Course 2023: React, Redux & More",
+    "details": "Master modern React from beginner to advanced! Context API, React Query, Redux Toolkit, Tailwind, advanced patterns",
+    "by": "By",
+    "courseType": "Course Type",
+    "sessionsCount": "Sessions",
+    "filesCount": "Files",
+    "textLessonsCount": "Text Lessons",
+    "startDate": "Start Date",
+    "report": "Report this course",
+    "quizzes": "Quizzes Included",
+    "support": "Instructor Support",
+    "subject": "Subject",
+    "rate": "Rating",
+    "duration": "Duration",
+    "bundleDuration": "Track Duration",
+    "weeks": "Weeks",
+    "student": "Student",
+    "arabic": "Arabic",
+    "entry": "Entry",
+    "capacity": "Capacity",
+    "unlimited": "Unlimited",
+    "yes": "Yes",
+    "readMore": "Show More",
+    "readLess": "Show Less",
+    "lessonsCount": "Chapters",
+    "coursesCount": "Courses",
+    "createdAt": "Created at",
+    "studentsCount": "Students",
+    "language": "Language",
+    "level": "Level",
+    "courseEnd": "Ends at",
+    "certified": "Certified",
+    "off": "Off",
+    "remainingOff": "Left for this course",
+    "buyNow": "Buy course",
+    "enroll": "Enroll now",
+    "share": "Share this course",
+    "description": "Description",
+    "faqs": "FAQs",
+    "prerequisites": "Prerequisites",
+    "content": "Content",
+    "instructor": {
+      "info": "Instructor Details",
+      "rate": "Rating",
+      "reviews": "Reviews",
+      "students": "Students",
+      "courses": "Courses"
+    },
+    "ratings": "Students Rating",
+    "courseRating": "Course Rating",
+    "addRating": "Add your review",
+    "whatLike": "What did you like about this course?",
+    "review": {
+      "title": "Review title",
+      "content": "Review Content",
+      "send": "Send Review",
+      "sent": "Review sent successfully",
+      "deleteQuestion": "Are you sure you want to delete this review ?",
+      "cancel": "Cancel",
+      "delete": "Yes, delete it",
+      "done": "Review deleted successfully"
+    },
+    "list": {
+      "title": "Our Best Instructors",
+      "subTitle": "Enjoy a unique learning experience with our best teachers"
+    },
+    "noBadges": "No badges yet",
+    "noComments": "No Comments Yet",
+    "youCantComment": "You can't add review to this course",
+    "content_quality": "Content Quality",
+    "instructor_skills": "Instructor Skills",
+    "purchase_worth": "Purchase Worth",
+    "support_quality": "Support Quality",
+    "reportModal": {
+      "title": "Report Course",
+      "reason": "reason",
+      "selectReason": "Select a reason...",
+      "message": "Message",
+      "send": "Send report",
+      "sent": "Report sent successfully"
+    },
+    "replyModal": {
+      "title": "Add reply to review",
+      "content": "Reply content",
+      "send": "Add reply",
+      "sent": "Reply sent to be reviewed"
+    },
+    "bookMeeting": "Book a meeting",
+    "goToLearningPage": "Go to learning page",
+    "favouritePopup": {
+      "unfavouriteQuestion": "Are you sure you want to unfavourite this course ?",
+      "cancel": "Cancel",
+      "unfavouriteConfirm": "Yes, unfavourite",
+      "unfavouriteSuccess": "Course has removed from favourites successfully",
+      "favouriteSuccess": "Course has been added to favourites successfully"
+    },
+    "welcome": "Welcome in ",
+    "learningPage": "Learning page",
+    "hour": "Hour",
+    "courseForum": "Course Forum",
+    "needHelp": "Do you need help ?",
+    "needHelpDetails": "Do you have questions about this course? Start a discussion with the community.",
+    "adVideo": "Trailer video",
+    "courseDetails": "Course details",
+    "courseContent": "Course contents",
+    "courseReviews": "Course reviews",
+    "instructorDeatils": "Instructor details"
+  },
+  "lessonPage": {
+    "header": {
+      "title": "How to create app from scratch"
+    },
+    "content": {
+      "toggleMenu": "Toggle content menu",
+      "replyAdded": "Your reply added successfully",
+      "noAccess": "You don't have access to this content",
+      "description": "Description",
+      "assignmentDescription": "Type solution / reply",
+      "fileTitle": "File title (optional)",
+      "file": "File upload (optional)",
+      "rateAssignment": "Rate the assignment",
+      "warningText": "By submitting the grade, the assignment will be closed.",
+      "assignmentGrade": "Assignment Grade",
+      "saveBtn": "Save",
+      "save": "Send",
+      "passGrade": "Pass Grade",
+      "noData": "No submissions yet",
+      "deadline": "Deadline",
+      "submissions": "Submissions",
+      "yourGrade": "Your grade",
+      "minGrade": "Min Grade",
+      "status": "Status",
+      "pending": "Pending",
+      "waiting": "Waiting",
+      "failed": "Failed",
+      "passed": "Passed",
+      "readMore": "Show More",
+      "readLess": "Show Less",
+      "nextLesson": "Next Lesson",
+      "prevLesson": "Previous Lesson",
+      "search": "Search in lessons",
+      "loadingContent": "Loading content...",
+      "courseContent": "Course contents",
+      "progressLevel": "Your progress",
+      "courseForum": "Course Forum",
+      "BackToCourse": "Back to course",
+      "min": "min",
+      "sessionEnded": "Live session is ended",
+      "sessionEndedOn": "This session ended on",
+      "sessionStarted": "Live session is started",
+      "join": "Join now",
+      "sessionNotStarted": "Live session not started yet",
+      "sessionStartOn": "This session will be started on",
+      "lessonToggled": "Lesson has marked as passed",
+      "lessonUnToggled": "Lesson has marked as not passed",
+      "text_lesson": "Text lesson",
+      "video": "Video",
+      "session": "Live session",
+      "document": "Document",
+      "pdf": "PDF",
+      "powerpoint": "Powerpoint",
+      "sound": "Sound",
+      "image": "Image",
+      "archive": "Archive",
+      "quiz": "Quiz",
+      "assignment": "Assignment",
+      "mb": "MB",
+      "minute": "Minutes",
+      "archiveText": {
+        "header": "The contents of the compressed file cannot be viewed",
+        "text": "You can view the link to the zip file included in this lesson"
+      },
+      "checkQuizStatus": "Check quiz status",
+      "startQuiz": "Start solving the quiz",
+      "liveSessionFinishAt": "This live session has finished at",
+      "assignmentAsTeacherText": "You can't add solutions to the assignment as a teacher, click to go to review student's solutions",
+      "markAsPassed": "Mark this lesson as passed"
+    }
+  },
+  "instructorPage": {
+    "header": {
+      "title": "Instructor",
+      "mrMrs": "Mr/Mrs"
+    },
+    "content": {
+      "share": "Share",
+      "instructor": "Instructor",
+      "review": "Reviews",
+      "rate": "Rating",
+      "topInstructors": "Top Instructors",
+      "courses": "Courses",
+      "overview": "Overview",
+      "students": "Students",
+      "followings": "Followings",
+      "followers": "Followers",
+      "about": "About Instructor",
+      "occupations": "Skills",
+      "noOccupations": "No skills yet",
+      "badges": "Badges",
+      "noBadges": "No badges yet",
+      "noInfo": "No data provided",
+      "noCourses": "No courses yet",
+      "follow": "Follow",
+      "cancelFollow": "Unfollow",
+      "followMessage": "You are now following this instructor",
+      "unfollowMessage": "Following this instructor is cancelled",
+      "articles": "Articles",
+      "noArticles": "No Articles Yet",
+      "reserveAMeetingInstructor": "Reserve a meeting with the instructor",
+      "reserveAMeeting": "Reserve a meeting",
+      "pickADate": "Pick a date",
+      "pickTime": "Pick a time",
+      "meetingType": "Meeting type",
+      "online": "Online",
+      "offline": "In Person",
+      "studentsCount": "Students count",
+      "groupMeeting": "Group Meeting",
+      "noMeetings": "Instructor is not available for meetings",
+      "onlineRate": "The instructor (online) hourly charge is",
+      "onlineGroupRate": "The instructor (online - group) hourly charge is",
+      "inPersonRate": "The instructor (in person) hourly charge is",
+      "inPersonGroupRate": "The instructor (in person - group) hourly charge is",
+      "done": "Reservation is added to cart"
+    },
+    "errors": {
+      "dateTime": "You must select a correct date and time",
+      "max": "Students count cannot be greater than the maximum",
+      "min": "Students count cannot be less than the minimum"
+    }
+  },
+  "eventsPage": {
+    "header": {
+      "title": "Events"
+    },
+    "content": {
+      "title": "The effective workshop on learning front-end web development.",
+      "address": "Online",
+      "date": {
+        "day": "Days",
+        "hour": "Hour",
+        "minute": "Minutes",
+        "second": "Seconds"
+      },
+      "off": "Off",
+      "availableSeats": "Available Seats",
+      "bookedSeats": "Booked Seats",
+      "bookSeat": "Book Your Seat",
+      "description": "Description",
+      "readMore": "Show More",
+      "readLess": "Show Less",
+      "ratings": "Students Rating",
+      "eventRating": "Event Rating",
+      "addRating": "Add your rating",
+      "whatLike": "What did you like about this event?",
+      "review": {
+        "title": "Review title",
+        "content": "Content",
+        "send": "Send Review"
+      }
+    }
+  },
+  "forumsPage": {
+    "header": {
+      "title": "Forums"
+    },
+    "noForums": "No forums yet",
+    "noTopics": "No topics in this forum yet",
+    "saveSuccess": "Topic created successfully",
+    "editSuccess": "Topic updated successfully",
+    "selectForum": "Select a forum",
+    "forums": "Forums",
+    "topics": "Topics",
+    "replies": "Replies",
+    "members": "Members",
+    "createTopic": "Create new topic",
+    "topicTitle": "Topic Title",
+    "forumCategory": "Forum Category",
+    "description": "Description",
+    "attachments": "Attachments",
+    "attachmentPlaceholder": "Choose file to upload",
+    "terms": "Terms and rules confirmation",
+    "termsText": "By posting a forum topic, you will accept community terms and rules.",
+    "publish": "Publish topic",
+    "edit": "Edit topic",
+    "save": "Save topic"
+  },
+  "courseForums": {
+    "header": {
+      "title": "Course Forums"
+    },
+    "statistics": {
+      "questions": "Questions",
+      "resolved": "Resolved",
+      "openQuestions": "Open Questions",
+      "answers": "Answers",
+      "activeUsers": "Active Users"
+    },
+    "filter": {
+      "search": "Search in forum",
+      "forum": "Course Forum",
+      "forumDescription": "Communicate others and ask your questions!",
+      "ask": "Ask a new question",
+      "addNewQuestion": "Add new question",
+      "title": "Title",
+      "description": "Description",
+      "attachFile": "Attach a file (optional)",
+      "close": "Close",
+      "post": "Post",
+      "fill": "Please fill in the required fields",
+      "added": "Question added successfully"
+    },
+    "list": {
+      "answers": "Answers",
+      "users": "Users",
+      "lastActivity": "Last activity",
+      "pin": "Pin Answer",
+      "lastAnswer": "Last answer",
+      "resolved": "Resolved",
+      "firstPerson": "Be the first person who answers this question",
+      "answer": "Answer",
+      "pinned": "Question pinned successfully",
+      "unpinned": "Question unpinned successfully",
+      "noData": "No topics yet"
+    }
+  },
+  "forumAnswers": {
+    "header": {
+      "title": "Forum Answers"
+    },
+    "editQuestion": "Edit Question",
+    "attachFile": "Attach a file (optional)",
+    "post": "Post",
+    "title": "Question title",
+    "description": "Question description",
+    "attachment": "Attachment",
+    "edit": "Edit",
+    "pin": "Pin",
+    "resolve": "Mark as resolved",
+    "postReply": "Post reply for this forum",
+    "editAnswer": "Edit Answer",
+    "answerDescription": "Description",
+    "close": "Close",
+    "save": "Save",
+    "fillFields": "Please fill in all the fields",
+    "questionUpdated": "Question updated successfully",
+    "by": "By",
+    "in": "In",
+    "resolved": "Answer resolved successfully",
+    "pinned": "Answer pinned successfully",
+    "unpinned": "Answer unpinned successfully",
+    "answerAdded": "Answer added successfully"
+  },
+  "newForumPage": {
+    "header": {
+      "title": "New Topic"
+    }
+  },
+  "forumTopicsPage": {
+    "header": {
+      "title": "Forum Topics"
+    },
+    "noUsers": "No users yet",
+    "noTopics": "No topics yet",
+    "createTopic": "Create new topic",
+    "older": "Older topics",
+    "searchTopics": "Search topics",
+    "newest": "Newest",
+    "popularTopics": "Popular Topics",
+    "notAnswered": "Not Answered",
+    "posts": "Posts",
+    "topics": "Topics",
+    "topUsers": "Top users",
+    "topTopics": "Top topics"
+  },
+  "topicPage": {
+    "header": {
+      "title": "Topic Details",
+      "editTitle": "Edit Topic"
+    },
+    "notAuthed": "You need to login to reply to this topic",
+    "instructor": "Instructor",
+    "student": "Student",
+    "posts": "Posts",
+    "followers": "Followers",
+    "memberSince": "Member since",
+    "edit": "Edit",
+    "report": "Report",
+    "likes": "Likes",
+    "replyBtn": "Reply",
+    "replyContent": "Reply content",
+    "pin": "Pin",
+    "unpin": "Unpin",
+    "replyAdded": "Thanks for posting to this topic",
+    "replyUpdated": "Your post has been updated successfully",
+    "reply": "Reply to the topic",
+    "replyTo": "Reply to ",
+    "description": "Description",
+    "attachments": "Attachments",
+    "upload": "Upload Files",
+    "send": "Send",
+    "postPinned": "Post pinned successfully",
+    "postUnPinned": "Post unpinned successfully",
+    "replyToReply": "Reply to post :",
+    "reportSent": "Report sent successfully",
+    "messageToReviewer": "Message to reviewer",
+    "descripe": "Please describe about the report short and clearly.",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "loginPage": {
+    "title": "Log In to Your Account",
+    "username": "Username or Email Address",
+    "email": "Email Address",
+    "password": "Password",
+    "remember": "Remember me",
+    "forget": "Forgot Password",
+    "login": "LOGIN",
+    "createTxt": "Don't have an account?",
+    "welcome": "Welcome Back",
+    "signup": "Sign up",
+    "social": "Continue using social account",
+    "google": "Continue with Google",
+    "facebook": "Continue with Facebook"
+  },
+  "signupPage": {
+    "title": "Create New Account",
+    "email": "Email Address",
+    "username": "Username",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "continue": "Continue",
+    "btn": "Complete Signup",
+    "createTxt": "Already have an account?",
+    "link": "Login",
+    "codeSentMessage": "Confirmation Code sent to your email",
+    "code": "Confirmation Code",
+    "referral_code": "Referral Code",
+    "optional": "optional",
+    "welcome": "Thank you for completing register",
+    "joinAs": "Account type",
+    "instructor": "Instructor",
+    "student": "Student"
+  },
+  "forgetPage": {
+    "title": "Forget Your Password ?",
+    "email": "Email Address",
+    "btn": "Send reset link",
+    "createTxt": "Already have an account ?",
+    "link": "Login"
+  },
+  "cartPage": {
+    "header": {
+      "title": "Cart"
+    },
+    "items": {
+      "item": "Item",
+      "price": "Price",
+      "remove": "Remove",
+      "by": "By",
+      "continue": "Continue Shopping",
+      "removeQuestion": "Are you sure you want to remove this item ?",
+      "removeSuccess": "Item removed successfully",
+      "cancel": "Cancel",
+      "confirm": "Yes, remove",
+      "courseRate": "Course rate",
+      "instructorRate": "Instructor rate",
+      "noData": "No items in the cart"
+    },
+    "coupon": {
+      "info": "If you have a coupon, insert the code in the following input and click 'Validate' button.",
+      "placeholder": "Enter coupon code here",
+      "validate": "Validate",
+      "couponApplied": "Coupon applied successfully",
+      "invalidCoupon": "Coupon is invalid"
+    },
+    "total": {
+      "checkout": "Checkout",
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "tax": "Tax",
+      "total": "Total"
+    }
+  },
+  "checkoutPage": {
+    "header": {
+      "title": "Checkout",
+      "successTitle": "Payment succeeded"
+    },
+    "items": {
+      "items": "items",
+      "for": "for",
+      "title": "Select a payment gateway",
+      "finalize": "Finalize",
+      "payWith": "Pay with",
+      "offline": "with balance",
+      "amount": "Amount",
+      "account": "Account",
+      "referenceCode": "Reference Code",
+      "date": "Date / Time",
+      "attach": "Attach the payment receipt",
+      "pay": "Pay Now",
+      "total": "Total amount",
+      "checkoutSuccess": "Payment operation success",
+      "successText": "Payment succeeded, Thank you for your payment with us",
+      "errorText": "Payment operation failed"
+    }
+  },
+  "panel": {
+    "sidemenu": {
+      "toggleMenu": "Toggle menu",
+      "dashboard": "Dashboard",
+      "courses": {
+        "title": "Courses",
+        "dropdown": {
+          "newCourse": "New Course",
+          "myCourses": "My Courses",
+          "invitedCourses": "Invited Courses",
+          "myPurchases": "My Purchases",
+          "myCourseComments": "My Course Comments",
+          "myComments": "My Comments",
+          "favourites": "Favourites"
+        }
+      },
+      "courseBundles": {
+        "title": "Course Bundles",
+        "dropdown": {
+          "newBundle": "New Bundle",
+          "myBundles": "My Bundles"
+        }
+      },
+      "assignments": {
+        "title": "Assignments",
+        "dropdown": {
+          "myAssignments": "My Assignments",
+          "studentAssignments": "Student Assignments"
+        }
+      },
+      "meetings": {
+        "title": "Meetings",
+        "dropdown": {
+          "myReservations": "My Reservations",
+          "requests": "Requests",
+          "settings": "Settings"
+        }
+      },
+      "quizzes": {
+        "title": "Quizzes",
+        "dropdown": {
+          "newQuiz": "New Quiz",
+          "list": "List",
+          "results": "Results",
+          "myResults": "My Results"
+        }
+      },
+      "certificates": {
+        "title": "Certificates",
+        "dropdown": {
+          "list": "List",
+          "achievements": "Achievements",
+          "certificateValidation": "Certificate Validation",
+          "completionCertificates": "Completion Certificates"
+        }
+      },
+      "financial": {
+        "title": "Financial",
+        "dropdown": {
+          "salesReport": "Sales report",
+          "financialSummary": "Financial summary",
+          "payout": "Payout",
+          "chargeAccount": "Charge account",
+          "subscribe": "Subscribe"
+        }
+      },
+      "support": {
+        "title": "Support",
+        "dropdown": {
+          "new": "New",
+          "coursesSupport": "Courses support",
+          "tickets": "Tickets"
+        }
+      },
+      "marketing": {
+        "title": "Marketing",
+        "dropdown": {
+          "discounts": "Discounts",
+          "promotions": "Promotions"
+        }
+      },
+      "forums": {
+        "title": "Forums",
+        "dropdown": {
+          "newTopic": "New Topic",
+          "myTopics": "My Topics",
+          "myReplies": "My Replies",
+          "bookmarks": "Bookmarks"
+        }
+      },
+      "articles": {
+        "title": "Articles",
+        "dropdown": {
+          "newArticle": "New Article",
+          "myArticles": "My Articles",
+          "comments": "Comments"
+        }
+      },
+      "noticeboard": {
+        "title": "Noticeboard",
+        "dropdown": {
+          "history": "History",
+          "new": "New",
+          "newCourseNotice": "New Course Notice",
+          "courseNotices": "Course Notices"
+        }
+      },
+      "notifications": "Notifications",
+      "settings": "Settings"
+    },
+    "dashboard": {
+      "welcomeBox": {
+        "hi": "Hi,",
+        "checkReports": "Check reports",
+        "viewEvents": "View events"
+      },
+      "statisticsBoxes": {
+        "accountBalance": "Account Balance",
+        "chargeAccount": "Charge Account",
+        "pendingMeetings": "Pending Meetings",
+        "supportMessages": "Support Messages",
+        "monthlySales": "Monthly Sales",
+        "purchasedCourses": "Purchased Courses",
+        "meetings": "Meetings",
+        "comments": "Comments"
+      },
+      "noticeboard": {
+        "title": "Noticeboard",
+        "viewMessage": "view message",
+        "for": "For",
+        "viewNotice": "View Notice",
+        "cancel": "Cancel",
+        "createdBy": "Created by"
+      },
+      "salesChart": {
+        "title": "Monthly Sales",
+        "chartTitle": "User Monthly Sales"
+      }
+    },
+    "courses": {
+      "invoice": {
+        "itemId": "Item ID",
+        "student": "Student",
+        "address": "Address",
+        "organization": "Organization",
+        "instructors": "Instructors",
+        "purchaseDate": "Purchase Date",
+        "orderSummary": "Order Summary",
+        "item": "Item",
+        "type": "Type",
+        "price": "Price",
+        "discountRate": "Discount rate",
+        "total": "Total",
+        "subTotal": "Sub Total",
+        "tax": "Tax",
+        "discount": "Discount",
+        "print": "Print"
+      },
+      "statisticsBoxes": {
+        "courses": "Courses",
+        "totalHours": "Total Minutes",
+        "liveClassesSales": "Live Classes Sales",
+        "totalSales": "Total Sales",
+        "purchased": "Purchased",
+        "hours": "Hours",
+        "upcoming": "Upcoming"
+      },
+      "list": {
+        "noCourses": "No courses yet",
+        "video": "Video course",
+        "webinar": "Live webinar",
+        "text_lesson": "Text course",
+        "active": "Active",
+        "pending": "Pending",
+        "options": {
+          "createJoinLink": "Create join link",
+          "learningPage": "Learning page",
+          "editCourse": "Edit course",
+          "sessions": "Sessions",
+          "files": "Files",
+          "exportStudents": "Export students",
+          "duplicate": "Duplicate",
+          "statistics": "Statistics",
+          "delete": "Delete",
+          "unfavourite": "Unfavourite",
+          "invoice": "Invoice",
+          "feedback": "Feedback",
+          "unfavouriteSuccess": "Course removed from favourites successfully",
+          "modal": {
+            "unfavouriteQuestion": "Are you sure you want to unfavourite this course ?",
+            "question": "Are you sure you want to delete this course ?",
+            "cancel": "Cancel",
+            "confirm": "Yes, delete",
+            "unfavouriteConfirm": "Yes, unfavourite",
+            "success": "Course deleted successfully"
+          }
+        },
+        "types": {
+          "liveClass": "Live class",
+          "videoCourse": "Video course",
+          "textCourse": "Text course"
+        },
+        "id": "ID",
+        "category": "Category",
+        "duration": "Duration",
+        "startDate": "Start Date",
+        "textLessons": "Text Lessons",
+        "files": "Files",
+        "downloadable": "Downloadable",
+        "sales": "Sales",
+        "hour": "Hour",
+        "minutes": "Minutes",
+        "free": "Free"
+      },
+      "comments": {
+        "statisticsBoxes": {
+          "comments": "Comments",
+          "replied": "Replied",
+          "notReplied": "Not Replied"
+        },
+        "table": {
+          "courseOrBlog": "Course/Article",
+          "noComments": "No Comments Yet",
+          "searchPlaceholder": "Search for a comment",
+          "user": "User",
+          "course": "Course",
+          "comment": "Comment",
+          "viewContent": "View content",
+          "status": "Status",
+          "open": "Open",
+          "closed": "Closed",
+          "active": "Active",
+          "pending": "Pending",
+          "date": "Date Created",
+          "action": "Action",
+          "reply": "Reply",
+          "message": "Message",
+          "report": "Report",
+          "filter": {
+            "from": "From",
+            "to": "To",
+            "user": "User",
+            "course": "Course",
+            "filter": "Filter"
+          },
+          "reportComment": "Report comment",
+          "commentContent": "Comment content",
+          "replyToComment": "Reply to the comment",
+          "title": "Title",
+          "description": "Description",
+          "save": "Save",
+          "reportSuccess": "Report is sent to review",
+          "replySuccess": "Reply sent to review"
+        }
+      },
+      "new": {
+        "clearCache": "Clear Cache",
+        "tabs": {
+          "basicInformation": "Basic Information",
+          "extraInformation": "Extra Information",
+          "pricing": "Pricing",
+          "prerequisites": "Prerequisites",
+          "content": "Content",
+          "faq": "FAQ",
+          "quizNCertificates": "Quiz & Certificates",
+          "messageToReviewer": "Message to reviewer"
+        },
+        "basicInformation": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Course data saved successfully",
+          "videoSources": {
+            "upload": "Upload",
+            "youtube": "Youtube",
+            "vimeo": "Vimeo",
+            "externalLink": "External Link"
+          },
+          "courseTypes": {
+            "liveClass": "Live class",
+            "videoCourse": "Video course",
+            "textCourse": "Text course"
+          },
+          "type": "Course type",
+          "title": "Course title",
+          "meta": "SEO meta description",
+          "thumbnail": "Thumbnail",
+          "cover": "Cover image",
+          "demoVideoSource": "Demo Video Source (Optional)",
+          "path": "Choose File",
+          "uploadFile": "Upload files from your PC",
+          "videoLink": "Video Link",
+          "description": "Description",
+          "previous": "Previous",
+          "next": "Next",
+          "save": "Save changes & Next"
+        },
+        "extraInformation": {
+          "start_date": "Start Date",
+          "loadingData": "Loading data...",
+          "saveSuccess": "Course data saved successfully",
+          "capacity": "Capacity",
+          "duration": "Duration",
+          "minutes": "Minutes",
+          "courseForum": "Course Forum",
+          "forumText": "By enabling this feature, students will be able to create questions and communicate with other students.",
+          "completionCertificate": "Completion Certificate",
+          "completionCertificateText": "A certificate will be awarded to the student when passed the course.",
+          "support": "Support",
+          "downloadable": "Downloadable",
+          "partnerInstructor": "Partner Instructor",
+          "selectPartnerInstructor": "Select a partner instructor",
+          "tags": "Tags",
+          "category": "Category",
+          "previous": "Previous",
+          "next": "Next",
+          "save": "Save changes & Next"
+        },
+        "pricing": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Course data saved successfully",
+          "enableSubscribe": "Enable Subscribe",
+          "subscribeText": "Students will be able to subscribe to your content in addition of direct purchasing.",
+          "accessPeriod": "Access Period",
+          "price": "Price",
+          "optional": "Optional",
+          "days": "Days",
+          "pricingPlans": "Pricing Plans",
+          "plansTexts": [
+            "Pricing plans will help you to create time & capacity depended prices for your content.",
+            "You can create pricing plans for a limited time or limited number of course students.",
+            "If you don't create a pricing plan, your course base price will be considered."
+          ],
+          "planAddedSuccess": "Plan added successfully",
+          "newPlan": "New Plan",
+          "title": "Title",
+          "discount": "Discount",
+          "capacity": "Capacity",
+          "capacityPlaceholder": "Leave it blank for unlimited",
+          "startDate": "Start Date",
+          "endDate": "End Date",
+          "cancel": "Cancel",
+          "noPlans": "No pricing plans yet",
+          "deleteQuestion": "Are you sure you want to delete this plan ?",
+          "confirmDelete": "Yes, delete this plan",
+          "deleteSuccess": "Plan deleted successfully",
+          "previous": "Previous",
+          "next": "Next",
+          "save": "Save changes & Next"
+        },
+        "content": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Course data saved successfully",
+          "sectionAndContent": "Sections & Content",
+          "newSection": "New Section",
+          "newSession": "New Session",
+          "newFile": "New File",
+          "newLesson": "New Text Lesson",
+          "newQuiz": "New Quiz",
+          "newAssignment": "New Assignment",
+          "noSections": "No sections added yet",
+          "previous": "Previous",
+          "next": "Next",
+          "section": {
+            "title": "New Section",
+            "modalTitle": "Section Details",
+            "sectionTitle": "Section Title",
+            "active": "Active",
+            "pass": "The student should pass all parts",
+            "cancel": "Cancel",
+            "save": "Save",
+            "added": "Section added successfully",
+            "updated": "Section updated successfully",
+            "deleteWarning": "Are you sure you want to delete this section?",
+            "delete": "Delete",
+            "deleted": "Section deleted successfully"
+          },
+          "session": {
+            "title": "Add New Session",
+            "modalTitle": "Section Session",
+            "provider": "Select live class provider",
+            "custom": "Custom (Local)",
+            "zoom": "Zoom",
+            "agora": "Agora",
+            "chatOn": "Chat On",
+            "link": "Link",
+            "password": "Password",
+            "titleField": "Title",
+            "titlePlaceholder": "Maximum 250 character",
+            "date": "Date",
+            "duration": "Duration",
+            "description": "Description",
+            "delay": "Live Class Delay Time (Minutes)",
+            "active": "Active",
+            "dripContent": "Drip Content",
+            "cancel": "Cancel",
+            "save": "Save",
+            "added": "Session added successfully",
+            "updated": "Session updated successfully",
+            "deleteWarning": "Are you sure you want to delete this session?",
+            "delete": "Delete",
+            "deleted": "Section session deleted successfully"
+          },
+          "file": {
+            "title": "Add New File",
+            "modalTitle": "Section File",
+            "titleField": "Title",
+            "source": "Source",
+            "path": "Path",
+            "pathPlaceholder": "Paste your link here",
+            "uploadFiles": "Upload Files",
+            "uploadPlaceholder": "Upload files from your PC",
+            "file": "File Type",
+            "accessibility": "Accessibility",
+            "free": "Free",
+            "paid": "Paid",
+            "fileType": "File Type",
+            "description": "Description",
+            "downloadable": "Downloadable",
+            "active": "Active",
+            "dripContent": "Drip Content",
+            "cancel": "Cancel",
+            "save": "Save",
+            "upload": "Upload",
+            "youtube": "Youtube",
+            "vimeo": "Vimeo",
+            "extranal": "Extranal Link",
+            "drive": "Google Drive",
+            "iframe": "Iframe",
+            "amazon-s3": "Amazon S3",
+            "volume": "Volume",
+            "inMBs": "In MBs",
+            "pdf": "PDF",
+            "powerpoint": "Powerpoint",
+            "sound": "Sound",
+            "video": "Video",
+            "image": "Image",
+            "archive": "Archive",
+            "document": "Document",
+            "project": "Project",
+            "added": "Section file added successfully",
+            "updated": "Section file updated successfully",
+            "deleteWarning": "Are you sure you want to delete this file?",
+            "delete": "Delete",
+            "deleted": "Section file deleted successfully"
+          },
+          "lesson": {
+            "title": "Add New Text Lesson",
+            "modalTitle": "Section Text Lesson",
+            "titleField": "Title",
+            "studyTime": "Study Time",
+            "udploadImage": "Upload Image",
+            "uploadPlaceholder": "Upload files from your PC",
+            "attachments": "Attachments",
+            "accessibility": "Accessibility",
+            "free": "Free",
+            "paid": "Paid",
+            "summary": "Summary",
+            "content": "Content",
+            "active": "Active",
+            "dripContent": "Drip Content",
+            "cancel": "Cancel",
+            "save": "Save",
+            "added": "Section lesson added successfully",
+            "updated": "Section lesson updated successfully"
+          },
+          "text_lesson": {
+            "deleteWarning": "Are you sure you want to delete this lesson?",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "deleted": "Section lesson deleted successfully"
+          },
+          "quiz": {
+            "title": "Add New Quiz",
+            "modalTitle": "Section Quiz",
+            "titleField": "Quiz Title",
+            "time": "Time",
+            "number": "Number Of Attempts",
+            "passMark": "Pass Mark",
+            "expiryDays": "Expiry Days",
+            "displayQuestions": "Display questions randomly",
+            "certificate": "Certificate included",
+            "active": "Active quiz",
+            "cancel": "Cancel",
+            "save": "Save",
+            "added": "Quiz added successfully",
+            "updated": "Quiz updated successfully",
+            "deleteWarning": "Are you sure you want to delete this quiz?",
+            "questionDeleteWarning": "Are you sure you want to delete this question?",
+            "delete": "Delete",
+            "deleted": "Section quiz deleted successfully",
+            "close": "Close",
+            "add": "Add",
+            "update": "Update",
+            "questionDeleted": "Question deleted successfully",
+            "questions": "Questions",
+            "questionTitle": "Title",
+            "type": "Type",
+            "grade": "Grade",
+            "addMultiple": "Add multiple choice question",
+            "addDescriptiveQuestion": "Add descriptive question",
+            "multipleQuestion": {
+              "questionTitle": "Question Title",
+              "grade": "Grade",
+              "image": "Image (Optional)",
+              "video": "Video (Optional)",
+              "correctAnswer": "Correct Answer",
+              "newMultiple": "New multiple choice question",
+              "editMultiple": "Edit multiple choice question",
+              "answers": "Answers",
+              "addAnswer": "Add an answer",
+              "answerTitle": "Answer Title",
+              "answerImage": "Answer Image (Optional)",
+              "isCorrect": "Correct answer",
+              "cancel": "Cancel",
+              "save": "Save",
+              "noQuestions": "No questions in this quiz yet",
+              "questionAdded": "Question added successfully",
+              "questionUpdated": "Question updated successfully"
+            },
+            "descriptiveQuestion": {
+              "newDescriptive": "New descriptive question",
+              "editDescriptive": "Edit descriptive question",
+              "questionTitle": "Question Title",
+              "grade": "Grade",
+              "image": "Image (Optional)",
+              "video": "Video (Optional)",
+              "correctAnswer": "Correct Answer",
+              "questionAdded": "Question added successfully",
+              "questionUpdated": "Question updated successfully"
+            }
+          },
+          "assignment": {
+            "title": "Add New Assignment",
+            "modalTitle": "Section Assignment",
+            "titleField": "Assignment Title",
+            "description": "Description",
+            "grade": "Grade",
+            "passGrade": "Pass Grade",
+            "deadline": "Deadline",
+            "attempts": "Attempts",
+            "attachments": {
+              "title": "Attachments",
+              "titleField": "title",
+              "textPlaceholder": "Maximum 250 characters",
+              "filePlaceholder": "Choose an attachments"
+            },
+            "active": "Active",
+            "dripContent": "Drip Content",
+            "cancel": "Cancel",
+            "save": "Save",
+            "added": "Assignment added successfully",
+            "updated": "Assignment updated successfully",
+            "deleteWarning": "Are you sure you want to delete this assignment?",
+            "delete": "Delete",
+            "deleted": "Section assignment deleted successfully"
+          },
+          "save": "Save changes"
+        },
+        "prerequisites": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Course data saved successfully",
+          "title": "Prerequisites",
+          "new": "New Prerequisite",
+          "empty": "No prerequisites added yet",
+          "modalTitle": "Prerequisite Details",
+          "select": "Select Prerequisite",
+          "required": "Required",
+          "requiredDescription": "- For required (forced) prerequisites, students should pass them before purchasing your course.",
+          "cancel": "Cancel",
+          "previous": "Previous",
+          "deleteQuestion": "Are you sure you want to delete this prerequisite ?",
+          "confirmDelete": "Yes, delete this prerequisite",
+          "deleteSuccess": "Prerequisite deleted successfully",
+          "next": "Next",
+          "save": "Save changes"
+        },
+        "faq": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Course data saved successfully",
+          "cancel": "Cancel",
+          "previous": "Previous",
+          "next": "Next",
+          "save": "Save changes",
+          "faqs": {
+            "title": "FAQ",
+            "modalTitle": "FAQ Details",
+            "newFaq": "New FAQ",
+            "faqTitle": "Title",
+            "faqTtilePlaceholder": "Maximum 64 character",
+            "description": "Description",
+            "empty": "No FAQs added yet",
+            "deleteQuestion": "Are you sure you want to delete this question ?",
+            "confirmDelete": "Yes, delete",
+            "deleteSuccess": "Question deleted successfully"
+          },
+          "materials": {
+            "title": "Learning materials",
+            "modalTitle": "Learning Material Details",
+            "newMaterial": "New learning material",
+            "materialTitle": "Title",
+            "materialTitlePlaceholder": "Maximum 64 character",
+            "empty": "No learning materials added yet",
+            "deleteQuestion": "Are you sure you want to delete this material ?",
+            "confirmDelete": "Yes, delete",
+            "deleteSuccess": "Material deleted successfully"
+          },
+          "logos": {
+            "title": "Company logos",
+            "modalTitle": "Logo Details",
+            "newLogo": "New company logo",
+            "image": "Image",
+            "logoPlaceholder": "Upload file from PC",
+            "empty": "No company logos added yet",
+            "deleteQuestion": "Are you sure you want to delete this logo ?",
+            "confirmDelete": "Yes, delete",
+            "deleteSuccess": "Logo deleted successfully"
+          },
+          "requirements": {
+            "title": "Requirements",
+            "modalTitle": "Requirement Details",
+            "newRequirement": "New Requirement",
+            "requirementTitle": "Title",
+            "requirementPlaceholder": "Maximum 64 character",
+            "empty": "No requirements added yet",
+            "deleteQuestion": "Are you sure you want to delete this requirement ?",
+            "confirmDelete": "Yes, delete",
+            "deleteSuccess": "Requirement deleted successfully"
+          }
+        },
+        "quizNCertificates": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Course data saved successfully",
+          "title": "Quiz & Certification",
+          "modalTitle": "Quiz Details",
+          "newQuiz": "New Quiz",
+          "addNew": "Add New Quiz",
+          "quizTitle": "Quiz Title",
+          "time": "Time",
+          "number": "Number Of Attempts",
+          "passMark": "Pass Mark",
+          "expiryDays": "Expiry Days",
+          "displayQuestions": "Display questions randomly",
+          "certificate": "Certificate included",
+          "active": "Active",
+          "mark": "Mark",
+          "empty": "No quizzes added yet",
+          "quizAdded": "Quiz added succeeded successfully",
+          "cancel": "Cancel",
+          "previous": "Previous",
+          "save": "Save changes",
+          "next": "Next",
+          "deleteWarning": "Are you sure you want to delete this quiz?",
+          "delete": "Delete",
+          "deleted": "Quiz deleted successfully",
+          "questionDeleteWarning": "Are you sure you want to delete this question?",
+          "close": "Close",
+          "add": "Add",
+          "update": "Update",
+          "questionDeleted": "Question deleted successfully",
+          "questions": "Questions",
+          "questionTitle": "Title",
+          "type": "Type",
+          "grade": "Grade",
+          "titleField": "Title",
+          "updated": "Question updated successfully",
+          "addMultiple": "Add multiple choice question",
+          "addDescriptiveQuestion": "Add descriptive question",
+          "multipleQuestion": {
+            "questionTitle": "Question Title",
+            "grade": "Grade",
+            "image": "Image (Optional)",
+            "video": "Video (Optional)",
+            "correctAnswer": "Correct Answer",
+            "newMultiple": "New multiple choice question",
+            "editMultiple": "Edit multiple choice question",
+            "answers": "Answers",
+            "addAnswer": "Add an answer",
+            "answerTitle": "Answer Title",
+            "answerImage": "Answer Image (Optional)",
+            "isCorrect": "Correct answer",
+            "cancel": "Cancel",
+            "save": "Save",
+            "close": "Close",
+            "add": "Add multiple choice question",
+            "update": "Update multiple choice question",
+            "noQuestions": "No questions in this quiz yet",
+            "questionAdded": "Question added successfully",
+            "questionUpdated": "Question updated successfully"
+          },
+          "descriptiveQuestion": {
+            "newDescriptive": "New descriptive question",
+            "editDescriptive": "Edit descriptive question",
+            "questionTitle": "Question Title",
+            "grade": "Grade",
+            "image": "Image (Optional)",
+            "video": "Video (Optional)",
+            "correctAnswer": "Correct Answer",
+            "questionAdded": "Question added successfully",
+            "questionUpdated": "Question updated successfully",
+            "close": "Close",
+            "addDescriptive": "Add descriptive question",
+            "updateDescriptive": "Update descriptive question"
+          }
+        },
+        "message": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Course data saved successfully",
+          "title": "Message to reviewer",
+          "message": "Type your message",
+          "agree": "I agree with terms & rules.",
+          "previous": "Previous",
+          "save": "Save changes"
+        }
+      },
+      "statistics": {
+        "courseStudents": "Course Students",
+        "students": "Students",
+        "comments": "Comments",
+        "sales": "Sales",
+        "salesAmount": "Sales amount",
+        "sections": "Sections",
+        "sessions": "Sessions",
+        "pendingQuizzes": "Pending Quizzes",
+        "pendingAssignments": "Pending Assignments",
+        "rating": "Rating",
+        "totalRating": "Total Rating",
+        "quizzes": "Quizzes",
+        "averageGrade": "Average Grade",
+        "assignments": "Assignments",
+        "forumMessages": "Forum Messages",
+        "activeForumStudents": "Active Forum Students",
+        "studentsRoles": "Students roles",
+        "courseProgress": "Course Progress",
+        "statusQuiz": "Status quiz",
+        "monthlySales": "Monthly Sales",
+        "courseProgressPercent": "Course Progress (%)",
+        "studentsList": "Students List",
+        "student": "Student",
+        "progress": "Progress",
+        "passedQuizzes": "Passed Quizzes",
+        "unsentAssignments": "Unsent Assignments",
+        "purchaseDate": "Purchase Date",
+        "instructors": "Instructors",
+        "completed": "Completed",
+        "inProgress": "In Progress",
+        "notStarted": "Not Started",
+        "pending": "Pending",
+        "passed": "Passed",
+        "failed": "Failed",
+        "empty": "No students found"
+      }
+    },
+    "bundles": {
+      "statisticsBoxes": {
+        "courseBundles": "Course Bundles",
+        "totalHours": "Total Hours",
+        "bundlesSales": "Bundles Sales",
+        "salesCount": "Sales Count"
+      },
+      "list": {
+        "video": "Video course",
+        "webinar": "Live webinar",
+        "text_lesson": "Text course",
+        "noBundles": "No bundles yet",
+        "options": {
+          "editBundle": "Edit bundle",
+          "bundleCourses": "Bundle courses",
+          "exportStudents": "Export students",
+          "delete": "Delete",
+          "modal": {
+            "question": "Are you sure you want to delete this bundle ?",
+            "cancel": "Cancel",
+            "confirm": "Yes, delete",
+            "success": "Bundle deleted successfully",
+            "noStudentsInBundle": "No students to export"
+          }
+        },
+        "id": "ID",
+        "category": "Category",
+        "duration": "Duration",
+        "courses": "Courses",
+        "sales": "Sales",
+        "hour": "Hour",
+        "free": "Free"
+      },
+      "new": {
+        "clearCache": "Clear Cache",
+        "tabs": {
+          "basicInformation": "Basic Information",
+          "extraInformation": "Extra Information",
+          "pricing": "Pricing",
+          "content": "Content",
+          "faq": "FAQ",
+          "messageToReviewer": "Message to reviewer"
+        },
+        "basicInformation": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Bundle data saved successfully",
+          "videoSources": {
+            "upload": "Upload",
+            "youtube": "Youtube",
+            "vimeo": "Vimeo",
+            "externalLink": "External Link"
+          },
+          "title": "Bundle title",
+          "meta": "SEO meta description",
+          "thumbnail": "Thumbnail",
+          "cover": "Cover image",
+          "path": "Choose File",
+          "demoVideoSource": "Demo Video Source (Optional)",
+          "uploadFile": "Upload files from your PC",
+          "videoLink": "Video Link",
+          "description": "Description",
+          "previous": "Previous",
+          "next": "Next",
+          "save": "Save & Next"
+        },
+        "extraInformation": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Bundle data saved successfully",
+          "tags": "Tags",
+          "category": "Category",
+          "previous": "Previous",
+          "next": "Next",
+          "save": "Save & Next"
+        },
+        "pricing": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Bundle data saved successfully",
+          "enableSubscribe": "Enable Subscribe",
+          "subscribeText": "Students will be able to subscribe to your content in addition of direct purchasing.",
+          "accessPeriod": "Access Period",
+          "price": "Price",
+          "optional": "Optional",
+          "days": "Days",
+          "pricingPlans": "Pricing Plans",
+          "plansTexts": [
+            "Pricing plans will help you to create time & capacity depended prices for your content.",
+            "You can create pricing plans for a limited time or limited number of course students.",
+            "If you don't create a pricing plan, your course base price will be considered."
+          ],
+          "newPlan": "New Plan",
+          "planAddedSuccess": "Plan added successfully",
+          "title": "Title",
+          "discount": "Discount",
+          "capacity": "Capacity",
+          "capacityPlaceholder": "Leave it blank for unlimited",
+          "startDate": "Start Date",
+          "endDate": "End Date",
+          "save": "Save & Next",
+          "cancel": "Cancel",
+          "deleteQuestion": "Are you sure you want to delete this plan ?",
+          "confirmDelete": "Yes, delete this plan",
+          "deleteSuccess": "Plan deleted successfully",
+          "noPlans": "No pricing plans yet",
+          "previous": "Previous",
+          "next": "Next"
+        },
+        "content": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Bundle data saved successfully",
+          "title": "Content & Courses",
+          "addCourse": "Add Course",
+          "noCourss": "No courses added yet",
+          "addNewCourse": "Add new course",
+          "selectCourse": "Select course",
+          "cancel": "Cancel",
+          "save": "Save",
+          "types": {
+            "liveClass": "Live class",
+            "videoCourse": "Video course",
+            "textCourse": "Text course"
+          },
+          "deleteQuestion": "Are you sure you want to remove this webinar ?",
+          "confirmDelete": "Yes, delete",
+          "deleteSuccess": "Webinar deleted successfully",
+          "previous": "Previous",
+          "updateSuccess": "Webinar updated successfully",
+          "addSuccess": "Webinar added successfully",
+          "next": "Next"
+        },
+        "faq": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Bundle data saved successfully",
+          "title": "FAQ",
+          "addFaq": "Add FAQ",
+          "noData": "No FAQs added yet",
+          "addNewFaq": "Add new FAQ",
+          "inputs": {
+            "question": "Question",
+            "questionPlaceholder": "maximum 64 characters",
+            "answer": "Answer"
+          },
+          "deleteQuestion": "Are you sure you want to remove this faq ?",
+          "confirmDelete": "Yes, delete",
+          "deleteSuccess": "Question deleted successfully",
+          "details": "FAQ Details",
+          "cancel": "Cancel",
+          "save": "Save",
+          "previous": "Previous",
+          "next": "Next"
+        },
+        "message": {
+          "loadingData": "Loading data...",
+          "saveSuccess": "Bundle data saved successfully",
+          "title": "Message to reviewer",
+          "message": "Type your message",
+          "agree": "I agree with terms & rules.",
+          "previous": "Previous",
+          "save": "Save"
+        }
+      },
+      "courses": {
+        "title": "Bundle Courses"
+      }
+    },
+    "assignments": {
+      "statisticsBoxes": {
+        "courseAssignments": "Course Assignments",
+        "pendingReview": "Pending Review",
+        "passed": "Passed",
+        "failed": "Failed"
+      },
+      "list": {
+        "noAssignments": "No assignments yet",
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "course": "Course",
+          "student": "Student",
+          "status": "Status",
+          "filter": "Filter",
+          "statuses": {
+            "pending": "Pending",
+            "passed": "Passed",
+            "notPassed": "Not Passed",
+            "notSubmitted": "Not Submitted"
+          },
+          "all": "All courses"
+        },
+        "title": "Title",
+        "minGrade": "Min Grade",
+        "average": "Average",
+        "submissions": "Submissions",
+        "pending": "Pending",
+        "course": "Course",
+        "passed": "Passed",
+        "failed": "Failed",
+        "status": "status",
+        "active": "Active",
+        "idle": "Idle",
+        "action": "Action",
+        "pendingReview": "Pending Review",
+        "allAssignments": "All Assignments",
+        "delete": "Delete",
+        "student": "Student",
+        "purchaseDate": "Purchase Date",
+        "firstSubmission": "First Submission",
+        "lastSubmission": "Last Submission",
+        "attempts": "Attempts",
+        "grade": "Grade",
+        "view": "View Assignment"
+      }
+    },
+    "meetings": {
+      "statisticsBoxes": {
+        "pendingMeetings": "Pending meetings",
+        "totalMeetings": "Total meetings",
+        "openMeetings": "Open meetings",
+        "salesAmount": "Sales amount",
+        "activeHours": "Active hours"
+      },
+      "list": {
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "day": "Day",
+          "instructor": "Instructor",
+          "student": "Student",
+          "status": "Status",
+          "statuses": {
+            "all": "All",
+            "open": "Open",
+            "pending": "Pending",
+            "finished": "Finished"
+          },
+          "days": {
+            "all": "All days",
+            "saturday": "Saturday",
+            "sunday": "Sunday",
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "friday": "Friday"
+          },
+          "clear": "Clear",
+          "filter": "Filter"
+        },
+        "join": "Join now",
+        "createSession": "Create session",
+        "sessionCreatedSuccess": "Session created successfully",
+        "addLink": "Add live meeting link",
+        "url": "URL",
+        "password": "Password",
+        "optional": "Optional",
+        "liveLinkText": "You can use Zoom, Bigbluebutton, etc links",
+        "meetingLinkCreated": "Meeting link created",
+        "save": "Save",
+        "contactInfo": "Contact Information",
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "noMeetings": "No meetings yet",
+        "message": "Message",
+        "studentsCount": "Students",
+        "type": "Meeting Type",
+        "in_person": "In Person",
+        "online": "Online",
+        "all": "Both",
+        "day": "Day",
+        "time": "Time",
+        "paidAmount": "Amount",
+        "date": "Date",
+        "user": "User",
+        "status": "Status",
+        "open": "Open",
+        "pending": "Pending",
+        "finished": "Finished",
+        "viewContent": "View content",
+        "action": "Action",
+        "addToCalender": "Add to calender",
+        "contactInstructor": "Contact instructor",
+        "contactStudent": "Contact student",
+        "finishMeeting": "Finish meeting",
+        "showMeeting": "Show meeting",
+        "closeMeeting": "Close meeting",
+        "finishQuestion": "Are you sure you want to finish this meeting ?",
+        "finishSuccess": "Meeting marked as finished",
+        "finishConfirm": "Yes, finish",
+        "cancel": "Cancel"
+      },
+      "settings": {
+        "timesheet": {
+          "title": "Timesheet",
+          "saturday": "Saturday",
+          "sunday": "Sunday",
+          "monday": "Monday",
+          "tuesday": "Tuesday",
+          "wednesday": "Wednesday",
+          "thursday": "Thursday",
+          "friday": "Friday",
+          "in_person": "In Person",
+          "online": "Online",
+          "noTimes": "No times available",
+          "removeQuestion": "Are you sure you want to remove this time ?",
+          "cancel": "Cancel",
+          "confirm": "Yes, remove",
+          "success": "Time removed successfully",
+          "removeTime": "Remove this time",
+          "modal": {
+            "title": "Add new time",
+            "from": "From",
+            "to": "To",
+            "both": "Both",
+            "in_person": "In Person",
+            "online": "Online",
+            "day": "Day",
+            "type": "Meeting Type",
+            "description": "Description",
+            "timeSaved": "Time saved successfully",
+            "cancel": "Cancel",
+            "save": "Add time"
+          }
+        },
+        "charges": {
+          "title": "Hourly Charges",
+          "amount": "Amount (₪)",
+          "discountRate": "Discount rate (%)",
+          "hourlyPrice": "Hourly Price (₪)",
+          "minimumStudents": "Minimum Students",
+          "maximumStudents": "Maximum Students",
+          "inPersonMeetings": "In-person meetings",
+          "inPersonMeetingsMessage": "Available for In-person meetings",
+          "groupMeetings": "Group meetings",
+          "groupMeetingsMessage": "Available for group meetings",
+          "onlineGroupMeetingOptions": "Online Group Meeting Options",
+          "inPersonGroupMeetingOptions": "In-person Group Meeting Options",
+          "save": "Save",
+          "saved": "Meetings settings saved"
+        }
+      }
+    },
+    "quizzes": {
+      "new": {
+        "title": "New Quiz",
+        "editTitle": "Edit Quiz",
+        "course": "Course",
+        "quizTitle": "Quiz Title",
+        "time": "Time",
+        "number": "Number Of Attempts",
+        "passMark": "Pass Mark",
+        "expiryDays": "Expiry Days",
+        "displayQuestions": "Display questions randomly",
+        "certificate": "Certificate included",
+        "active": "Active",
+        "mark": "Mark",
+        "empty": "No quizzes added yet",
+        "create": "Create Quiz",
+        "edit": "Edit Quiz",
+        "questions": "Questions",
+        "addMultiple": "Add multiple choice question",
+        "addDescriptive": "Add descriptive",
+        "newDescriptive": "New descriptive question",
+        "questionTitle": "Question Title",
+        "grade": "Grade",
+        "type": "Type",
+        "image": "Image (Optional)",
+        "video": "Video (Optional)",
+        "correctAnswer": "Correct Answer",
+        "close": "Close",
+        "add": "Add",
+        "newMultiple": "New multiple choice question",
+        "answers": "Answers",
+        "addAnswer": "Add an answer",
+        "answerTitle": "Answer Title",
+        "answerImage": "Answer Image (Optional)",
+        "isCorrect": "Correct answer",
+        "cancel": "Cancel",
+        "save": "Save",
+        "added": "Quiz added successfully",
+        "updated": "Quiz updated successfully",
+        "noQuestions": "No questions in this quiz yet",
+        "loadingData": "Loading data...",
+        "questionUpdated": "Question updated successfully",
+        "questionAdded": "Question added successfully",
+        "editMultiple": "Edit multiple choice question",
+        "update": "Update",
+        "questionDeleteWarning": "Are you sure you want to delete this question?",
+        "delete": "Delete",
+        "questionDeleted": "Question deleted successfully",
+        "descriptiveQuestion": {
+          "newDescriptive": "New descriptive question",
+          "editDescriptive": "Edit descriptive question",
+          "questionTitle": "Question Title",
+          "grade": "Grade",
+          "image": "Image (Optional)",
+          "video": "Video (Optional)",
+          "correctAnswer": "Correct Answer",
+          "questionAdded": "Question added successfully",
+          "questionUpdated": "Question updated successfully"
+        }
+      },
+      "list": {
+        "statisticsBoxes": {
+          "quizzes": "Quizzes",
+          "questions": "Questions",
+          "students": "Students"
+        },
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "course": "Quiz / Course",
+          "total": "Total Mark",
+          "status": "Status",
+          "filter": "Filter",
+          "active": "Active",
+          "inactive": "Inavtive"
+        },
+        "table": {
+          "inactive": "Inavtive",
+          "title": "title",
+          "questions": "Questions",
+          "time": "Time (Min)",
+          "total": "Total Mark",
+          "passMark": "Pass Mark",
+          "students": "Students",
+          "status": "Status",
+          "date": "Date Created",
+          "active": "Active",
+          "action": "Action",
+          "empty": "No quizzes found",
+          "edit": "Edit",
+          "delete": "Delete",
+          "deleteQuiz": "DeleteQuiz",
+          "deleteWarning": "Are you sure you want to delete this quiz ?",
+          "cancel": "Cancel",
+          "deleted": "Quiz deleted successfully"
+        }
+      },
+      "results": {
+        "statisticsBoxes": {
+          "needReview": "Need Review",
+          "results": "Results",
+          "averageGrade": "Average Grade",
+          "successRate": "Success Rate"
+        },
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "course": "Quiz / Course",
+          "student": "Student",
+          "status": "Status",
+          "filter": "Filter",
+          "passed": "Passed",
+          "failed": "Failed",
+          "waiting": "Waiting"
+        },
+        "table": {
+          "waiting": "Waiting",
+          "passed": "Passed",
+          "failed": "Failed",
+          "student": "Student",
+          "quiz": "Quiz",
+          "quizGrade": "Quiz Grade",
+          "studentGrade": "Student Grade",
+          "status": "Status",
+          "date": "Date",
+          "action": "Action",
+          "empty": "No results found",
+          "review": "Review",
+          "delete": "Delete",
+          "view": "View course"
+        }
+      },
+      "myResults": {
+        "statisticsBoxes": {
+          "quizzes": "Quizzes",
+          "passed": "Passed",
+          "failed": "Failed",
+          "openResults": "Open Results"
+        },
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "course": "Quiz / Course",
+          "instructor": "Instructor",
+          "status": "Status",
+          "filter": "Filter",
+          "passed": "Passed",
+          "failed": "Failed",
+          "waiting": "Waiting"
+        },
+        "table": {
+          "waiting": "Waiting",
+          "passed": "Passed",
+          "failed": "Failed",
+          "instructor": "Instructor",
+          "quiz": "Quiz",
+          "quizGrade": "Quiz Grade",
+          "myGrade": "My Grade",
+          "status": "Status",
+          "date": "Date",
+          "action": "Action",
+          "empty": "No results found",
+          "tryAgain": "Try again",
+          "coursePage": "Course page",
+          "student": "Student",
+          "studentGrade": "Student Grade",
+          "view": "View course"
+        }
+      },
+      "studentResults": {
+        "statisticsBoxes": {
+          "minGrade": "Min Grade",
+          "avgGrade": "Avergae Grade",
+          "attempts": "Attempts",
+          "yourGrade": "Your Grade",
+          "status": "Status",
+          "questions": "Questions",
+          "timeLeft": "Time Left"
+        },
+        "questionGrade": "Question grade",
+        "studentGrade": "Student grade",
+        "yourGrade": "Your grade",
+        "studentAnswer": "Student Answer",
+        "correctAnswer": "Correct Answer",
+        "grade": "Grade",
+        "nextQuestion": "Next Question",
+        "previousQuestion": "Previous Question",
+        "finish": "Finish",
+        "notFound": "Quiz not found"
+      },
+      "tryAgain": {
+        "statisticsBoxes": {
+          "minGrade": "Min Grade",
+          "avgGrade": "Avg Grade",
+          "attempts": "Attempts",
+          "yourGrade": "Your Grade",
+          "status": "Status",
+          "questions": "Questions",
+          "timeLeft": "Time Left"
+        },
+        "tryAgain": "Try again",
+        "results": "My results",
+        "failed": "Sorry, You failed the exam.",
+        "waiting": "Wait for instructor to review your answers",
+        "time": "It may take a while to review your answers.",
+        "quizMark": [
+          "The quiz pass mark is",
+          "but your grade is",
+          "Don't be worried, you can try again.",
+          "You cannot try again."
+        ],
+        "questionGrade": "Question grade",
+        "yourGrade": "Your grade",
+        "studentAnswer": "Student Answer",
+        "nextQuestion": "Next Question",
+        "previousQuestion": "Previous Question",
+        "passed": "Congratulations, you passed this quiz",
+        "passedDescription": "You get the mark the made you pass this quiz",
+        "finish": "Finish",
+        "noQuestions": "No questions in this quiz yet"
+      }
+    },
+    "certificates": {
+      "statisticsBoxes": {
+        "activeCertificates": "Active certificates",
+        "studentAchievements": "Student achievements",
+        "failedStudents": "Failed students",
+        "averageGrade": "Average Grade"
+      },
+      "table": {
+        "quiz": "Quiz",
+        "grade": "Grade",
+        "average": "Average",
+        "generatedCertificates": "Generated certificates",
+        "date": "Date",
+        "action": "Action",
+        "show": "Show",
+        "delete": "Delete",
+        "empty": "No certificates yet",
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "course": "Course",
+          "quiz": "Quiz",
+          "grade": "Grade",
+          "filter": "Filter"
+        }
+      },
+      "validation": {
+        "title": "Certificate Validation",
+        "details": "To validate certificates please enter the certificate id in this input field and click on validate button.",
+        "cert_id": "Certificate ID",
+        "captcha": "Captcha",
+        "btn": "Validate",
+        "notValid": "Invalid certificate",
+        "valid": "Certificate is valid",
+        "captchaWrong": "Invalid captcha code"
+      }
+    },
+    "financial": {
+      "sales": {
+        "statisticsBoxes": {
+          "students": "Students",
+          "sales": "Sales",
+          "meetingSales": "Meeting Sales",
+          "totalSales": "Total Sales"
+        },
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "liveClass": "Live class",
+          "student": "Student",
+          "type": "Type",
+          "filter": "Filter",
+          "meeting": "Meeting"
+        },
+        "table": {
+          "student": "Student",
+          "content": "Content",
+          "price": "Price",
+          "discount": "Discount",
+          "totalAmount": "Total Amount",
+          "income": "Income",
+          "type": "Type",
+          "date": "Date",
+          "action": "Action",
+          "delete": "Delete",
+          "empty": "No sales yet",
+          "meeting": "meeting",
+          "webinar": "webinar"
+        }
+      },
+      "summary": {
+        "title": "Financial Documents",
+        "type": "Type",
+        "description": "Description",
+        "amount": "Amount",
+        "creator": "Creator",
+        "date": "Date",
+        "download": "Download",
+        "discount": "Discount",
+        "empty": "No financial documents found!"
+      },
+      "payout": {
+        "statisticsBoxes": {
+          "accountCharge": "Account Charge",
+          "readyToPayout": "Ready to Payout",
+          "totalIncome": "Total income"
+        },
+        "list": {
+          "request": "Request Payout",
+          "confirmation": "Payout Confirmation",
+          "confirmDescription": "Please check the following information for your payout request, we will transfer money to following accounts.",
+          "payoutDetails": "Payout Details",
+          "accountHolder": "Account Holder",
+          "bankName": "Bank Name",
+          "accountNumber": "Account Number",
+          "cancel": "Cancel",
+          "table": {
+            "account": "Account",
+            "bankName": "Bank Name",
+            "type": "Type",
+            "amount": "Amount",
+            "status": "Status",
+            "date": "Date",
+            "action": "Action",
+            "show": "Show details",
+            "delete": "Delete",
+            "empty": "No payouts yet"
+          }
+        }
+      },
+      "account": {
+        "statisticsBoxes": {
+          "accountCharge": "Account Charge",
+          "readyToPayout": "Ready to Payout",
+          "totalIncome": "Total income"
+        },
+        "payment": {
+          "title": "Select a payment gateway",
+          "finalize": "Finalize",
+          "payWith": "Pay with",
+          "offline": "Offline payment",
+          "amount": "Amount",
+          "account": "Account",
+          "referenceCode": "Reference Code",
+          "date": "Date / Time",
+          "attach": "Attach the payment receipt",
+          "pay": "Pay Now"
+        },
+        "accounts": {
+          "title": "Bank accounts information",
+          "name": "Name",
+          "cardNumber": "Card Number",
+          "account": "Account ID",
+          "IBAN": "IBAN",
+          "empty": "No bank accounts yet"
+        },
+        "offline": {
+          "table": {
+            "bank": "Bank",
+            "reference": "Reference Code",
+            "amount": "Amount",
+            "attachment": "Attachment",
+            "status": "Status",
+            "action": "Action",
+            "delete": "Delete",
+            "empty": "No payouts yet"
+          }
+        }
+      },
+      "subscribe": {
+        "title": "Subscription Plans",
+        "empty": "No Subscription plans yet",
+        "popular": "Popular",
+        "days": "Days of subscription",
+        "subscribes": "Subscribes",
+        "subscribe": "Subscribe",
+        "activePlan": "Active Plan",
+        "remained_downloads": "Remained Downloads",
+        "days_remained": "Days Remained",
+        "noPlan": "You are not subscribed to any plan"
+      }
+    },
+    "achievements": {
+      "statisticsBoxes": {
+        "certificates": "Certificates",
+        "averageGrade": "Average Grade",
+        "failedQuizzes": "Failed Quizzes"
+      },
+      "table": {
+        "quiz": "Quiz",
+        "grade": "Grade",
+        "average": "Average",
+        "generatedCertificates": "Generated certificates",
+        "date": "Date",
+        "action": "Action",
+        "show": "Show",
+        "delete": "Delete",
+        "empty": "No achievements yet",
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "course": "Course",
+          "quiz": "Quiz",
+          "grade": "Grade",
+          "filter": "Filter"
+        }
+      }
+    },
+    "completion": {
+      "table": {
+        "quiz": "Quiz",
+        "grade": "Grade",
+        "average": "Average",
+        "generatedCertificates": "Generated certificates",
+        "date": "Date",
+        "action": "Action",
+        "show": "Show",
+        "delete": "Delete",
+        "empty": "No certificates yet",
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "course": "Course",
+          "filter": "Filter"
+        }
+      }
+    },
+    "support": {
+      "new": {
+        "title": "New support message",
+        "subject": "Subject",
+        "type": "Type",
+        "message": "Message",
+        "attachFile": "Attach a file",
+        "sendMessage": "Send Message",
+        "course_support": "Course Support",
+        "platform_support": "Platform Support"
+      },
+      "courses": {
+        "statisticsBoxes": {
+          "openConversations": "Open conversations",
+          "closedConversations": "Closed conversations",
+          "totalConversations": "Total conversations"
+        },
+        "table": {
+          "title": "Title",
+          "create_date": "Create Date",
+          "last_update": "Last Update",
+          "user": "User",
+          "role": "Role",
+          "department": "Department",
+          "status": "Status",
+          "reply": "Reply",
+          "webinar": "Webinar",
+          "from": "From",
+          "to": "To",
+          "action": "Action",
+          "empty": "No courses yet",
+          "view": "View",
+          "delete": "Delete",
+          "open": "Open",
+          "supporter_replied": "Supporter replied",
+          "filter": {
+            "from": "From",
+            "to": "To",
+            "userType": "User Type",
+            "courses": "Courses",
+            "status": "Status",
+            "filter": "Filter",
+            "student": "Student",
+            "instructor": "Instructor",
+            "open": "Open",
+            "close": "Close",
+            "replied": "Replied"
+          }
+        }
+      },
+      "tickets": {
+        "statisticsBoxes": {
+          "openConversations": "Open conversations",
+          "closedConversations": "Closed conversations",
+          "totalConversations": "Total conversations"
+        },
+        "table": {
+          "title": "Title",
+          "create_date": "Create Date",
+          "last_update": "Last Update",
+          "user": "User",
+          "role": "Role",
+          "department": "Department",
+          "status": "Status",
+          "reply": "Reply",
+          "webinar": "Webinar",
+          "from": "From",
+          "to": "To",
+          "action": "Action",
+          "empty": "No courses yet",
+          "view": "View",
+          "delete": "Delete",
+          "supporter_replied": "Supporter replied",
+          "filter": {
+            "from": "From",
+            "to": "To",
+            "department": "Department",
+            "status": "Status",
+            "filter": "Filter",
+            "student": "Student",
+            "instructor": "Instructor",
+            "open": "Open",
+            "close": "Close",
+            "replied": "Replied"
+          }
+        },
+        "reply": {
+          "closeConversation": "Close conversation",
+          "closeTitle": "Close Conversation",
+          "closeDesc": "Are you sure you want to close this conversation?",
+          "cancel": "Cancel",
+          "closed": "Conversation closed successfully",
+          "typeMessage": "Type Your Message",
+          "noMessages": "No messages in this chat yet"
+        }
+      }
+    },
+    "marketing": {
+      "discounts": {
+        "new": {
+          "newTitle": "Create new discount",
+          "from": "From",
+          "to": "To",
+          "title": "Title",
+          "course": "Course",
+          "amount": "Amount",
+          "cancel": "Cancel",
+          "create": "Create",
+          "offerAdded": "Offer added successfully"
+        },
+        "title": "Discounts",
+        "name": "Name",
+        "course": "Course",
+        "amount": "Amount",
+        "status": "Status",
+        "active": "Active",
+        "disabled": "Disabled",
+        "from": "From",
+        "to": "To",
+        "action": "Action",
+        "disable": "Disable",
+        "noData": "No discounts yet",
+        "disableWarning": "Are you sure you want to disable this offer?",
+        "cancel": "Cancel",
+        "offerDisabled": "Offer disabled successfully"
+      },
+      "promotions": {
+        "title": "Promotions",
+        "name": "Name",
+        "course": "Course",
+        "amount": "Amount",
+        "status": "Status",
+        "active": "Active",
+        "disabled": "Disabled",
+        "from": "From",
+        "to": "To",
+        "action": "Action",
+        "disable": "Disable",
+        "noData": "No promotions yet",
+        "plan": "Plan",
+        "description": "Description",
+        "days": "Days",
+        "price": "Price",
+        "date": "Date"
+      }
+    },
+    "articles": {
+      "new": {
+        "addNew": "Add new article",
+        "editTitle": "Edit Article",
+        "title": "Title",
+        "category": "Category",
+        "cover": "Cover image",
+        "description": "Description",
+        "content": "Content",
+        "save": "Save changes",
+        "saveSuccess": "Article created successfully",
+        "editSuccess": "Article updated successfully"
+      },
+      "table": {
+        "statisticsBoxes": {
+          "articles": "Articles",
+          "comments": "Comments",
+          "pendingForPublish": "Pending For Publish"
+        },
+        "deleteQuestion": "Are you sure you want to delete this article ?",
+        "cancel": "Cancel",
+        "confirm": "Yes, delete",
+        "deleteSuccess": "Article deleted successfully",
+        "noData": "No articles yet",
+        "title": "Title",
+        "category": "Category",
+        "comments": "Comments",
+        "views": "Views",
+        "status": "Status",
+        "published": "Published",
+        "pending": "Pending",
+        "date": "Created At",
+        "action": "Action",
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "comments": {
+        "all": "All",
+        "clear": "Clear",
+        "reportComment": "Report comment",
+        "commentContent": "Comment content",
+        "replyToComment": "Reply to the comment",
+        "title": "Title",
+        "description": "Description",
+        "save": "Save",
+        "noComments": "No Comments Yet",
+        "searchPlaceholder": "Search for a comment",
+        "user": "User",
+        "article": "Article",
+        "comment": "Comment",
+        "viewContent": "View content",
+        "status": "Status",
+        "open": "Open",
+        "closed": "Closed",
+        "date": "Date",
+        "action": "Action",
+        "reply": "Reply",
+        "report": "Report",
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "user": "User",
+          "article": "Article",
+          "filter": "Filter"
+        }
+      }
+    },
+    "noticeboard": {
+      "statisticsBoxes": {
+        "totalNotices": "Total Notices",
+        "courseNotices": "Course Notices",
+        "generalNotices": "General Notices"
+      },
+      "filter": {
+        "from": "From",
+        "to": "To",
+        "course": "Course",
+        "all": "All courses",
+        "title": "Title",
+        "filter": "Filter",
+        "clear": "Clear"
+      },
+      "noData": "No notices yet",
+      "deleteQuestion": "Are you sure you want to delete this notice ?",
+      "cancel": "Cancel",
+      "confirm": "Yes, delete",
+      "deleteSuccess": "Notice deleted successfully",
+      "title": "Title",
+      "message": "Message",
+      "type": "Type",
+      "viewContent": "View content",
+      "date": "Date",
+      "action": "Action",
+      "edit": "Edit",
+      "delete": "Delete",
+      "new": {
+        "addNew": "Send new notice",
+        "editTitle": "Edit Notice",
+        "title": "Title",
+        "type": "Type",
+        "allStudents": "All students",
+        "courseStudents": "Course students",
+        "all": "All courses",
+        "course": "Course",
+        "message": "Message",
+        "sendNotice": "Send notice",
+        "saveSuccess": "Notice saved successfully",
+        "loadingData": "Loading data..."
+      },
+      "newCourseNotice": {
+        "addNew": "Send new course notice",
+        "editTitle": "Edit Course Notice",
+        "title": "Title",
+        "color": "Color",
+        "yellow": "Yellow",
+        "red": "Red",
+        "green": "Green",
+        "warning": "Warning",
+        "blue": "Blue",
+        "grey": "Grey",
+        "all": "All courses",
+        "course": "Course",
+        "message": "Message",
+        "sendNotice": "Send notice",
+        "saveSuccess": "Notice saved successfully",
+        "loadingData": "Loading data..."
+      },
+      "courseNotices": {
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "course": "Course",
+          "all": "All courses",
+          "title": "Title",
+          "color": "Color",
+          "filter": "Filter",
+          "clear": "Clear",
+          "yellow": "Yellow",
+          "red": "Red",
+          "green": "Green",
+          "blue": "Blue",
+          "warning": "Warning",
+          "grey": "Grey"
+        },
+        "noData": "No notices yet",
+        "deleteQuestion": "Are you sure you want to delete this notice ?",
+        "cancel": "Cancel",
+        "confirm": "Yes, delete",
+        "deleteSuccess": "Notice deleted successfully",
+        "title": "Title",
+        "message": "Message",
+        "color": "Color",
+        "viewContent": "View content",
+        "date": "Date",
+        "action": "Action",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    },
+    "notifications": {
+      "title": "Notifications",
+      "view": "View",
+      "markAsRead": "Mark this notification as read",
+      "markAllAsRead": "Mark all notifications as read"
+    },
+    "forums": {
+      "statisticsBoxes": {
+        "publishedTopics": "Published Topics",
+        "closedTopics": "Closed Topics",
+        "topicReplies": "Topic Replies"
+      },
+      "topicsTable": {
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "forum": "Forum",
+          "all": "All",
+          "status": "Status",
+          "published": "Published",
+          "closed": "Closed",
+          "filter": "Filter"
+        },
+        "title": "Title",
+        "forum": "Forum",
+        "replies": "Replies",
+        "posts": "Posts",
+        "published": "Published",
+        "active": "Active",
+        "closed": "Closed",
+        "status": "Status",
+        "publishedAt": "Publish Date",
+        "unBookmark": "Unbookmark",
+        "bookmarks": "Bookmarks",
+        "bookmarkRemoved": "Topic removed from bookmarks successfully",
+        "noData": "No forums yet"
+      },
+      "repliesTable": {
+        "filter": {
+          "from": "From",
+          "to": "To",
+          "forum": "Forum",
+          "all": "All",
+          "status": "Status",
+          "published": "Published",
+          "closed": "Closed",
+          "filter": "Filter"
+        },
+        "by": "By",
+        "topic": "Topic",
+        "forum": "Forum",
+        "replies": "Replies",
+        "publishedAt": "Publish Date",
+        "noData": "No replies yet"
+      },
+      "create": {
+        "createTopic": "Create new topic",
+        "title": "Title",
+        "forum": "Forum",
+        "description": "Description",
+        "attachmentPlaceholder": "Choose file to upload",
+        "attachments": "Attachments",
+        "forumAdded": "Forum added successfully",
+        "uploadFiles": "Upload Files",
+        "uploadPlaceholder": "Upload files from your PC",
+        "create": "Create topic",
+        "all": "All"
+      }
+    },
+    "settings": {
+      "tabs": {
+        "basicInformation": "Basic Information",
+        "images": "Images",
+        "about": "About",
+        "education": "Education",
+        "experiences": "Experiences",
+        "skill": "Skill Topics",
+        "identity": "Identity & Financial",
+        "zoomApi": "Zoom API",
+        "extraInformation": "Extra Information",
+        "basicInfoTab": {
+          "title": "Account",
+          "email": "Email",
+          "name": "Name",
+          "password": "Password",
+          "retypePassword": "Retype Password",
+          "phone": "Phone",
+          "language": "Language",
+          "timeZone": "Time zone",
+          "join": "Join email newsletter",
+          "messages": "Enable profile messages",
+          "save": "Save",
+          "arabic": "Arabic",
+          "english": "English",
+          "updatedSuccessfully": "Profile data updated successfully"
+        },
+        "imagesTab": {
+          "title": "Images",
+          "changeCover": "Change cover picture",
+          "save": "Save",
+          "updatedSuccessfully": "Profile data updated successfully"
+        },
+        "aboutTab": {
+          "title": "About",
+          "biography": "Biography",
+          "jobTitle": "Job Title",
+          "jobHelpOne": "- The Job title will be displayed at the bottom of your name on the profile cards.",
+          "jobHelpTwo": "- Keep it short (2 or 3 words) Eg.Product designer, Senior software engineer.",
+          "save": "Save",
+          "updatedSuccessfully": "Profile data updated successfully"
+        },
+        "educationTab": {
+          "title": "Education",
+          "addNew": "Add Education",
+          "delete": "Delete",
+          "edit": "Edit",
+          "save": "Save",
+          "empty": "No educations yet",
+          "modal": {
+            "title": "Describe your education degree in a single line.",
+            "description": "Example: PhD of Medicine from Michigan university",
+            "placeholder": "Educaation degree",
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "updatedSuccessfully": "Profile data updated successfully"
+        },
+        "experiencesTab": {
+          "title": "Experiences",
+          "addNew": "Add Experience",
+          "delete": "Delete",
+          "edit": "Edit",
+          "save": "Save",
+          "empty": "No experiences yet",
+          "modal": {
+            "title": "Describe your experience in a single line.",
+            "description": "Example: Marketing manager at Microsoft 2012 - 2013",
+            "placeholder": "Experience",
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "updatedSuccessfully": "Profile data updated successfully"
+        },
+        "skillsTab": {
+          "title": "Skills",
+          "save": "Save",
+          "updatedSuccessfully": "Profile data updated successfully"
+        },
+        "identityTab": {
+          "title": "Identity & Financial",
+          "description": "Your identity & financial information approved so you cant change them. If you want to change, please contact support.",
+          "account": "Select account type",
+          "identity": "Identity scan",
+          "certificates": "Certificates & Documents",
+          "address": "Address",
+          "save": "Save",
+          "accountHolder": "Account Holder",
+          "accountId": "Account ID",
+          "email": "Account Email",
+          "updatedSuccessfully": "Profile data updated successfully"
+        },
+        "zoomApiTab": {
+          "title": "Zoom API",
+          "apiKey": "Zoom Api Key",
+          "apiSecret": "Zoom API secret",
+          "save": "Save",
+          "updatedSuccessfully": "Profile data updated successfully"
+        },
+        "extraInfoTab": {
+          "title": "Settings",
+          "gender": "Gender",
+          "male": "Male",
+          "female": "Female",
+          "age": "Age",
+          "meetingType": "Meeting Type",
+          "inPerson": "In-person",
+          "online": "Online",
+          "all": "All",
+          "trainingLevel": "Training Level",
+          "beginner": "Beginner",
+          "intermediate": "Intermediate",
+          "advanced": "Advanced",
+          "region": "Region",
+          "country": "Country",
+          "province": "Province",
+          "city": "City",
+          "district": "District",
+          "address": "Address",
+          "deleteAccount": "Delete Account",
+          "save": "Save",
+          "updatedSuccessfully": "Profile data updated successfully"
+        }
+      }
+    }
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy"
+  },
+  "refund": {
+    "pageTitle": "Refund Policy"
+  }
+}

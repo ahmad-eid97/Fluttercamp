@@ -1,0 +1,70 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.validation {
+  background-color: #fff;
+  padding: 30px 40px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  gap: 10px;
+
+  h3 {
+    color: var(--text-color);
+  }
+
+  p {
+    color: var(--light-text-color);
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .field {
+      width: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 15px;
+
+      &.captcha_field {
+        label + div {
+          padding: 5px;
+          display: flex;
+          gap: 5px;
+        }
+      }
+    }
+
+    .button {
+      width: 15%;
+      display: flex;
+      align-items: flex-end;
+
+      @include lg {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      button {
+        @extend %panelBtn;
+        width: 100%;
+        position: relative;
+        height: 50px;
+
+        svg {
+          margin-inline-end: 5px;
+        }
+      }
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 5px;
+    }
+  }
+}

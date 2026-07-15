@@ -1,0 +1,9 @@
+@use "@/styles/mixins" as *;
+
+.header {
+  margin: 56px 0 40px;
+
+  @include xs {
+    margin: 40px 0 28px;
+  }
+}

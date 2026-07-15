@@ -1,0 +1,53 @@
+@use "@/styles/extends" as *;
+
+.loadingData {
+  @extend %tabsTitle;
+  justify-content: start;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.faqs {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  padding: 25px 35px;
+  box-shadow: var(--shadow-sm);
+
+  h4 {
+    @extend %tabsTitle;
+    margin-bottom: 25px;
+  }
+
+  .section {
+    margin-bottom: 25px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+
+    &:last-of-type {
+      margin-bottom: 15px;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    & > button {
+      @extend %panelFocusBtn;
+      padding: 7px 20px;
+      margin-top: 10px;
+    }
+  }
+
+  .emptyData {
+    @extend %emptyData;
+    margin-top: 20px;
+  }
+
+  .actions {
+    margin-top: 20px;
+    @extend %formActions;
+  }
+}

@@ -1,0 +1,219 @@
+@use "@/styles/mixins" as *;
+
+.accordionCurriculum {
+  .loading {
+    font-size: 46px;
+    padding: 50px 0;
+    text-align: center !important;
+    color: var(--main-color);
+  }
+
+  .noData {
+    padding: 50px 0;
+    text-align: center !important;
+    color: var(--light-text-color);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+    color: var(--main-color-dark);
+    text-align: start !important;
+
+    @include sm {
+      font-size: 1.25rem;
+    }
+  }
+
+  .accordion {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-xs);
+    overflow: hidden;
+    transition: box-shadow var(--dur-base) var(--ease-out);
+
+    &:hover {
+      box-shadow: var(--shadow-sm);
+    }
+
+    &::before {
+      content: none;
+    }
+
+    svg {
+      top: 3px;
+      width: 18px;
+      height: 18px;
+
+      @include sm {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    :global(.Mui-expanded) {
+      background-color: rgba(var(--main-color-rgb), 0.04) !important;
+    }
+
+    :global(.MuiAccordionSummary-root) {
+      padding: 16px 22px;
+      background-color: #fff;
+
+      :global(.MuiAccordionSummary-content) {
+        margin: 0;
+        color: var(--text-color);
+
+        p {
+          display: flex;
+          align-items: center;
+          font-size: 1.02rem;
+          font-weight: 700;
+          line-height: 1.4;
+          color: var(--main-color-dark);
+
+          svg { color: var(--main-color); }
+
+          @include sm {
+            font-size: 0.92rem;
+          }
+        }
+      }
+    }
+
+    :global(.MuiCollapse-root) {
+      :global(.MuiAccordionDetails-root) {
+        padding: 0;
+
+        .item {
+          min-height: 64px;
+          display: flex;
+          align-items: center;
+          padding: 14px 22px;
+          border-top: 1px solid var(--border-color);
+          transition: background-color var(--dur-base) var(--ease-out);
+
+          &:hover {
+            background-color: var(--bg-alt-color);
+          }
+
+          @include sm {
+            display: block;
+          }
+
+          .text {
+            display: flex;
+            align-items: center;
+            margin-inline-end: auto;
+            margin-bottom: 0;
+
+            .icon {
+              display: grid;
+              place-items: center;
+              width: 34px;
+              height: 34px;
+              flex-shrink: 0;
+              border-radius: var(--radius-sm);
+              color: var(--main-color);
+              background: rgba(var(--main-color-rgb), 0.1);
+              margin-inline-end: 12px;
+
+              svg { top: 0; }
+            }
+
+            .title {
+              color: var(--text-color);
+              font-size: 0.97rem;
+              font-weight: 500;
+              margin-inline-start: 4px;
+              text-align: start !important;
+
+              a {
+                color: var(--text-color);
+                transition: color var(--dur-base) var(--ease-out);
+                &:hover { color: var(--main-color); }
+              }
+            }
+
+            @include sm {
+              margin-bottom: 14px;
+            }
+          }
+
+          .meta {
+            align-items: center;
+            display: flex;
+
+            .badge {
+              font-size: 0.8rem;
+              font-weight: 600;
+              margin-inline-end: 18px;
+              padding: 6px 12px;
+              text-align: center !important;
+              white-space: nowrap;
+              border-radius: var(--radius-pill);
+              display: inline-block;
+
+              &.question {
+                background-color: rgba(242, 178, 78, 0.18);
+                color: #b9831f;
+              }
+
+              &.time {
+                background-color: rgba(var(--main-color-rgb), 0.1);
+                color: var(--main-color);
+              }
+            }
+
+            .lectures {
+              color: var(--light-text-color);
+              font-size: 0.85rem;
+              margin-inline-end: 18px;
+              text-align: start !important;
+            }
+
+            .icon {
+              display: grid;
+              place-items: center;
+              width: 36px;
+              height: 36px;
+              border-radius: var(--radius-pill);
+              color: var(--main-color);
+              background: rgba(var(--main-color-rgb), 0.1);
+              transition: all var(--dur-base) var(--ease-out);
+
+              &:hover {
+                color: #fff;
+                background: var(--main-color);
+              }
+
+              svg { top: 0; }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ar {
+    .accordion {
+      :global(.MuiCollapse-root) {
+        :global(.MuiAccordionDetails-root) {
+          .item {
+            .text {
+              margin-left: auto;
+              margin-right: 0;
+              .title {
+                margin-left: 0;
+                margin-right: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

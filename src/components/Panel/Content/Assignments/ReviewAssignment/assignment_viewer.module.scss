@@ -1,0 +1,188 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.assignment_viewer {
+  .content {
+    .top_boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      .item {
+        width: calc(25% - 8px);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        @include lg {
+          width: calc(25% - 8px);
+        }
+
+        @include md {
+          width: calc(33.33% - 8px);
+        }
+
+        @include xs {
+          width: 100%;
+        }
+      }
+
+      .title {
+        width: 100%;
+
+        h4 {
+          @extend %sectionTitle;
+          margin-bottom: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .content_items {
+      display: flex;
+      gap: 20px;
+
+      @include md {
+        flex-wrap: wrap;
+      }
+
+      .forms {
+        width: 40%;
+
+        @include md {
+          width: 100%;
+        }
+
+        .form {
+          margin-bottom: 20px;
+          border: 1px solid var(--border-color);
+          padding: 20px;
+          border-radius: var(--radius-lg);
+          background-color: #fff;
+          height: fit-content;
+
+          h5 {
+            color: var(--text-color);
+            margin-bottom: 20px;
+          }
+        }
+
+        form {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          gap: 10px;
+
+          .field {
+            grid-column: span 12;
+            display: inline-flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 10px;
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+
+            label {
+              color: var(--text-color);
+
+              span {
+                font-size: 13px;
+                color: var(--light-text-color);
+              }
+            }
+          }
+        }
+        .actions {
+          margin-top: 25px;
+          @extend %smallFormActions;
+
+          p {
+            width: 100%;
+            font-size: 14px;
+            color: var(--light-text-color);
+          }
+        }
+      }
+
+      .mySubmissions {
+        background-color: #fff;
+        border: 1px solid var(--border-color);
+        padding: 20px;
+        border-radius: var(--radius-lg);
+        flex: 1;
+
+        .noData {
+          @extend %emptyData;
+        }
+
+        .submission {
+          border: 1px solid var(--border-color);
+          padding: 15px;
+          border-radius: var(--radius-md);
+          background-color: var(--bg-alt-color);
+          margin-bottom: 15px;
+
+          .info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+
+            img {
+              width: 44px;
+              height: 44px;
+              border-radius: 50%;
+            }
+
+            div {
+              p {
+                margin: 0;
+                color: var(--text-color);
+                font-size: 14px;
+                position: relative;
+                top: 5px;
+              }
+              span {
+                color: var(--light-text-color);
+                font-size: 12px;
+              }
+            }
+          }
+
+          .answer {
+            color: var(--text-color);
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+
+          .attachments {
+            .attachment {
+              width: fit-content;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid var(--border-color);
+              padding: 7px 10px 3px;
+              border-radius: var(--radius-pill);
+              background-color: #fff;
+              font-size: 13px;
+              gap: 4px;
+              color: var(--text-color);
+              cursor: pointer;
+              transition: all 0.3s ease;
+
+              &:hover {
+                background-color: var(--bg-alt-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

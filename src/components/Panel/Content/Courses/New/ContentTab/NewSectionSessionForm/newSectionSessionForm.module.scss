@@ -1,0 +1,71 @@
+@use "@/styles/extends" as *;
+@use "@/styles/mixins" as *;
+
+.newSectionSessionForm {
+  background-color: var(--bg-alt-color);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background-color: var(--bg-alt-color);
+      border-radius: var(--radius-md);
+      padding: 5px;
+    }
+  }
+  form {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    .field {
+      grid-column: span 6;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+      .radioGroup {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        .radio {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+      @include md {
+        grid-column: span 6;
+      }
+      @include sm {
+        grid-column: span 12;
+      }
+    }
+    .fullField {
+      grid-column: span 12;
+    }
+    .switch {
+      grid-column: span 6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include sm {
+        grid-column: span 12;
+      }
+    }
+    .empty {
+      grid-column: span 6;
+      @include sm {
+        display: none;
+      }
+    }
+  }
+  .actions {
+    margin-top: 25px;
+    @extend %smallFormActions;
+  }
+}

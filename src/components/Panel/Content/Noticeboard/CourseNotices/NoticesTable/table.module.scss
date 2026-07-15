@@ -1,0 +1,172 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.table_container {
+  margin-top: 20px;
+
+  .table {
+    box-shadow: var(--shadow-sm);
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+  }
+
+  p {
+    color: var(--light-text-color);
+    font-size: 14px;
+
+    &.title {
+      font-weight: bold;
+      color: var(--text-color);
+    }
+  }
+
+  .btn {
+    @extend %panelFocusBtn;
+    padding: 5px 0;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      top: 0;
+      margin-inline-end: 0;
+    }
+  }
+
+  .color {
+    text-align: center !important;
+    padding: 2px 0;
+    border-radius: var(--radius-md);
+    background-color: var(--bg-alt-color);
+    border: 1px solid var(--border-color);
+    color: var(--light-text-color);
+    margin-top: 0;
+    transition: all 0.35s ease;
+    font-size: 13px;
+    font-weight: bold;
+    width: 75px;
+
+    &:hover {
+      background-color: var(--main-color-dark);
+    }
+
+    @include sm {
+      font-size: 13px;
+    }
+
+    &.red {
+      border-color: rgba(234, 84, 85, 0.15);
+      background-color: rgba(234, 84, 85, 0.15);
+      color: var(--danger);
+    }
+
+    &.yellow {
+      border-color: rgba(255, 159, 67, 0.15);
+      background-color: rgba(255, 159, 67, 0.15);
+      color: var(--warning);
+    }
+
+    &.grey {
+      border-color: var(--border-color);
+      background-color: var(--bg-alt-color);
+      color: var(--light-text-color);
+    }
+
+    &.blue {
+      border-color: rgba(0, 207, 232, 0.15);
+      background-color: rgba(0, 207, 232, 0.15);
+      color: var(--info);
+    }
+
+    &.green {
+      border-color: rgba(69, 202, 128, 0.15);
+      background-color: rgba(69, 202, 128, 0.15);
+      color: var(--success);
+    }
+  }
+
+  .date {
+    font-size: 14px;
+    color: var(--light-text-color);
+  }
+
+  .actions {
+    padding: 0;
+
+    &.ar {
+      .iconOptions {
+        button {
+          & > div {
+            right: unset;
+            left: calc(100% + 5px);
+          }
+        }
+      }
+    }
+
+    .iconOptions {
+      button {
+        & > div {
+          top: -5px;
+          padding: 10px;
+          border: 1px solid rgba(var(--main-color-rgb), 0.2);
+          left: unset;
+          right: calc(100% + 5px);
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    background-color: #fff !important;
+    border-radius: var(--radius-lg);
+    margin-top: 10px;
+    box-shadow: var(--shadow-sm);
+    gap: 10px;
+    justify-content: center;
+
+    button {
+      @extend %outlinedFocusBtn;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: var(--main-color);
+
+      svg {
+        top: 0;
+        margin-inline-end: 0;
+        color: var(--main-color);
+      }
+
+      &:hover {
+        color: #fff;
+
+        svg {
+          color: #fff;
+        }
+      }
+
+      &:disabled {
+        border-color: transparent;
+        color: #fff;
+      }
+
+      &.active {
+        background-color: var(--main-color-dark);
+        color: #fff;
+      }
+    }
+  }
+
+  .noData {
+    @extend %emptyData;
+  }
+}

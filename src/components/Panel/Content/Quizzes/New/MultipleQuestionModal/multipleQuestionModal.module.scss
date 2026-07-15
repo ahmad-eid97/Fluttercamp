@@ -1,0 +1,72 @@
+@use "@/styles/extends" as *;
+
+.multipleQuestion {
+  h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      label {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .answers {
+    .header {
+      margin-top: 20px;
+      h5 {
+        @extend %sectionTitle;
+      }
+      button {
+        @extend %panelFocusBtn;
+        padding: 7px 20px;
+      }
+    }
+
+    .list {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .answer {
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .field,
+        .switch {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          label {
+            font-weight: 500;
+          }
+        }
+        .switch {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          padding: 20px 0
+        }
+      }
+    }
+  }
+
+  .actions {
+    @extend %smallFormActions;
+  }
+
+}

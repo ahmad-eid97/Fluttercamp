@@ -1,0 +1,134 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.subscribe {
+  h4 {
+    @extend %sectionTitle;
+  }
+
+  .myPlan {
+    @extend %sectionTitle;
+    width: 100%;
+    margin-bottom: 25px;
+
+    .plan_content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      & > div {
+        width: calc(33.33% - 15px);
+        text-align: center !important;
+      }
+    }
+  }
+
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    padding-top: 25px;
+
+    .item {
+      grid-column: span 4;
+      min-height: 200px;
+      padding: 20px;
+      padding-top: 0;
+      border-radius: var(--radius-lg);
+      position: relative;
+      background-color: var(--bg-alt-color);
+      border: 1px solid var(--border-color);
+      border-top: none;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &:hover {
+        background-color: rgba(var(--main-color-rgb), 0.08);
+      }
+
+      .isPopular {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 2px 15px;
+        border-radius: var(--radius-md);
+        background-color: rgba(var(--main-color-rgb), 0.2);
+        color: var(--main-color);
+        font-weight: bold;
+      }
+
+      .badge {
+        img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          margin-top: -30px;
+          border: 5px solid var(--border-color);
+        }
+      }
+
+      .content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        z-index: 2;
+
+        h4,
+        p {
+          margin: 0;
+        }
+
+        p {
+          font-size: 14px;
+          color: var(--light-text-color);
+          text-align: center !important;
+          margin-bottom: 20px;
+        }
+
+        .price {
+          font-weight: bold;
+          font-size: 25px;
+          color: var(--main-color);
+        }
+
+        ul {
+          li {
+            padding: 5px;
+            font-size: 16px;
+            color: var(--light-text-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+
+        button {
+          @extend %mainBtn;
+
+          &:disabled {
+            cursor: not-allowed;
+            background-color: #ccc;
+            border-color: #ccc;
+            color: #fff;
+          }
+        }
+      }
+
+      @include lg {
+        grid-column: span 4;
+      }
+      @include md {
+        grid-column: span 6;
+      }
+      @include xs {
+        grid-column: span 12;
+      }
+    }
+  }
+}

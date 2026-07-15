@@ -1,0 +1,134 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.print {
+  @extend %panelBtn;
+  margin-bottom: 10px;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  color: #fff;
+  transition: all 0.3s ease;
+
+  @media print {
+    display: none;
+  }
+
+  &:hover {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-alt-color);
+    color: var(--main-color);
+  }
+
+  svg {
+    top: 0px;
+    margin-inline-end: 0;
+  }
+}
+
+.invoice_wrapper {
+  width: 100%;
+  padding: 25px 35px;
+  background-color: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  color: var(--light-text-color);
+
+  @media print {
+    border: 0;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+
+    @include md {
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      margin: 0;
+
+      @include md {
+        font-size: 24px;
+      }
+    }
+
+    h3 {
+      margin: 0;
+      color: var(--light-text-color);
+
+      @include lg {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .metadata {
+    margin-bottom: 20px;
+
+    p.info {
+      b {
+        display: block;
+        line-height: 18px;
+      }
+      span {
+        padding-inline-start: 5px;
+        color: var(--light-text-color);
+      }
+    }
+
+    .cells {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      p.info {
+        width: calc(50% - 0px);
+
+        @include lg {
+          width: calc(50% - 0px);
+        }
+      }
+    }
+  }
+
+  .table {
+    margin-top: 25px;
+  }
+
+  .footer {
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    flex: 1;
+    width: 30%;
+
+    @include md {
+      width: 50%;
+    }
+
+    @include xs {
+      width: 100%;
+    }
+
+    p {
+      color: var(--light-text-color);
+      margin: 0;
+      padding: 8px 15px;
+      border-bottom: 1px solid var(--border-color);
+
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+}

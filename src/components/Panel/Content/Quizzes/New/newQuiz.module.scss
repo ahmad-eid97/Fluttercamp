@@ -1,0 +1,164 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.loadingData {
+  @extend %tabsTitle;
+  justify-content: start;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.newQuiz {
+  h4 {
+    @extend %tabsTitle;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+    row-gap: 15px;
+    background-color: #fff;
+    border-radius: var(--radius-lg);
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+
+    @include xs {
+      gap: 15px;
+      column-gap: 0px;
+    }
+
+    .field,
+    .switch {
+      grid-column: span 6;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+
+      @include md {
+        grid-column: span 12;
+      }
+    }
+
+    .switch {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      .content {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+
+        span {
+          color: var(--light-text-color);
+          font-size: 14px;
+
+          @include sm {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .empty {
+      grid-column: span 6;
+      @include sm {
+        display: none;
+      }
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--text-color);
+
+      svg {
+        top: 0px;
+      }
+    }
+  }
+
+  .questions {
+    grid-column: span 12;
+    margin-top: 00px;
+    .header {
+      margin-bottom: 20px;
+      h4 {
+        @extend %tabsTitle;
+        div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+    .list {
+      background-color: #fff;
+      border-radius: var(--radius-lg);
+      margin-top: 20px;
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .singleQuestion {
+        background-color: var(--bg-alt-color);
+        padding: 20px;
+        border-radius: var(--radius-md);
+        color: var(--text-color);
+
+        .head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 20px;
+
+          h5 {
+            span {
+              color: var(--light-text-color);
+              font-weight: 400;
+            }
+          }
+
+          .icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          svg {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            background-color: var(--bg-alt-color);
+            padding: 5px;
+          }
+        }
+
+        .details {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          span {
+            color: var(--light-text-color);
+          }
+        }
+      }
+      .noData {
+        @extend %emptyData;
+      }
+    }
+  }
+
+  .actions {
+    margin-top: 20px;
+    button {
+      @extend %panelFocusBtn;
+    }
+  }
+}

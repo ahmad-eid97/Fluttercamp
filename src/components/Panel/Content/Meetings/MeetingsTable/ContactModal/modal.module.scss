@@ -1,0 +1,75 @@
+@use "@/styles/extends" as *;
+@use "@/styles/mixins" as *;
+
+.modal {
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background-color: var(--bg-alt-color);
+      border-radius: var(--radius-md);
+      padding: 5px;
+    }
+  }
+  .content {
+    margin-top: 20px;
+    padding: 5px;
+
+    .topInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+
+      p {
+        font-weight: bold;
+        margin: 0;
+        font-size: 20px;
+        margin-top: 5px;
+        color: var(--text-color);
+      }
+    }
+
+    .bottomInfo {
+      margin-bottom: 15px;
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        svg {
+          top: 2px;
+          margin-inline-end: 4px;
+        }
+        b {
+          margin-inline-end: 8px;
+          font-weight: normal;
+          color: var(--light-text-color);
+        }
+      }
+    }
+  }
+  .actions {
+    margin-top: 25px;
+    @extend %smallFormActions;
+  }
+}

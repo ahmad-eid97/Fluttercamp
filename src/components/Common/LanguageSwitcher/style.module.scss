@@ -1,0 +1,134 @@
+@use "@/styles/mixins" as *;
+
+.lang_switcher {
+  display: inline-flex;
+  align-items: center;
+}
+
+// ---------- Trigger: globe + code chip ----------
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 38px;
+  padding: 0 10px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--main-color-dark);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  .globe {
+    font-size: 1.3rem;
+    color: var(--main-color);
+  }
+
+  .code {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+
+  .chev {
+    font-size: 0.85rem;
+    opacity: 0.55;
+    transition: transform 0.2s var(--ease-out);
+  }
+
+  &:hover {
+    background: rgba(var(--main-color-rgb), 0.1);
+  }
+
+  &[data-state="open"] {
+    background: rgba(var(--main-color-rgb), 0.12);
+
+    .chev {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// ---------- Dropdown card ----------
+// Neutralise the Radix/shadcn content shell so `.menu_content` is the card.
+.dropdown {
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-width: 0 !important;
+}
+
+.menu_content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 212px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg, 16px);
+  box-shadow: 0 18px 44px -12px rgba(16, 32, 55, 0.24);
+}
+
+.menuTitle {
+  margin: 4px 10px 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--light-text-color);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 9px 10px;
+  border: none;
+  border-radius: var(--radius-md, 12px);
+  background: transparent;
+  color: var(--text-color);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease;
+
+  .flag {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .name {
+    flex: 1;
+    text-align: start;
+  }
+
+  .check {
+    font-size: 1.2rem;
+    color: var(--main-color);
+  }
+
+  &:hover {
+    background: rgba(var(--main-color-rgb), 0.08);
+  }
+
+  &.active {
+    background: rgba(var(--main-color-rgb), 0.1);
+    color: var(--main-color-dark);
+    font-weight: 700;
+  }
+}

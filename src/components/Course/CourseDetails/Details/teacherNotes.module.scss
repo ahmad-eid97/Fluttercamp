@@ -1,0 +1,157 @@
+@use "@/styles/mixins" as *;
+
+.teacherNotes {
+  .listHeading {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--main-color-dark);
+    margin: 0 0 14px;
+  }
+
+  // ---- Meta stats list (left column) ----
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      width: calc(50% - 6px);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px !important;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      transition: border-color var(--dur-base) var(--ease-out),
+        box-shadow var(--dur-base) var(--ease-out);
+
+      @include sm {
+        width: 100%;
+      }
+
+      &:hover {
+        border-color: rgba(var(--main-color-rgb), 0.4);
+        box-shadow: var(--shadow-sm);
+      }
+
+      // leading icon chip (.icon-uxs is a global wrapper)
+      :global(.icon-uxs) {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        flex-shrink: 0;
+        border-radius: var(--radius-sm);
+        color: var(--main-color);
+        background: rgba(var(--main-color-rgb), 0.1);
+
+        svg {
+          top: 0;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      h6 {
+        margin: 0;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-color);
+      }
+
+      span {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--main-color-dark);
+
+        b { color: var(--main-color); }
+
+        svg {
+          color: var(--success);
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+
+  // ---- Help / actions card (right column) ----
+  h6 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--main-color-dark);
+    margin: 0 0 8px;
+  }
+
+  > :global(.MuiGrid-container) > :global(.MuiGrid-root):last-child {
+    p {
+      color: var(--light-text-color);
+      line-height: 1.6;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+    }
+
+    :global(.list-group-item) {
+      display: flex !important;
+      flex-direction: column;
+      align-items: stretch !important;
+      gap: 10px;
+      padding: 0 !important;
+      border: 0;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--dur-base) var(--ease-out);
+
+    a { color: #fff; justify-content: center; }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      top: 0;
+    }
+
+    &:hover {
+      background: var(--main-color-dark);
+      border-color: var(--main-color-dark);
+    }
+
+    // secondary (share / report) buttons
+    &.shareIcon {
+      color: var(--main-color);
+      background: rgba(var(--main-color-rgb), 0.08);
+      border-color: transparent;
+
+      &:hover {
+        background: rgba(var(--main-color-rgb), 0.15);
+        color: var(--main-color-dark);
+      }
+    }
+  }
+}

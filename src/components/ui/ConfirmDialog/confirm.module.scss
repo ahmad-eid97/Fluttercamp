@@ -1,0 +1,166 @@
+@use "@/styles/mixins" as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(8, 24, 40, 0.45);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.18s var(--ease-out, ease) both;
+}
+
+.dialog {
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-default, #fff);
+  border: 1px solid var(--border-color, #e9eef3);
+  border-radius: var(--radius-xl, 18px);
+  box-shadow: 0 24px 60px -12px rgba(8, 24, 40, 0.35);
+  padding: 28px 26px 22px;
+  text-align: center;
+  animation: pop 0.22s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)) both;
+
+  @include xs {
+    padding: 24px 18px 18px;
+  }
+}
+
+.iconChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  font-size: 36px;
+
+  &.brand {
+    color: var(--main-color, #1671b2);
+    background: rgba(var(--main-color-rgb, 22, 113, 178), 0.12);
+  }
+  &.danger {
+    color: #e5484d;
+    background: rgba(229, 72, 77, 0.12);
+  }
+  &.success {
+    color: var(--success, #45ca80);
+    background: rgba(69, 202, 128, 0.14);
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-color, #383e50);
+}
+
+.text {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted-text-color, #6b7280);
+  word-break: break-word;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 24px;
+
+  @include xs {
+    flex-direction: column-reverse;
+  }
+}
+
+.cancelBtn,
+.confirmBtn {
+  flex: 1;
+  min-width: 120px;
+  height: 46px;
+  padding: 0 22px;
+  border-radius: var(--radius-md, 10px);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform var(--dur-base, 0.2s) var(--ease-out, ease),
+    box-shadow var(--dur-base, 0.2s) ease, background-color 0.2s ease;
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.cancelBtn {
+  background: transparent;
+  border-color: var(--border-color, #e1e7ee);
+  color: var(--text-color, #383e50);
+
+  &:hover {
+    background: var(--bg-alt-color, #ecf1f5);
+  }
+}
+
+.confirmBtn {
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &.brand {
+    background: var(--main-color, #1671b2);
+    &:hover {
+      background: var(--main-color-dark, #07436e);
+    }
+  }
+  &.danger {
+    background: #e5484d;
+    &:hover {
+      background: #c93a3f;
+    }
+  }
+  &.success {
+    background: var(--success, #45ca80);
+    &:hover {
+      background: #36ad6b;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .dialog {
+    animation: none;
+  }
+}

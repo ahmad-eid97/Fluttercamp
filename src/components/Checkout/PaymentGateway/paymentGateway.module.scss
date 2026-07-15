@@ -1,0 +1,212 @@
+@use "@/styles/mixins" as *;
+
+.paymentGateway {
+  width: 100%;
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+
+    .headerIcon {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      display: grid;
+      place-items: center;
+      background: var(--gradient-brand);
+      color: #fff;
+
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    h4 {
+      font-size: var(--text-lead, 1.25rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--main-color-dark);
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--light-text-color);
+      margin: 2px 0 0;
+    }
+  }
+
+  .gateways {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+
+    .gateway {
+      grid-column: span 3;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      background-color: #fff;
+      padding: 32px 18px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-xs, var(--shadow-sm));
+      cursor: pointer;
+      text-align: center;
+      transition: all var(--dur-base) var(--ease-out);
+      appearance: none;
+      width: 100%;
+
+      .check {
+        position: absolute;
+        inset-block-start: 12px;
+        inset-inline-end: 12px;
+        width: 22px;
+        height: 22px;
+        border-radius: var(--radius-pill);
+        display: grid;
+        place-items: center;
+        color: var(--main-color);
+        opacity: 0;
+        transform: scale(0.6);
+        transition: all var(--dur-base) var(--ease-out);
+
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      .media {
+        width: 56px;
+        height: 56px;
+        border-radius: var(--radius-md);
+        display: grid;
+        place-items: center;
+        background-color: rgba(var(--main-color-rgb), 0.08);
+
+        svg,
+        img {
+          width: 36px;
+          height: 36px;
+          object-fit: contain;
+          color: var(--main-color);
+        }
+      }
+
+      .method {
+        font-size: 15px;
+        color: var(--text-color);
+        text-align: center;
+        margin: 0;
+
+        span {
+          display: block;
+          font-weight: 700;
+          color: var(--main-color-dark);
+        }
+      }
+
+      .balance {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--success);
+        min-height: 18px;
+      }
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+        border-color: rgba(var(--main-color-rgb), 0.2);
+      }
+
+      &.active {
+        border-color: var(--main-color);
+        box-shadow: var(--shadow-brand, var(--shadow-md));
+        background-color: rgba(var(--main-color-rgb), 0.04);
+
+        .check {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @include lg {
+        grid-column: span 4;
+      }
+
+      @include md {
+        grid-column: span 6;
+      }
+
+      @include xs {
+        grid-column: span 12;
+      }
+    }
+  }
+
+  .summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 22px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-alt-color);
+    margin-bottom: 20px;
+
+    .summaryLabel {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+
+    .summaryValue {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--main-color-dark);
+    }
+  }
+
+  .payBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 15px 28px;
+    border: none;
+    border-radius: var(--radius-md);
+    background: var(--gradient-brand);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--dur-base) var(--ease-out);
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-brand, var(--shadow-md));
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}

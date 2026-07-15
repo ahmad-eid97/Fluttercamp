@@ -1,0 +1,195 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.forumsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .noData {
+    @extend %emptyData;
+  }
+
+  .item {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+
+    .questionArea {
+      display: flex;
+      gap: 10px;
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--border-color);
+        flex-shrink: 0;
+      }
+      .content {
+        h5 {
+          color: var(--main-color);
+
+          a {
+            color: inherit;
+          }
+        }
+        p {
+          font-size: 15px;
+          color: var(--pale-text-color);
+        }
+      }
+    }
+
+    .answerForm {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-left: 1px solid var(--border-color);
+      padding-left: 20px;
+
+      &.ar {
+        border-right: 1px solid var(--border-color);
+        padding-right: 20px;
+        border-left: none;
+        padding-left: unset;
+      }
+
+      @include md {
+        padding-inline: 0 !important;
+        padding-top: 20px;
+        border-right: 0 !important;
+        border-left: 0 !important;
+        border-top: 1px solid var(--border-color);
+      }
+
+      p {
+        color: var(--pale-text-color);
+      }
+
+      button {
+        @extend %mainBtn;
+        padding: 5px 20px;
+        margin: 0;
+      }
+    }
+
+    .answerArea {
+      border-left: 1px solid var(--border-color);
+      padding-left: 20px;
+
+      &.ar {
+        border-right: 1px solid var(--border-color);
+        padding-right: 20px;
+        border-left: none;
+        padding-left: unset;
+      }
+
+      .stats {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        .users {
+          .inside {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            img {
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              background-color: var(--border-color);
+            }
+            .usersCount {
+              border: 1px solid var(--border-color);
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              font-size: 12px;
+              background-color: rgba(var(--bg-main-rgb), 0.5);
+              flex-shrink: 0;
+              display: grid;
+              place-content: center;
+              font-weight: 700;
+            }
+          }
+        }
+
+        span {
+          color: var(--pale-text-color);
+          font-size: 14px;
+        }
+
+        svg {
+          width: 35px;
+          height: 35px;
+          border: 1px solid var(--alert);
+          border-radius: 50%;
+          padding: 8px;
+          color: var(--alert);
+          cursor: pointer;
+          &.pinned {
+            background-color: var(--alert);
+            color: #fff;
+          }
+          &:hover {
+            background-color: var(--alert);
+            color: #fff;
+          }
+        }
+      }
+
+      .studentAnswer {
+        .head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-top: 1px solid var(--border-color);
+          padding-top: 10px;
+          margin-bottom: 10px;
+
+          .resolved {
+            border: 1px solid rgba(var(--bg-main-rgb), 1);
+            border-radius: 200px;
+            padding: 5px 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: rgba(var(--bg-main-rgb), 0.5);
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+
+        .answer {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--border-color);
+          }
+
+          h5,
+          p {
+            margin: 0;
+          }
+
+          p {
+            color: var(--pale-text-color);
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

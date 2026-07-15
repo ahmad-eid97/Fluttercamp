@@ -1,0 +1,94 @@
+@use "@/styles/extends" as *;
+
+.coursesTable {
+  .status {
+    display: inline-block;
+    padding: 1px 10px;
+    border-radius: var(--radius-md);
+    &.Pending {
+      background-color: rgba(255, 159, 67, 0.15);
+      color: var(--warning);
+    }
+    &.Active {
+      background-color: rgba(69, 202, 128, 0.15);
+      color: var(--success);
+    }
+  }
+
+  .actions {
+    padding: 0;
+
+    &.ar {
+      .iconOptions {
+        button {
+          & > div {
+            right: unset;
+            left: calc(100% + 5px);
+          }
+        }
+      }
+    }
+
+    .iconOptions {
+      button {
+        & > div {
+          top: -5px;
+          padding: 10px;
+          border: 1px solid rgba(var(--main-color-rgb), 0.2);
+          left: unset;
+          right: calc(100% + 5px);
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    background-color: #fff;
+    border-radius: var(--radius-md);
+    margin-top: 10px;
+    box-shadow: var(--shadow-sm);
+    gap: 10px;
+    justify-content: center;
+
+    button {
+      @extend %outlinedFocusBtn;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: var(--main-color-dark);
+
+      svg {
+        top: 0;
+        margin-inline-end: 0;
+        color: var(--main-color-dark);
+      }
+
+      &:hover {
+        color: #fff;
+
+        svg {
+          color: #fff;
+        }
+      }
+
+      &:disabled {
+        border-color: transparent;
+        color: #fff;
+      }
+
+      &.active {
+        background-color: var(--main-color-dark);
+        color: #fff;
+      }
+    }
+  }
+  .noData {
+    @extend %emptyData;
+  }
+}

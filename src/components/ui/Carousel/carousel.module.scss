@@ -1,0 +1,105 @@
+@use "@/styles/mixins" as *;
+
+.embla {
+  position: relative;
+}
+
+.viewport {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  gap: var(--cgap, 20px);
+  touch-action: pan-y pinch-zoom;
+}
+
+.slide {
+  position: relative;
+  min-width: 0;
+  display: flex; // stretch the card to equal height across slides
+  // default = largest screens (xl)
+  flex: 0 0 calc((100% - (var(--pv-xl) - 1) * var(--cgap)) / var(--pv-xl));
+
+  & > * {
+    width: 100%;
+  }
+
+  @include lg {
+    flex-basis: calc((100% - (var(--pv-lg) - 1) * var(--cgap)) / var(--pv-lg));
+  }
+  @include md {
+    flex-basis: calc((100% - (var(--pv-md) - 1) * var(--cgap)) / var(--pv-md));
+  }
+  @include sm {
+    flex-basis: calc((100% - (var(--pv-sm) - 1) * var(--cgap)) / var(--pv-sm));
+  }
+  @include xs {
+    flex-basis: calc((100% - (var(--pv-base) - 1) * var(--cgap)) / var(--pv-base));
+  }
+}
+
+// ---- Arrows ----
+.arrows {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill, 999px);
+  border: 1px solid var(--border-color, #e1e7ee);
+  background: var(--bg-default, #fff);
+  color: var(--main-color, #1671b2);
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: all var(--dur-base, 0.2s) var(--ease-out, ease);
+
+  &:hover:not(:disabled) {
+    background: var(--main-color, #1671b2);
+    color: #fff;
+    border-color: var(--main-color, #1671b2);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-brand);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+// ---- Dots ----
+.dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: rgba(var(--main-color-rgb, 22, 113, 178), 0.25);
+  cursor: pointer;
+  transition: all var(--dur-base, 0.2s) var(--ease-out, ease);
+
+  &:hover {
+    background: rgba(var(--main-color-rgb, 22, 113, 178), 0.5);
+  }
+}
+
+.dotActive {
+  width: 26px;
+  border-radius: var(--radius-pill, 999px);
+  background: var(--main-color, #1671b2);
+}

@@ -1,0 +1,53 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.sales_chart {
+  background-color: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  width: calc(50% - 5px);
+  overflow: hidden;
+  transition: box-shadow var(--dur-base) var(--ease-out);
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  @include lg {
+    width: 100%;
+  }
+
+  & > div {
+    min-height: 250px;
+    padding: 18px 20px 22px;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 18px 20px;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      border-radius: var(--radius-pill);
+      background: var(--gradient-brand);
+    }
+
+    @include md {
+      font-size: 17px;
+    }
+  }
+
+  &.ar {
+    display: inline-block;
+  }
+}

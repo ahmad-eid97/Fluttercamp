@@ -1,0 +1,70 @@
+@use "@/styles/mixins" as *;
+
+.view_content_modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #000, $alpha: 0.75);
+  z-index: 9999999;
+  transition: all 0.3s ease;
+  animation: showModal 0.2s forwards ease-in-out 1;
+
+  @keyframes showModal {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes show {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .content {
+    color: var(--main-color);
+    border-radius: var(--radius-lg);
+    padding: 40px 20px;
+    width: 700px;
+    background-color: rgba(var(--main-color-rgb), 0.05);
+    text-align: center !important;
+    animation: show 0.4s forwards ease-in-out 1;
+
+    @include lg {
+      max-width: 650px;
+    }
+
+    @include md {
+      max-width: 600px;
+      padding: 30px 20px;
+    }
+
+    @include sm {
+      margin: 130px auto 60px;
+      max-width: 90%;
+    }
+
+    @include xs {
+      padding: 40px 20px;
+      max-width: 100%;
+    }
+  }
+}

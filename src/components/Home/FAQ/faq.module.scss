@@ -1,0 +1,44 @@
+@use "@/styles/mixins" as *;
+
+.faq {
+  position: relative;
+  overflow: hidden;
+  padding: 84px 0;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(var(--main-color-rgb), 0.06), transparent 60%),
+    var(--bg-alt-color);
+
+  @include sm {
+    padding: 56px 0;
+  }
+
+  .bgGlow {
+    position: absolute;
+    inset-block-start: -120px;
+    inset-inline-end: -120px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(var(--main-color-rgb), 0.16);
+    filter: blur(90px);
+    pointer-events: none;
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .faq__area {
+    width: 100%;
+    margin: 44px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 14px 24px;
+
+    @include md {
+      grid-template-columns: 1fr;
+    }
+  }
+}

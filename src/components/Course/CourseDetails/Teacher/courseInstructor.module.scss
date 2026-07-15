@@ -1,0 +1,150 @@
+@use "@/styles/mixins" as *;
+
+.instructor {
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+    color: var(--main-color-dark);
+    text-align: start !important;
+
+    @include sm {
+      font-size: 1.25rem;
+    }
+  }
+
+  .instructorInfo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 26px 28px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+
+    @include xs {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 22px 20px;
+    }
+
+    .profilePicture {
+      position: relative;
+      flex-shrink: 0;
+      padding: 5px;
+      border-radius: 50%;
+      background: var(--gradient-brand);
+
+      img {
+        display: block;
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #fff;
+      }
+
+      .verified {
+        position: absolute;
+        bottom: 4px;
+        inset-inline-end: 4px;
+        width: 30px;
+        height: 30px;
+        color: var(--main-color);
+        z-index: 1;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+    }
+
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin: 0 0 6px;
+        text-align: start !important;
+        color: var(--main-color-dark);
+
+        a {
+          color: inherit;
+          transition: color var(--dur-base) var(--ease-out);
+          &:hover { color: var(--main-color); }
+        }
+      }
+
+      span {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--light-text-color);
+      }
+
+      .stat {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        width: fit-content;
+        margin-top: 10px;
+        padding: 5px 12px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: #b9831f;
+        background: rgba(242, 178, 78, 0.18);
+        border-radius: var(--radius-pill);
+
+        svg {
+          color: var(--dark-alt-color);
+          width: 16px;
+          height: 16px;
+          top: 0;
+        }
+      }
+
+      .action_btns {
+        a {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          width: fit-content;
+          margin-top: 14px;
+          font-size: 0.9rem;
+          font-weight: 700;
+          border-radius: var(--radius-md);
+          cursor: pointer;
+          padding: 10px 18px;
+          background: var(--main-color);
+          color: #fff;
+          border: 1px solid var(--main-color);
+          transition: all var(--dur-base) var(--ease-out);
+
+          &:hover {
+            background: var(--main-color-dark);
+            border-color: var(--main-color-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-brand);
+          }
+
+          svg {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.ar {
+    .instructorInfo {
+      .profilePicture {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}

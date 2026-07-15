@@ -1,0 +1,23 @@
+@use "@/styles/extends" as *;
+
+.payoutDetailsModal {
+  p {
+    color: var(--light-text-color);
+  }
+
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .actions {
+    margin-top: 20px;
+    button {
+      @extend %panelFocusBtn;
+      padding: 5px 20px;
+    }
+  }
+}

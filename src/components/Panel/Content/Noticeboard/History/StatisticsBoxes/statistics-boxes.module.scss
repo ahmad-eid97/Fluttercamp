@@ -1,0 +1,19 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .item {
+    width: calc(33.33% - 7px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @include md {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.box {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+
+  @include xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    display: flex;
+    min-height: 96px;
+  }
+
+  .cardLink {
+    display: block;
+    width: 100%;
+    border-radius: var(--radius-lg);
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: var(--ring);
+    }
+  }
+}

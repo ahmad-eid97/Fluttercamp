@@ -1,0 +1,40 @@
+@use "@/styles/extends" as *;
+
+.loadingData {
+  @extend %tabsTitle;
+  justify-content: start;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.contentsTab {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+
+  h4.sectionTitle {
+    @extend %tabsTitle;
+  }
+
+  & > button {
+    @extend %panelFocusBtn;
+    padding: 7px 20px;
+    margin-top: 10px;
+  }
+
+  .emptyData {
+    @extend %emptyData;
+    margin-top: 20px;
+  }
+
+  .actions {
+    margin-top: 20px;
+    @extend %formActions;
+  }
+}

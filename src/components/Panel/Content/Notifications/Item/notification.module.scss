@@ -1,0 +1,98 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.item {
+  margin-top: 10px;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--main-color);
+    box-shadow: var(--shadow-md);
+  }
+
+  &.read {
+    border-color: var(--border-color);
+
+    &:hover {
+      border-color: var(--border-color);
+    }
+
+    .title {
+      p {
+        font-weight: normal;
+      }
+    }
+  }
+
+  @include md {
+    flex-wrap: wrap;
+  }
+
+  .title {
+    width: 40%;
+
+    @include md {
+      width: 100%;
+      margin-bottom: 7px;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 16px;
+      color: var(--text-color);
+      margin: 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+    span {
+      font-size: 14px;
+      color: var(--light-text-color);
+    }
+  }
+
+  .content {
+    width: 55%;
+    color: var(--light-text-color);
+    font-size: 15px;
+
+    @include md {
+      width: 100%;
+      margin-bottom: 7px;
+    }
+  }
+
+  .action {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      @extend %panelFocusBtn;
+      padding: 5px 0;
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+
+      @include md {
+        font-size: 14px;
+        padding: 3px 0;
+      }
+
+      svg {
+        top: 0;
+        margin-inline-end: 0;
+      }
+    }
+  }
+}

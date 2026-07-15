@@ -1,0 +1,420 @@
+@use "@/styles/mixins" as *;
+
+.instructor {
+  padding-top: 0;
+  margin-bottom: 128px;
+
+  .header {
+    margin-top: 24px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl, 24px);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+
+    .cover {
+      position: relative;
+      height: 180px;
+      background: linear-gradient(160deg, var(--main-color-dark), #06243b);
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 85% 10%, rgba(var(--main-color-rgb), 0.55), transparent 55%),
+          linear-gradient(to top, rgba(7, 36, 59, 0.5), transparent 60%);
+      }
+
+      @include sm {
+        height: 130px;
+      }
+
+      .social {
+        position: absolute;
+        inset-block-start: 16px;
+        inset-inline-end: 18px;
+        z-index: 2;
+        display: flex;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          width: 38px;
+          height: 38px;
+          display: grid;
+          place-items: center;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(6px);
+          cursor: pointer;
+          transition: all var(--dur-base) var(--ease-out);
+
+          svg {
+            width: 20px;
+            height: 20px;
+            color: #fff;
+          }
+
+          &:hover {
+            background-color: #fff;
+
+            svg {
+              color: var(--main-color);
+            }
+          }
+        }
+      }
+    }
+
+    .body {
+      padding: 0 32px 28px;
+
+      @include sm {
+        padding: 0 18px 22px;
+      }
+    }
+
+    .topRow {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: -64px;
+
+      @include sm {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -56px;
+        gap: 16px;
+      }
+
+      .avatar {
+        position: relative;
+        flex-shrink: 0;
+
+        .image {
+          position: relative;
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          background-color: #fff;
+          padding: 5px;
+          box-shadow: var(--shadow-md);
+
+          @include sm {
+            width: 120px;
+            height: 120px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+          }
+
+          .verified {
+            position: absolute;
+            inset-block-end: 6px;
+            inset-inline-end: 6px;
+            width: 34px;
+            height: 34px;
+            color: var(--main-color);
+            z-index: 1;
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 2px;
+            box-shadow: var(--shadow-sm);
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 6px;
+
+        @include sm {
+          width: 100%;
+          justify-content: center;
+          padding-bottom: 0;
+        }
+
+        .textTeal,
+        .follow {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          transition: all var(--dur-base) var(--ease-out);
+          padding: 10px 18px;
+          border: 1px solid var(--main-color);
+          color: var(--main-color);
+          border-radius: var(--radius-md);
+          font-size: 14px;
+          font-weight: 700;
+          background-color: #fff;
+          cursor: pointer;
+
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+
+          &:hover {
+            background-color: var(--main-color);
+            color: #fff;
+            box-shadow: var(--shadow-brand);
+          }
+        }
+
+        .follow {
+          &.unfollow {
+            border-color: #a00404;
+            background-color: #a00404;
+            color: #fff;
+
+            &:hover {
+              background-color: #740707;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+
+    .identity {
+      margin-top: 18px;
+
+      @include sm {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        margin: 0 0 8px;
+        color: var(--text-color);
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 11px;
+          height: 11px;
+          background-color: var(--success, #45ca80);
+          border-radius: 50%;
+          box-shadow: 0 0 12px rgba(69, 202, 128, 0.6);
+        }
+
+        @include sm {
+          font-size: 24px;
+          justify-content: center;
+        }
+
+        &.offline {
+          &::after {
+            background-color: #b80000;
+            box-shadow: 0 0 12px rgba(184, 0, 0, 0.4);
+          }
+        }
+      }
+
+      .offline_message {
+        font-size: 13px;
+        margin: -2px 0 6px;
+        color: var(--light-text-color);
+      }
+
+      .bio {
+        color: var(--light-text-color);
+        font-size: 15px;
+        line-height: 1.65;
+        max-width: 680px;
+        margin: 0;
+
+        @include sm {
+          margin-inline: auto;
+        }
+      }
+
+      .followers {
+        margin-top: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        @include sm {
+          justify-content: center;
+        }
+
+        span {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          color: var(--main-color);
+          background-color: rgba(var(--main-color-rgb), 0.1);
+          padding: 6px 16px;
+          border-radius: var(--radius-pill);
+          font-size: 13px;
+          font-weight: 700;
+          transition: all var(--dur-base) var(--ease-out);
+
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+
+    .stats {
+      margin-top: 26px;
+
+      .state {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        background-color: rgba(var(--main-color-rgb), 0.05);
+        border: 1px solid rgba(var(--main-color-rgb), 0.12);
+        border-radius: var(--radius-md);
+        transition: all var(--dur-base) var(--ease-out);
+
+        &:hover {
+          background-color: rgba(var(--main-color-rgb), 0.09);
+          transform: translateY(-3px);
+          box-shadow: var(--shadow-sm);
+        }
+
+        .icon {
+          width: 44px;
+          height: 44px;
+          flex-shrink: 0;
+          display: grid;
+          place-items: center;
+          border-radius: var(--radius-md);
+          background: var(--gradient-brand);
+          color: #fff;
+
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        .value {
+          display: flex;
+          flex-direction: column;
+          line-height: 1.2;
+
+          strong {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--text-color);
+          }
+
+          span {
+            font-size: 13px;
+            color: var(--light-text-color);
+          }
+        }
+      }
+    }
+  }
+
+  // ---- Segmented pill tab bar ----
+  .tabsContainer {
+    margin-top: 36px;
+    margin-bottom: 30px;
+    min-height: 0 !important;
+  }
+
+  .tabTitle {
+    min-height: 0 !important;
+    min-width: 0 !important;
+  }
+
+  // MUI v9 names the flex row `.MuiTabs-list` (not `.MuiTabs-flexContainer`)
+  :global(.MuiTabs-list) {
+    display: inline-flex !important;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px;
+    background: var(--bg-alt-color, #eef2f6);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-pill, 999px);
+    list-style: none;
+
+    @include sm {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  :global(.MuiTab-root) {
+    flex-direction: row !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    color: var(--light-text-color) !important;
+    padding: 10px 20px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    border-radius: var(--radius-pill, 999px);
+    text-transform: none !important;
+    transition: color var(--dur-base) var(--ease-out),
+      background-color var(--dur-base) var(--ease-out);
+
+    // override the global `svg { display: block }` so the icon sits inline
+    svg {
+      display: inline-block !important;
+      margin: 0 !important;
+      top: 0;
+      font-size: 1.2rem;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    &:hover {
+      color: var(--main-color) !important;
+      background-color: rgba(var(--main-color-rgb), 0.07);
+    }
+
+    &:global(.Mui-selected) {
+      color: var(--main-color) !important;
+      background-color: #fff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    @include sm {
+      font-size: 13px !important;
+      padding: 8px 13px !important;
+    }
+  }
+
+  :global(.MuiTabs-indicator) {
+    display: none;
+  }
+}
+
+.noData {
+  padding: 50px 25px;
+  width: 100%;
+  margin: 0px auto;
+  color: var(--text-color);
+  text-align: center !important;
+  background-color: var(--bg-alt-color);
+  border-radius: var(--radius-md);
+}

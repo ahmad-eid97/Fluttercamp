@@ -1,0 +1,160 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.assignment_viewer {
+	.content {
+		background-color: #fff;
+		border-radius: 8px;
+		padding: 15px 0;
+		padding-inline: 10px;
+
+		.top_boxes {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px;
+			margin-bottom: 20px;
+
+			.item {
+				width: calc(25% - 8px);
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+
+				@include md {
+					width: calc(33.33% - 8px);
+				}
+
+				@include xs {
+					width: 100%;
+				}
+			}
+
+			.title {
+				width: 100%;
+
+				h4 {
+					@extend %sectionTitle;
+					margin-bottom: 0;
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.content_items {
+			display: flex;
+			gap: 20px;
+
+			@include md {
+				flex-wrap: wrap;
+			}
+
+			.form {
+				width: 40%;
+				border: 1px solid var(--bg-main);
+				padding: 20px;
+				border-radius: 4px;
+				background-color: rgba(var(--bg-main-rgb), 0.5);
+				height: fit-content;
+
+				@include md {
+					width: 100%;
+				}
+
+				form {
+					display: grid;
+					grid-template-columns: repeat(12, 1fr);
+					gap: 10px;
+
+					.field {
+						grid-column: span 12;
+						display: inline-flex;
+						flex-direction: column;
+						gap: 5px;
+
+						label {
+							color: var(--text-color);
+						}
+					}
+				}
+				.actions {
+					margin-top: 25px;
+					@extend %smallFormActions;
+				}
+			}
+
+			.mySubmissions {
+				border: 1px solid var(--bg-main);
+				padding: 20px;
+				border-radius: 4px;
+				flex: 1;
+
+				.submission {
+					border: 1px solid var(--bg-main);
+					padding: 15px;
+					border-radius: 4px;
+					background-color: rgba(var(--bg-main-rgb), 0.5);
+					margin-bottom: 15px;
+
+					.info {
+						display: flex;
+						align-items: center;
+						gap: 10px;
+						border-bottom: 1px solid var(--bg-main);
+						padding-bottom: 10px;
+						margin-bottom: 10px;
+
+						img {
+							width: 44px;
+							height: 44px;
+							border-radius: 50%;
+							border: 1px solid var(--bg-main);
+						}
+
+						div {
+							p {
+								margin: 0;
+								color: var(--text-color);
+								font-size: 14px;
+								position: relative;
+								top: 5px;
+							}
+							span {
+								color: var(--pale-text-color);
+								font-size: 12px;
+							}
+						}
+					}
+
+					.answer {
+						color: var(--text-color);
+						font-size: 14px;
+						margin-bottom: 20px;
+					}
+
+					.attachments {
+						.attachment {
+							width: fit-content;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							border: 1px solid #eee;
+							padding: 7px 10px 3px;
+							border-radius: 25px;
+							background-color: #fff;
+							font-size: 13px;
+							gap: 4px;
+							color: var(--text-color);
+							cursor: pointer;
+							transition: all 0.3s ease;
+
+							&:hover {
+								background-color: #f6f6f6;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

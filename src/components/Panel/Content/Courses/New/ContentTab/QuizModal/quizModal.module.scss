@@ -1,0 +1,106 @@
+@use "@/styles/extends" as *;
+@use "@/styles/mixins" as *;
+
+.quizModal {
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background-color: var(--bg-alt-color);
+      border-radius: var(--radius-md);
+      padding: 5px;
+    }
+  }
+  form {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    .field {
+      grid-column: span 12;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .switch {
+      grid-column: span 12;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .empty {
+      grid-column: span 6;
+      @include sm {
+        display: none;
+      }
+    }
+  }
+
+  .questions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .singleQuestion {
+      background-color: var(--bg-alt-color);
+      padding: 20px;
+      border-radius: var(--radius-lg);
+
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        h5 {
+          span {
+            color: var(--light-text-color);
+            font-weight: 400;
+          }
+        }
+
+        .icons {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      .details {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        span {
+          color: var(--light-text-color);
+        }
+      }
+    }
+  }
+
+  .questionActions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      @extend %panelFocusBtn;
+      padding: 7px 20px;
+    }
+    margin: 20px 0;
+  }
+
+  .actions {
+    margin-top: 25px;
+    @extend %smallFormActions;
+  }
+}

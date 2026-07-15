@@ -1,0 +1,449 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/variables" as *;
+@use "@/styles/extends" as *;
+@use "react-modal-video/scss/modal-video.scss" as *;
+//==> Global UIs
+@use "@/styles/UIs/select-box" as *;
+@use "@/styles/UIs/radio-box" as *;
+@use "@/styles/UIs/ck-editor-reset" as *;
+@use "@/styles/UIs/iconify-reset" as *;
+@use "@/styles/UIs/lightgallery-reset" as *;
+@use "@/styles/UIs/loading-button" as *;
+@use "@/styles/UIs/modal-video-reset" as *;
+@use "@/styles/UIs/progressbar-reset" as *;
+@use "@/styles/UIs/toastify-reset" as *;
+@use "@/styles/UIs/old_garbage" as *;
+
+$mainColor: #40739e;
+$h1: 2rem;
+$h2: 1.714rem;
+$h3: 1.5rem;
+$h4: 1.286rem;
+$h5: 1.07rem;
+$h6: 1rem;
+$p: 1rem;
+
+/***************  { General Styles For Elements }   *****************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Noto Sans Arabic", "Noto Sans", sans-serif;
+  color: var(--text-color);
+  scroll-behavior: unset !important;
+  background-color: #fbfcfe;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+[lang="ar"] {
+  * {
+    direction: rtl;
+    text-align: right;
+    font-family: "Noto Sans Arabic", "Noto Sans", sans-serif;
+  }
+}
+
+[lang="en"] {
+  * {
+    direction: ltr;
+    text-align: left;
+    font-family: "Noto Sans Arabic", "Noto Sans", sans-serif;
+  }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  outline: none;
+  padding: 8px 12px;
+
+  &:focus {
+    border-color: var(--main-color);
+  }
+}
+
+button {
+  font: inherit;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  outline: none;
+  padding: 8px 12px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Noto Sans Arabic", "Noto Sans", sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/********************************************************************************/
+/********************* Adjusting Font Sizes For All Screens *********************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 5px 0;
+}
+
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  font-size: $h2;
+}
+
+h3 {
+  font-size: $h3;
+}
+
+h4 {
+  font-size: $h4;
+}
+
+h5 {
+  font-size: $h5;
+}
+
+h6 {
+  font-size: $h6;
+}
+
+p {
+  line-height: 25px;
+  font-size: $p;
+}
+
+// span {
+//   --base-font-size: 15px;
+//   font-size: var(--base-font-size, 15px);
+
+//   @include xl {
+//     font-size: 15px;
+//   }
+
+//   @include lg {
+//     font-size: 15px;
+//   }
+
+//   @include md {
+//     font-size: 14px;
+//   }
+
+//   @include sm {
+//     font-size: 14px;
+//   }
+
+//   @include xs {
+//     font-size: 13px;
+//   }
+// }
+
+/*****************************************\ Selection Reset \**************************************/
+
+::selection {
+  background: var(--main-color);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: var(--main-color);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: rgb(179, 188, 204);
+}
+
+.emptyData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(var(--main-background-rgb), 0.1);
+  border: 1px solid rgba(var(--main-background-rgb), 0.1);
+  border-radius: 4px;
+  padding: 100px 0;
+  font-size: 22px;
+  color: rgba(var(--main-color-rgb), 0.8);
+
+  p {
+    font-size: 22px;
+    color: rgba(var(--main-color-rgb), 0.8);
+  }
+}
+
+.video-player {
+  background-color: rgba(var(--main-color-rgb), 0.6);
+  padding: 5px;
+  border-radius: 0 0 5px 5px;
+
+  iframe,
+  video,
+  .plyr__video-wrapper,
+  .plyr {
+    border-radius: 5px;
+    max-height: 75vh;
+  }
+
+  * {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+}
+
+.plyr audio,
+.plyr iframe,
+.plyr video {
+  max-height: 75vh !important;
+}
+
+iframe#google_drive_video {
+  width: 100%;
+  min-height: 75vh;
+}
+
+.loading_content {
+  position: relative;
+  min-height: 70vh;
+
+  .loading {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--main-color-rgb), 0.6);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    z-index: 100;
+
+    svg {
+      width: 50px;
+      height: 50px;
+      display: block;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+      text-align: center !important;
+    }
+  }
+
+  * {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+}
+
+.loading-button {
+  &:disabled {
+    background-color: #b1b0b4 !important;
+    border-color: #b1b0b4 !important;
+    pointer-events: none;
+  }
+}
+
+.panel_container {
+  position: relative;
+
+  /* ============================================================
+     Light & airy dashboard reskin — panel-scoped token overrides.
+     Panel components read these tokens, so redefining them here
+     reskins the whole dashboard at once (public site untouched).
+     The `0 0 0 1px` ring in the shadows acts as a hairline border,
+     so every card reads as a crisp, lightly-outlined airy surface
+     instead of a heavy drop-shadow block.
+     ============================================================ */
+  --border-color: #eaecf2;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --shadow-xs: 0 0 0 1px rgba(17, 24, 39, 0.05);
+  --shadow-sm: 0 0 0 1px rgba(17, 24, 39, 0.05), 0 1px 2px rgba(17, 24, 39, 0.03);
+  --shadow-md: 0 0 0 1px rgba(17, 24, 39, 0.05), 0 2px 6px rgba(17, 24, 39, 0.04);
+  --shadow-lg: 0 0 0 1px rgba(17, 24, 39, 0.04), 0 10px 30px rgba(17, 24, 39, 0.08);
+  --shadow-brand: 0 0 0 1px rgba(22, 113, 178, 0.18), 0 2px 8px rgba(22, 113, 178, 0.12);
+  --airy-bg: #f6f7fb;
+
+  .content {
+    display: flex;
+    background-color: var(--airy-bg);
+
+    .page_content {
+      background-color: var(--airy-bg);
+      flex: 1;
+      padding: 34px 38px;
+      min-height: calc(100vh - 88px);
+
+      a {
+        color: var(--panel-text-color);
+      }
+
+      // Airy headings — larger, calmer, more breathing room
+      h1 {
+        font-size: clamp(22px, 2.4vw, 28px);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      h2 {
+        font-size: clamp(18px, 2vw, 22px);
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      @include xl {
+        padding: 28px 28px;
+      }
+
+      @include lg {
+        min-height: calc(100vh - 70px);
+        max-width: calc(100% - 80px);
+        overflow-x: scroll;
+        padding: 24px 22px;
+      }
+
+      @include md {
+        padding-top: 50px;
+        min-height: calc(100vh - 57px);
+        max-width: 100%;
+      }
+    }
+  }
+
+  // ---- Airy data tables (cascades to every panel table) ----
+  .page_content {
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+
+      thead th,
+      th {
+        font-size: 12.5px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: var(--light-text-color) !important;
+        padding: 14px 16px !important;
+        background: #fbfcfe;
+        border-bottom: 1px solid var(--border-color) !important;
+        white-space: nowrap;
+      }
+
+      tbody td,
+      td {
+        padding: 16px !important;
+        border-bottom: 1px solid #f1f3f7 !important;
+        color: var(--text-color);
+        font-size: 14px;
+      }
+
+      tbody tr {
+        transition: background-color var(--dur-base, 0.2s) var(--ease-out, ease);
+
+        &:hover {
+          background-color: #fafbfd;
+        }
+        &:last-child td {
+          border-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.horizontal-panel-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+
+  @include lg {
+    flex-wrap: wrap;
+  }
+}
+
+table {
+  td {
+    text-align: center !important;
+    p {
+      text-align: center !important;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@use "@/styles/mixins" as *;
+
+.contact__info {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  padding: 36px 32px;
+  background: var(--gradient-brand);
+  color: #fff;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-brand);
+
+  @include xs {
+    padding: 28px 22px;
+  }
+
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 34px 34px;
+    mask-image: radial-gradient(120% 80% at 20% 0%, #000 30%, transparent 78%);
+    pointer-events: none;
+  }
+
+  h3 {
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+
+  > p {
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.82);
+    margin: 0 0 28px;
+    max-width: 360px;
+  }
+
+  .list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .one {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      i {
+        flex-shrink: 0;
+        display: grid;
+        place-content: center;
+        width: 52px;
+        height: 52px;
+        font-size: 1.5rem;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: var(--radius-md);
+        transition: transform var(--dur-base) var(--ease-out);
+
+        @include xs {
+          width: 46px;
+          height: 46px;
+          font-size: 1.3rem;
+        }
+      }
+
+      &:hover i {
+        transform: translateY(-4px);
+      }
+
+      .text {
+        .label {
+          display: block;
+          font-size: 0.78rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.03em;
+          color: rgba(255, 255, 255, 0.65);
+          margin-bottom: 2px;
+        }
+
+        p {
+          font-size: 1.05rem;
+          font-weight: 700;
+          margin: 0;
+          word-break: break-word;
+
+          @include xs {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+
+  .markIcon {
+    position: absolute;
+    bottom: -30px;
+    inset-inline-end: -20px;
+    font-size: 11rem;
+    color: rgba(255, 255, 255, 0.07);
+    pointer-events: none;
+  }
+}

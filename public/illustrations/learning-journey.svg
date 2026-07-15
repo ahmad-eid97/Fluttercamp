@@ -1,0 +1,62 @@
+<svg width="960" height="220" viewBox="0 0 960 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Learning journey from beginner to advanced">
+  <defs>
+    <linearGradient id="lj-brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1671b2"/>
+      <stop offset="1" stop-color="#07436e"/>
+    </linearGradient>
+    <linearGradient id="lj-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6c560"/>
+      <stop offset="1" stop-color="#f2b24e"/>
+    </linearGradient>
+    <linearGradient id="lj-orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9233"/>
+      <stop offset="1" stop-color="#ff7300"/>
+    </linearGradient>
+  </defs>
+
+  <!-- dashed journey path -->
+  <path d="M70 168 C 220 168, 250 92, 400 92 S 640 132, 740 86 S 880 56, 900 52"
+        stroke="url(#lj-brand)" stroke-width="3.5" stroke-linecap="round"
+        stroke-dasharray="2 14" opacity="0.55"/>
+
+  <!-- floating widget squares -->
+  <rect x="300" y="30" width="34" height="34" rx="9" fill="#1671b2" opacity="0.12"/>
+  <rect x="560" y="150" width="26" height="26" rx="8" fill="#ff7300" opacity="0.16"/>
+  <rect x="820" y="120" width="30" height="30" rx="9" fill="#f2b24e" opacity="0.22"/>
+
+  <!-- milestone 1 : beginner -->
+  <g transform="translate(70,168)">
+    <circle r="30" fill="#fff" stroke="#e6eef5" stroke-width="2"/>
+    <circle r="22" fill="url(#lj-brand)"/>
+    <path d="M-9 -6 h18 a2 2 0 0 1 2 2 v9 a2 2 0 0 1 -2 2 h-18 a2 2 0 0 1 -2 -2 v-9 a2 2 0 0 1 2 -2 z" fill="#fff" opacity="0.92"/>
+    <rect x="-9" y="-6" width="9" height="13" rx="2" fill="#bcd6ec"/>
+    <text x="0" y="52" text-anchor="middle" font-family="Rubik, sans-serif" font-size="13" font-weight="700" fill="#07436e">01</text>
+  </g>
+
+  <!-- milestone 2 : intermediate -->
+  <g transform="translate(400,92)">
+    <circle r="32" fill="#fff" stroke="#e6eef5" stroke-width="2"/>
+    <circle r="24" fill="url(#lj-gold)"/>
+    <rect x="-11" y="-11" width="9" height="9" rx="2.5" fill="#fff"/>
+    <rect x="2" y="-11" width="9" height="9" rx="2.5" fill="#fff" opacity="0.75"/>
+    <rect x="-11" y="2" width="9" height="9" rx="2.5" fill="#fff" opacity="0.75"/>
+    <rect x="2" y="2" width="9" height="9" rx="2.5" fill="#fff"/>
+    <text x="0" y="54" text-anchor="middle" font-family="Rubik, sans-serif" font-size="13" font-weight="700" fill="#07436e">02</text>
+  </g>
+
+  <!-- milestone 3 : advanced (launch) -->
+  <g transform="translate(740,86)">
+    <circle r="30" fill="#fff" stroke="#e6eef5" stroke-width="2"/>
+    <circle r="22" fill="url(#lj-orange)"/>
+    <path d="M0 -12 C 7 -7 8 2 4 9 H -4 C -8 2 -7 -7 0 -12 Z" fill="#fff"/>
+    <circle cy="-2" r="3" fill="#ff7300"/>
+    <path d="M-4 9 l-4 7 6 -3 Z M4 9 l4 7 -6 -3 Z" fill="#fff" opacity="0.9"/>
+    <text x="0" y="50" text-anchor="middle" font-family="Rubik, sans-serif" font-size="13" font-weight="700" fill="#07436e">03</text>
+  </g>
+
+  <!-- finish flag -->
+  <g transform="translate(900,52)">
+    <line x1="0" y1="-2" x2="0" y2="34" stroke="#07436e" stroke-width="3" stroke-linecap="round"/>
+    <path d="M0 -14 h30 l-8 9 8 9 h-30 Z" fill="url(#lj-brand)"/>
+  </g>
+</svg>

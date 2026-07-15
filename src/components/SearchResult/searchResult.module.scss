@@ -1,0 +1,54 @@
+@use "@/styles/mixins" as *;
+
+.searchResult {
+  padding-block: 90px 140px;
+
+  @include md {
+    padding-block: 70px 100px;
+  }
+
+  .resultsHeader {
+    text-align: start;
+    margin-bottom: 48px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border-color);
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--main-color);
+      background: rgba(var(--main-color-rgb), 0.1);
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+
+      svg {
+        font-size: 1.1rem;
+      }
+    }
+
+    h1 {
+      font-size: var(--text-h1);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--main-color-dark);
+      margin: 16px 0 8px;
+    }
+
+    p {
+      color: var(--light-text-color);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  .section {
+    margin-bottom: 56px;
+
+    .grid {
+      margin-top: 24px;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.head {
+  @extend %tabsTitle;
+  margin-top: 20px;
+
+  h4 {
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+.resultsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fff;
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  color: var(--text-color);
+  .question {
+    p {
+      color: var(--light-text-color);
+    }
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    .field {
+      display: flex;
+      flex-direction: column;
+      grid-column: span 6;
+      label {
+        color: var(--text-color);
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      textarea {
+        &:disabled {
+          background-color: rgba(var(--main-color-rgb), 0.05) !important;
+        }
+      }
+      @include md {
+        grid-column: span 12;
+      }
+      &.full {
+        grid-column: span 12;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        .answer {
+          width: calc(33.33% - 10px);
+          min-width: 200px;
+          border: 1px solid var(--border-color);
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: var(--radius-md);
+          padding: 50px;
+          text-align: center !important;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          flex: 1;
+
+          @include md {
+            width: calc(50% - 10px);
+          }
+
+          @include sm {
+            width: 100%;
+          }
+
+          &:hover,
+          &.selected {
+            background-color: var(--bg-alt-color);
+          }
+          &.correct {
+            border: 2px solid var(--main-color);
+          }
+        }
+      }
+    }
+    .empty {
+      grid-column: span 6;
+      @include sm {
+        display: none;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    button {
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+    .actions {
+      @extend %formActions;
+      margin: 0;
+    }
+    & > button {
+      @extend %panelFocusBtn;
+    }
+  }
+}
+
+.loading {
+  margin-top: 20px;
+}

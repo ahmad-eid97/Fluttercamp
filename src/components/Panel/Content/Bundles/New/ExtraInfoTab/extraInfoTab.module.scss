@@ -1,0 +1,87 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.loadingData {
+  @extend %tabsTitle;
+  justify-content: start;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.basicInfo {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+    row-gap: 15px;
+
+    @include xs {
+      gap: 15px;
+      column-gap: 0px;
+    }
+
+    .field,
+    .switch {
+      grid-column: span 6;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 5px;
+
+      @include md {
+        grid-column: span 12;
+      }
+    }
+
+    .switch {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      .content {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+
+        span {
+          color: var(--light-text-color);
+          font-size: 14px;
+
+          @include sm {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .empty {
+      grid-column: span 6;
+      @include sm {
+        display: none;
+      }
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--text-color);
+
+      svg {
+        top: 0px;
+      }
+    }
+  }
+
+  .actions {
+    margin-top: 20px;
+    @extend %formActions;
+  }
+}

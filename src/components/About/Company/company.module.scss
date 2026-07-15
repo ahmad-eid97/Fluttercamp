@@ -1,0 +1,196 @@
+@use "@/styles/mixins" as *;
+
+.companySection {
+  margin-top: 40px;
+  padding: 16px;
+
+  .image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Branded gradient illustration panel (replaces the empty/broken photo)
+    .illustration {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      max-width: 520px;
+      aspect-ratio: 16 / 11;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      background: var(--gradient-brand);
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(7, 36, 59, 0.45), transparent 55%);
+      }
+
+      .pattern {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 30px 30px;
+        mask-image: radial-gradient(90% 90% at 50% 40%, #000 30%, transparent 80%);
+        pointer-events: none;
+      }
+
+      .watermark {
+        position: absolute;
+        bottom: -26px;
+        inset-inline-start: -22px;
+        font-size: 9rem;
+        color: #fff;
+        opacity: 0.1;
+        transform: rotate(-8deg);
+        pointer-events: none;
+      }
+
+      .mainIcon {
+        position: relative;
+        z-index: 1;
+        font-size: 6rem;
+        filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.3));
+
+        @include xs {
+          font-size: 4.4rem;
+        }
+      }
+
+      .chip {
+        position: absolute;
+        z-index: 2;
+        display: grid;
+        place-items: center;
+        width: 56px;
+        height: 56px;
+        font-size: 1.7rem;
+        border-radius: var(--radius-lg);
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: var(--shadow-md);
+
+        @include xs {
+          width: 44px;
+          height: 44px;
+          font-size: 1.3rem;
+        }
+      }
+
+      .chipA {
+        top: 22px;
+        inset-inline-start: 22px;
+      }
+
+      .chipB {
+        top: 26px;
+        inset-inline-end: 26px;
+        background: rgba(255, 255, 255, 0.95);
+        color: var(--main-color);
+      }
+    }
+
+    // brand glow behind the panel
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      filter: blur(70px);
+      background: rgba(var(--main-color-rgb), 0.25);
+    }
+
+    .floatBadge {
+      position: absolute;
+      z-index: 3;
+      bottom: -18px;
+      inset-inline-end: 18px;
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      font-size: 2rem;
+      border-radius: var(--radius-lg);
+      background: #fff;
+      box-shadow: var(--shadow-lg);
+
+      @include xs {
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .content {
+    @include md {
+      margin-top: 40px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--main-color);
+      background: rgba(var(--main-color-rgb), 0.1);
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+
+      svg { font-size: 1.1rem; }
+    }
+
+    h3 {
+      font-size: var(--text-h1);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--main-color-dark);
+      margin: 18px 0 14px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--light-text-color);
+    }
+
+    .stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+
+      .stat {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .statIcon {
+          display: grid;
+          place-items: center;
+          width: 48px;
+          height: 48px;
+          border-radius: var(--radius-md);
+          font-size: 1.5rem;
+          color: #fff;
+          background: var(--gradient-brand);
+        }
+
+        strong {
+          font-size: 1.5rem;
+          font-weight: 900;
+          color: var(--main-color-dark);
+        }
+      }
+    }
+  }
+}

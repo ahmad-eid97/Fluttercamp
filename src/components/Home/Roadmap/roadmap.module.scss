@@ -1,0 +1,186 @@
+@use "@/styles/mixins" as *;
+
+.roadmap {
+  position: relative;
+  padding-block: clamp(60px, 8vw, 110px);
+  overflow: hidden;
+  background: var(--bg-default, #fff);
+}
+
+.bgGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(var(--main-color-rgb, 22, 113, 178), 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--main-color-rgb, 22, 113, 178), 0.04) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 40%, transparent 75%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.journey {
+  margin: clamp(28px, 4vw, 44px) auto 0;
+  max-width: 880px;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @include sm {
+    display: none;
+  }
+}
+
+.track {
+  position: relative;
+  margin-top: clamp(28px, 3.5vw, 44px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(18px, 2.2vw, 30px);
+
+  @include md {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+}
+
+// Horizontal connector rail behind the step icons (desktop only).
+.line {
+  position: absolute;
+  top: 92px;
+  inset-inline: 12%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(var(--main-color-rgb, 22, 113, 178), 0.35) 0 10px,
+    transparent 10px 20px
+  );
+  z-index: 0;
+
+  @include md {
+    display: none;
+  }
+}
+
+.stageWrap {
+  position: relative;
+  z-index: 1;
+}
+
+.stage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(22px, 2.4vw, 30px);
+  background: var(--bg-default, #fff);
+  border: 1px solid var(--border-color, #e9eef3);
+  border-radius: var(--radius-xl, 18px);
+  box-shadow: 0 1px 2px rgba(17, 24, 39, 0.03);
+  transition: transform var(--dur-base, 0.24s) var(--ease-out, ease),
+    box-shadow var(--dur-base, 0.24s) ease, border-color var(--dur-base, 0.24s) ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(var(--main-color-rgb, 22, 113, 178), 0.28);
+    box-shadow: 0 18px 40px -16px rgba(17, 24, 39, 0.2);
+  }
+}
+
+.stageHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.iconChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  font-size: 32px;
+
+  &.brand {
+    color: var(--main-color, #1671b2);
+    background: rgba(var(--main-color-rgb, 22, 113, 178), 0.12);
+  }
+  &.gold {
+    color: #c97a12;
+    background: rgba(242, 178, 78, 0.2);
+  }
+  &.secondary {
+    color: var(--secondary-color, #ff7300);
+    background: rgba(255, 115, 0, 0.12);
+  }
+}
+
+.step {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(var(--main-color-rgb, 22, 113, 178), 0.12);
+  letter-spacing: -0.03em;
+}
+
+.level {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 18px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill, 999px);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--main-color-dark, #07436e);
+  background: rgba(var(--main-color-rgb, 22, 113, 178), 0.08);
+}
+
+.stageTitle {
+  margin: 12px 0 8px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-color, #383e50);
+}
+
+.stageDesc {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--muted-text-color, #6b7280);
+}
+
+.skills {
+  margin: 18px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color, #383e50);
+
+    svg {
+      color: var(--success, #45ca80);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.cta {
+  margin-top: clamp(32px, 4vw, 48px);
+  display: flex;
+  justify-content: center;
+}

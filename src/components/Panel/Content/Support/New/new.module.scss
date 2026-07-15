@@ -1,0 +1,42 @@
+@use "@/styles/mixins" as *;
+@use "@/styles/extends" as *;
+
+.new {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  h4 {
+    @extend %sectionTitle;
+    margin-bottom: 30px;
+  }
+  form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    .field {
+      grid-column: span 6;
+      flex-direction: column;
+      gap: 5px;
+      @include md {
+        grid-column: span 12;
+      }
+      @include xs {
+        grid-column: span 12;
+      }
+    }
+    .empty {
+      grid-column: span 6;
+      flex-direction: column;
+      gap: 5px;
+      @include sm {
+        display: none
+      }
+    }
+  }
+  &>button {
+    @extend %panelFocusBtn;
+    margin-top: 20px;
+  }
+}
