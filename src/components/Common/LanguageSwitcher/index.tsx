@@ -20,7 +20,7 @@ const LANGS = [
   { code: 'en', label: 'English', short: 'EN', flag: '/imgs/locales/en.png' },
 ];
 
-function LanguageSwitcher() {
+function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
   const { locale } = useDictionary();
   const pathName = usePathname();
   const cookies = useMemo(() => new Cookies(), []);
@@ -35,7 +35,7 @@ function LanguageSwitcher() {
   const current = LANGS.find((l) => l.code === locale) || LANGS[0];
 
   return (
-    <div className={cls.lang_switcher}>
+    <div className={`${cls.lang_switcher} ${compact ? cls.compact : ''}`}>
       {/* modal={false} → no scroll-lock, avoids the scrollbar-compensation layout shift */}
       <DropdownMenu modal={false}>
         <DropdownMenuTrigger asChild>

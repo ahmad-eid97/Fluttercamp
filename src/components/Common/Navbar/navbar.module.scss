@@ -59,6 +59,15 @@
       height: 64px;
       padding-inline: 16px;
     }
+
+    @include xs {
+      gap: 8px;
+
+      &,
+      &.docked {
+        padding-inline: 12px;
+      }
+    }
   }
 
   // ---------- Brand ----------
@@ -102,7 +111,7 @@
       }
 
       @include xs {
-        font-size: 1.05rem;
+        display: none;
       }
     }
   }
@@ -151,7 +160,7 @@
       }
     }
 
-    @include lg {
+    @include xl {
       display: none;
     }
   }
@@ -162,6 +171,14 @@
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
+
+    > * {
+      flex-shrink: 0;
+    }
+
+    @include xs {
+      gap: 6px;
+    }
 
     a {
       cursor: pointer;
@@ -217,7 +234,7 @@
         box-shadow: var(--shadow-sm);
       }
 
-      @include lg {
+      @include xl {
         min-width: 0;
         width: 42px;
         padding: 0;
@@ -330,6 +347,17 @@
           display: none;
         }
       }
+
+      @include sm {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        justify-content: center;
+
+        .loginArrow {
+          display: none;
+        }
+      }
     }
 
     .mobIcon {
@@ -352,7 +380,7 @@
         color: #fff;
       }
 
-      @include lg {
+      @include xl {
         display: grid;
       }
     }

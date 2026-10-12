@@ -119,7 +119,7 @@ function Navbar() {
 
           {/* grouped utility cluster */}
           <div className={cls.cluster}>
-            <LanguageSwitcher />
+            <LanguageSwitcher compact />
             <span className={cls.clusterDivider} />
             <Tooltip title={translations.cart}>
               <Link href={`/cart`} className={`${cls.iconBtn} ${cls.cartWrap}`}>
@@ -133,7 +133,7 @@ function Navbar() {
             isLoggedIn ?
               <UserDropdown user={user} />
               :
-              <button className={cls.loginBtn} onClick={() => router.push("/login")}>
+              <button type="button" className={cls.loginBtn} onClick={() => router.push("/login")} aria-label={translations.login}>
                 <Icon icon="solar:login-3-bold-duotone" />
                 <span>{translations.login}</span>
                 <Icon icon={locale === 'ar' ? 'solar:alt-arrow-left-linear' : 'solar:alt-arrow-right-linear'} className={cls.loginArrow} />

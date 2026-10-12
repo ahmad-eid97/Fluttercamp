@@ -49,6 +49,21 @@
   }
 }
 
+.compact {
+  @include xs {
+    .trigger {
+      width: 38px;
+      padding: 0;
+      justify-content: center;
+
+      .code,
+      .chev {
+        display: none;
+      }
+    }
+  }
+}
+
 // ---------- Dropdown card ----------
 // Neutralise the Radix/shadcn content shell so `.menu_content` is the card.
 .dropdown {
@@ -93,7 +108,9 @@
   font-size: 0.92rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.18s ease, color 0.18s ease;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
 
   .flag {
     display: grid;

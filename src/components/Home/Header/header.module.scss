@@ -48,19 +48,21 @@
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     align-items: center;
     gap: 50px;
     padding-bottom: 60px;
 
     @include lg {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 40px;
     }
   }
 
   // ---- Text side ----
   .textSide {
+    min-width: 0;
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -100,11 +102,17 @@
       background: #fff;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-pill);
-      padding: 6px 6px 6px 18px;
+      padding: 6px;
+      padding-inline: 18px 6px;
       margin-top: 28px;
+      width: 100%;
       max-width: 520px;
       box-shadow: var(--shadow-md);
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      @include xs {
+        padding-inline-start: 12px;
+      }
 
       &:focus-within {
         border-color: var(--main-color);
@@ -120,6 +128,7 @@
       input {
         flex: 1;
         min-width: 0;
+        max-width: 100%;
         border: none;
         outline: none;
         background: transparent;
@@ -137,6 +146,10 @@
         padding: 11px 26px;
         border-radius: var(--radius-pill);
         transition: background 0.2s ease;
+
+        @include xs {
+          padding-inline: 16px;
+        }
 
         &:hover {
           background: var(--main-color-dark);
@@ -193,6 +206,7 @@
   // ---- Visual side ----
   .visualSide {
     position: relative;
+    min-width: 0;
     display: flex;
     justify-content: center;
     align-items: center;
